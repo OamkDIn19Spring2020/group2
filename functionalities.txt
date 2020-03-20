@@ -1,0 +1,47 @@
+push to stageinBranch when functionality is done
+push to own branch while working
+
+universal -> lasse
+	header
+		links to other pages
+			dropdown
+		search bar
+	footer
+		contact info
+		company info
+		support -> nabeel
+
+homepage -> lasse
+	sale items
+	game categories
+	best sellers 
+	popular
+	new releases
+	
+shoppingcart -> nabeel
+	promocode
+	selected games
+	payment options
+		skrill
+		chungus coin
+	
+register/login -> lauri
+	register
+		email
+		username
+		password
+		phone number
+		country
+	login
+		usename/email
+		password
+
+profile -> lauri
+	account info
+		change password
+
+purchase history -> lauri
+	search purchased games
+	amount spend
+
+support -> nabeel
