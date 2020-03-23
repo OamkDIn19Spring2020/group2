@@ -32,13 +32,13 @@ class Database extends \CodeIgniter\Database\Config
 	public $default = [
 		'DSN'      => '',
 		'hostname' => 'localhost',
-		'username' => '',
-		'password' => '',
-		'database' => '',
+		'username' => 'pro_user',
+		'password' => 'pro_pass',
+		'database' => 'mydb',
 		'DBDriver' => 'MySQLi',
 		'DBPrefix' => '',
-		'pConnect' => false,
-		'DBDebug'  => (ENVIRONMENT !== 'production'),
+		'pConnect' => True,
+		'DBDebug'  => True,
 		'cacheOn'  => false,
 		'cacheDir' => '',
 		'charset'  => 'utf8',
@@ -50,7 +50,7 @@ class Database extends \CodeIgniter\Database\Config
 		'failover' => [],
 		'port'     => 3306,
 	];
-
+	
 	/**
 	 * This database connection is used when
 	 * running PHPUnit database tests.
