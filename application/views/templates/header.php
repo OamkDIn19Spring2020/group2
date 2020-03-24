@@ -1,6 +1,7 @@
 <html>
     <head>
         <title>Home</title>
+        <link rel="shortcut icon" href="#" />
         <link rel="stylesheet" type="text/css" href="<? echo site_url();?>/assests/css/styles.css">
     </head>
     <body>
