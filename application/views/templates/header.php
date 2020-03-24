@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>Home</title>
-        <link rel="stylesheet" type="text/css" href="<? echo base_url();?>/assests/css/styles.css">
+        <link rel="stylesheet" type="text/css" href="<? echo site_url();?>/assests/css/styles.css">
     </head>
     <body>
         <div id="header">
