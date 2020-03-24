@@ -1,6 +1,18 @@
-<IfModule authz_core_module>
-    Require all denied
-</IfModule>
-<IfModule !authz_core_module>
-    Deny from all
-</IfModule>
+RewriteEngine On
+   RewriteBase /html/group2/
+
+   RewriteCond %{THE_REQUEST} \s/+(.*?)/{2,}([^\s]*)
+   RewriteRule ^ %1/%2 [R=302,L,NE]
+
+   RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+(.+?)/{2,}[?\s] [NC]
+   RewriteRule ^ /%1/ [L,R=301]
+
+   RewriteCond %{HTTP_HOST} !^www\. [NC]
+   RewriteRule ^ http://www.%{HTTP_HOST}%{REQUEST_URI}  [R=301,L]
+
+   RewriteCond %{REQUEST_URI} system|application
+   RewriteRule ^(.*)$ index.php?/$1 [L]
+
+   RewriteCond %{REQUEST_FILENAME} !-f
+   RewriteCond %{REQUEST_FILENAME} !-d
+   RewriteRule ^(.*)$ index.php?/$1 [L]
