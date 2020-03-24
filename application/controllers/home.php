@@ -12,7 +12,7 @@ class Home extends CI_Controller {
       if ( ! file_exists(APPPATH.'views/pages/'.$page.'.php'))
   {
           // Whoops, we don't have a page for that!
-          echo 'whoops, file doesnt exist'
+          echo 'whoops, file doesnt exist';
   }
 
     $data['title'] = ucfirst($page); // Capitalize the first letter
