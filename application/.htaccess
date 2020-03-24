@@ -4,3 +4,6 @@
 <IfModule !authz_core_module>
     Deny from all
 </IfModule>
+<IfModule mod_alias.c>
+    RedirectMatch 403 favicon.ico
+</IfModule>
