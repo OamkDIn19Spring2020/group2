@@ -1,3 +1,0 @@
-trying to get git to work
-can't push anything
-changes need to be commited
