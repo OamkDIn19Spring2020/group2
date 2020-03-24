@@ -14,7 +14,7 @@ Options All -Indexes
 	# If you installed CodeIgniter in a subfolder, you will need to
 	# change the following line to match the subfolder you need.
 	# http://httpd.apache.org/docs/current/mod/mod_rewrite.html#rewritebase
- RewriteBase /var/www/html/group2
+ RewriteBase /var/www/html/group2/public
 
 	# Redirect Trailing Slashes...
 	RewriteCond %{REQUEST_FILENAME} !-d
