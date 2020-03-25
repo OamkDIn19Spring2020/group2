@@ -20,31 +20,38 @@ body{
 }
 #tags{
     height:auto;
-    grid-row-start:1;
+    grid-row-start:2;
     display: grid;
     grid-template-columns: [col1] 20% [col2] 20% [col3] 20% [col4] 20% [col5] 20%;
 }
 .buttons{
     width: 100%;
     grid-column: auto;
-    border:1px solid black;
     text-align:center;
 }
 #funcs{
     grid-row-start: 0;
     display: grid;
+    padding:0px;
     grid-template-rows: [row1]50% [row2]50%;
-    align-content: rigth;
+    grid-template-columns: [col1] 3fr [col2] 1fr;
+    align-content:left;
 }
 #Login{
-    border:1px solid black;
+    grid-row-start:0;
+    grid-row-end:1;
+    grid-column-start:2;
+    grid-column-end:2;
     text-align:center;
-    width:150px;
+    width:100%;
 }
 #cart{
-    border:1px solid black;
+    grid-row-start:1;
+    grid-row-end:2;
+    grid-column-start:2;
+    grid-column-end:3;
     text-align:center;
-    width:150px;
+    width:100%;
 }
 #contents{
     min-height: 90%;
