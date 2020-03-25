@@ -16,7 +16,10 @@ class Home extends CI_Controller {
   }
 
     $data['page'] = $page;
-    $this->load->view('templates/content', $data);
+    $this->load->view('templates/header');
+    $this->load->view('pages/'.$data);
+    $this->load->view('templates/footer');
+    
   }
 
 }
