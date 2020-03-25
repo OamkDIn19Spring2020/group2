@@ -1,7 +1,7 @@
 <body>
     <div>
-        <? $this->load->view('templates/header'); ?>
-        <? $this->load->view($page); ?>
-        <? $this->load->view('templates/footer'); ?>
+        <?php $this->load->view('templates/header'); ?>
+        <?php $this->load->view($page); ?>
+        <?php $this->load->view('templates/footer'); ?>
     </div>
 </body>
