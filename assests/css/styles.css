@@ -12,28 +12,39 @@ body{
     background-color: rgba( 94,134,185,1);
 }
 #header{
-    background-color: ;
     width: 100%;
-    height: auto;
+    height: 100px;
     color: black;
-    display: inline-block;
+    display: grid;
+    grid-tempalte-rows:[row1]66.6% [row2] 33.3%;
 }
 #tags{
+    height:auto;
+    grid-row-start:1;
     display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: [row1] 100%;
+    grid-template-columns: [col1] 20% [col2] 20% [col3] 20% [col4] 20% [col5] 20%;
 }
 .buttons{
-    width: 12.5%;
-    height: 57px;
+    width: 100%;
     grid-column: auto;
     border:1px solid black;
+    text-align:center;
+}
+#funcs{
+    grid-row-start: 0;
+    display: grid;
+    grid-template-rows: [row1]50% [row2]50%;
+    align-content: rigth;
 }
 #Login{
     border:1px solid black;
+    text-align:center;
+    width:150px;
 }
 #cart{
     border:1px solid black;
+    text-align:center;
+    width:150px;
 }
 #contents{
     min-height: 90%;
