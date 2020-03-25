@@ -29,12 +29,15 @@ body{
     grid-column: auto;
     text-align:center;
 }
+.buttons:hover{
+    background-color:rgba( 59,105,163,1);
+}
 #funcs{
     grid-row-start: 0;
     display: grid;
     padding:0px;
     grid-template-rows: [row1]50% [row2]50%;
-    grid-template-columns: [col1] 3fr [col2] 1fr;
+    grid-template-columns: [col1] 3fr [col2] 20%;
     align-content:left;
 }
 #Login{
@@ -45,6 +48,9 @@ body{
     text-align:center;
     width:100%;
 }
+#Login:hover{
+    background-color:rgba( 59,105,163,1);
+}
 #cart{
     grid-row-start:1;
     grid-row-end:2;
@@ -52,6 +58,9 @@ body{
     grid-column-end:3;
     text-align:center;
     width:100%;
+}
+#cart:hover{
+    background-color:rgba( 59,105,163,1);
 }
 #contents{
     min-height: 90%;
