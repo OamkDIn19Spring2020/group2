@@ -5,6 +5,7 @@ class Home extends CI_Controller {
   public function __construct()
   {
     parent::__construct();
+    $this->load->model('Games');
   }
 
   function content($page = 'sales')
@@ -14,12 +15,11 @@ class Home extends CI_Controller {
           // Whoops, we don't have a page for that!
           echo 'whoops, file doesnt exist';
   }
+    $data['games'] = $this->Games->getgames();
+    $data['page'] = $page;
+    $this->load->view('templates/page', $data);
 
-    $data['title'] = ucfirst($page); // Capitalize the first letter
-
-    $this->load->view('templates/header', $data);
-    $this->load->view('pages/'.$page, $data);
-    $this->load->view('templates/footer', $data);
   }
+
 
 }

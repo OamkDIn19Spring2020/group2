@@ -1,3 +1,2 @@
 this is a foot
-</body>
-</html>
+<div class="buttons">nabeels allmighty support page</div>

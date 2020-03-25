@@ -81,7 +81,7 @@ $db['default'] = array(
 	'database' => 'opisk_t9mila00',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
-	'pconnect' => True,
+	'pconnect' => FALSE,
 	'db_debug' => (ENVIRONMENT !== 'production'),
 	'cache_on' => FALSE,
 	'cachedir' => '',
