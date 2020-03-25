@@ -1,3 +1,7 @@
-I am a sales page :-D
-< ? php die(phpversion()); ? >
-<?php die(phpversion()); ?>
+<div>
+I am a sales page :-D <br>
+< ? php die(phpversion()); ? > <br>
+<?php
+die(phpversion());
+?>
+</div>
