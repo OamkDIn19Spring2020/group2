@@ -15,11 +15,10 @@ class Home extends CI_Controller {
           echo 'whoops, file doesnt exist';
   }
 
-    $data['page'] = $page;
     $this->load->view('templates/header');
-    $this->load->view('pages/'.$data);
+    $this->load->view('pages/'.$page);
     $this->load->view('templates/footer');
-    
+
   }
 
 }
