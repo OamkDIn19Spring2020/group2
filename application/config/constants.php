@@ -26,6 +26,7 @@ defined('SHOW_DEBUG_BACKTRACE') OR define('SHOW_DEBUG_BACKTRACE', TRUE);
 | always be used to set the mode correctly.
 |
 */
+define("LAYOUT_URL","http://students.oamk.fi/~t8hula00/group2/assests/css/");
 defined('FILE_READ_MODE')  OR define('FILE_READ_MODE', 0644);
 defined('FILE_WRITE_MODE') OR define('FILE_WRITE_MODE', 0666);
 defined('DIR_READ_MODE')   OR define('DIR_READ_MODE', 0755);
