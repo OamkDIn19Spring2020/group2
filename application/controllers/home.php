@@ -15,11 +15,8 @@ class Home extends CI_Controller {
           echo 'whoops, file doesnt exist';
   }
 
-    $data['title'] = ucfirst($page); // Capitalize the first letter
-
-    $this->load->view('templates/header', $data);
-    $this->load->view('pages/'.$page, $data);
-    $this->load->view('templates/footer', $data);
+    $data['page'] = $page.'php'
+    $this->load->view('templates/content', $data);
   }
 
 }
