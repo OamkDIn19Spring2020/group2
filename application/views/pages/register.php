@@ -1,16 +1,24 @@
 
-  <div id="regContainer">
-    <div id="regForm">
+    <div id="regForm" style="border: 1px solid black; width: 50%; margin: auto">
       <form action="register" method="post">
-        <label for="uname">Username:</label><br>
-        <input type="text" id="uname" name="uname">
         <fieldset class="fieldset">
-          <legend>Password</legend>
+
+          <legend>User info</legend>
+
+          <label for="uname">Username:</label><br>
+          <input type="text" id="uname" name="uname"><br>
+
           <label for="password">Password:</label><br>
-          <input type="text" id="pword" name="pword">
+          <input type="text" id="pword" name="pword"><br>
+
           <label for="password">Repeat password:</label><br>
-          <input type="text" id="pword" name="pword">
+          <input type="text" id="pword" name="pword"><br>
+
+          <label for="email">E-mail address:</label><br>
+          <input type="text" id="email" name="email"><br>
+
+          <input type="submit" value="submit">
+
         </fieldset>
       </form>
     </div>
-  </div>
