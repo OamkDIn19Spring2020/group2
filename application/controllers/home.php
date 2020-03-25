@@ -15,7 +15,7 @@ class Home extends CI_Controller {
           echo 'whoops, file doesnt exist';
   }
 
-    $data['page'] = $page.'php';
+    $data['page'] = $page;
     $this->load->view('templates/content', $data);
   }
 
