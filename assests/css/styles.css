@@ -16,7 +16,7 @@ body{
     height: 100px;
     color: black;
     display: grid;
-    grid-tempalte-rows:[row1]66.6% [row2] 33.3%;
+    grid-template-rows:[row1]66.6% [row2] 33.3%;
 }
 #tags{
     height:auto;
