@@ -14,11 +14,26 @@ body{
 #header{
     background-color: ;
     width: 100%;
-    height: fit-content;
+    height: auto;
     color: black;
+    display: inline-block;
+}
+#tags{
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: [row1] 100%;
+}
+.buttons{
+    width: 12.5%;
+    height: 57px;
+    grid-column: auto;
+    border:1px solid black;
+}
+#Login{
+    border:1px solid black;
+}
+#cart{
+    border:1px solid black;
 }
 #contents{
     min-height: 90%;
