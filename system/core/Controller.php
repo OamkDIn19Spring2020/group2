@@ -83,6 +83,7 @@ class CI_Controller {
 		}
 
 		$this->load =& load_class('Loader', 'core');
+		$this->load->helper('url');
 		$this->load->initialize();
 		log_message('info', 'Controller Class Initialized');
 	}
