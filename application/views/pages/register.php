@@ -1,20 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <div id="regContainer">
-    <div id="regForm">
+
+    <div id="regForm" style="border: 1px solid black; width: 50%; margin: auto">
       <form action="register" method="post">
         <fieldset class="fieldset">
-          <legend>Password</legend>
-          
+
+          <legend>User info</legend>
+
+          <label for="uname">Username:</label><br>
+          <input type="text" id="uname" name="uname"><br>
+
+          <label for="password">Password:</label><br>
+          <input type="text" id="pword" name="pword"><br>
+
+          <label for="password">Repeat password:</label><br>
+          <input type="text" id="pword" name="pword"><br>
+
+          <label for="email">E-mail address:</label><br>
+          <input type="text" id="email" name="email"><br>
+
+          <input type="submit" value="submit">
+
         </fieldset>
       </form>
     </div>
-  </div>
-</body>
-</html>
