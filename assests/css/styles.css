@@ -71,3 +71,8 @@ body{
     height: 10%;
     width: 100%;
 }
+a:link, a:visited{
+    text-decoration:inherit;
+    color: inherit;
+    cursor: pointer;
+}
