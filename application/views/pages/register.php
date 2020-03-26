@@ -9,13 +9,13 @@
           <input type="text" id="uname" name="uname"><br>
 
           <label for="password">Password:</label><br>
-          <input type="text" id="pword" name="pword"><br>
+          <input type="password" id="pword" name="pword"><br>
 
           <label for="password">Repeat password:</label><br>
-          <input type="text" id="pword" name="pword"><br>
+          <input type="password" id="pword" name="pword"><br>
 
           <label for="email">E-mail address:</label><br>
-          <input type="text" id="email" name="email"><br>
+          <input type="email" id="email" name="email"><br>
 
           <input type="submit" value="submit">
 
