@@ -8,7 +8,7 @@ class Aboot extends CI_Controller {
     $this->load->model('user');
   }
 
-  function getusers(){
+  function showuser(){
       $this->load->helper('url');
         $data['user'] = $this->Aboot->getusers();
         $data['page'] = $page;
