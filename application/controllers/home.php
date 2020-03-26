@@ -9,41 +9,20 @@ class Home extends CI_Controller {
     $this->load->model('Aboot_model');
   }
 
-  function content($page = 'sales')
+  function content()
   {
       if ( ! file_exists(APPPATH.'views/pages/'.$page.'.php'))
   {
           // Whoops, we don't have a page for that!
           echo 'whoops, file doesnt exist';
-  } $this->load->helper('url');
+  }
+    $this->load->helper('url');
     $data['games'] = $this->Games->getgames();
+    $data['user'] = $this->Aboot_model->getusers();
     $data['page'] = $page;
     $this->load->view('templates/page', $data);
 
   }
-  public function getuser($page = 'users')
-  {
-      $data['user'] = $this->Aboot_model->getusers();
-      $data['page'] = $page;
-      $this->load->view('templates/page', $data);
-
-  }
-
-  public function adduser(){
-    //print_r($this->input->post());
-    $plainpass = $this->input->post('password');
-    $hash = password_hash($plainpass, PASSWORD_DEFAULT);
-
-    $insert_data=array(
-      'username'=>$this->input->post('username'),
-      'email'=>$this->input->post('email'),
-      'password'=>$hash,
-      'phone'=>$this->input->post('phone'),
-      'country'=>$this->input->post('country'),
-    );
-    $test=$this->Aboot_model->adduser($insert_data);
-    redirect('users')
-    }
 
 
 }
