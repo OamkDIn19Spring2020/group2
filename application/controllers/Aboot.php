@@ -8,13 +8,6 @@ class Aboot extends CI_Controller {
     $this->load->model('Aboot');
   }
 
-  function showuser(){
-      $this->load->helper('url');
-        $data['user'] = $this->Aboot->getusers();
-        $data['page'] = $page;
-        $this->load->view('templates/page', $data);
-  }
-
   public function adduser(){
     //print_r($this->input->post());
     $plainpass = $this->input->post('password');
@@ -28,6 +21,9 @@ class Aboot extends CI_Controller {
       'country'=>$this->input->post('country'),
     );
     $test=$this->Aboot->adduser($insert_data);
-    echo 'inserted '.$test;
 
+    $data['user'] = $this->Aboot->getusers();
+    redirect('pages/users', $data);
+
+}
 }
