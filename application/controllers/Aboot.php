@@ -8,6 +8,14 @@ class Aboot extends CI_Controller {
     $this->load->model('Aboot_model');
   }
 
+  public function getuser($page = 'users')
+  {
+      $data['user'] = $this->Aboot_model->getusers();
+      $data['page'] = $page;
+      $this->load->view('templates/page', $data);
+
+  }
+
   public function adduser(){
     //print_r($this->input->post());
     $plainpass = $this->input->post('password');
@@ -24,12 +32,6 @@ class Aboot extends CI_Controller {
     redirect('users')
     }
 
-    public function getuser($page = 'users')
-    {
-        $data['user'] = $this->Aboot_model->getusers();
-        $data['page'] = $page;
-        $this->load->view('templates/page', $data);
 
-    }
 
 }
