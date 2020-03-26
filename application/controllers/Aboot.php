@@ -21,9 +21,15 @@ class Aboot extends CI_Controller {
       'country'=>$this->input->post('country'),
     );
     $test=$this->Aboot_model->adduser($insert_data);
+    redirect('users')
+    }
 
-    $data['user'] = $this->Aboot_model->getusers();
-    print_r($data);
+    public function getuser($page = 'users')
+    {
+        $data['user'] = $this->Aboot_model->getusers();
+        $data['page'] = $page;
+        $this->load->view('templates/page', $data);
 
-}
+    }
+
 }
