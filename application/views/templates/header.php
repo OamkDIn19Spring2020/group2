@@ -7,7 +7,7 @@
         <div class="buttons">New releases</div>
     </div>
     <div id='funcs'>
-        <a href="<?php echo site_url('register'); ?>" class="Login">Login</a>
+        <a href="<?php echo site_url('register'); ?>" id="Login">Login</a>
         <div id="cart">Shopping Cart</div>
     </div>
 </div>
