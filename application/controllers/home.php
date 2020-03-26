@@ -9,7 +9,7 @@ class Home extends CI_Controller {
     $this->load->model('Aboot_model');
   }
 
-  function content()
+  function content($pages = 'sales')
   {
       if ( ! file_exists(APPPATH.'views/pages/'.$page.'.php'))
   {
