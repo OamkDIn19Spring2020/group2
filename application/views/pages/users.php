@@ -6,7 +6,7 @@
     </thead>
     <tbody>
         <?php
-        foreach ($user as $row){
+        foreach ($accounts as $row){
             echo '<tr>';
             echo '<td>'.$row['username'].'</td><td>'.$row['email'].'</td><td>'.$row['password'].'</td><td>'.$row['create_time'].'</td><td>'.$row['phone'].'</td><td>'.$row['country'].'</td><td>';
             echo '</tr>';

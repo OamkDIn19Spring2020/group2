@@ -22,7 +22,7 @@ class Aboot extends CI_Controller {
     );
     $test=$this->Aboot_model->adduser($insert_data);
 
-    $data['user'] = $this->Aboot_model->getusers();
+    $data['accounts'] = $this->Aboot_model->getusers();
     redirect('users', $data);
 
 }
