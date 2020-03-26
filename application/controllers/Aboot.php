@@ -28,7 +28,6 @@ class Aboot extends CI_Controller {
       'country'=>$this->input->post('country'),
     );
     $test=$this->Aboot->adduser($insert_data);
-    //echo 'inserted '.$test. 'books';
-    redirect('aboot');
+    echo 'inserted '.$test;
 
 }
