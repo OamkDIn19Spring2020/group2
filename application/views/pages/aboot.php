@@ -1,5 +1,5 @@
 ïnsert a picture of a boot in here => (.)
-  <form action="register" method="post">
+  <form action=" <?php echo site_url('Aboot') ?> " method="post">
     <fieldset class="fieldset">
 
       <legend>User info</legend>
