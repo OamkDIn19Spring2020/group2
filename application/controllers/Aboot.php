@@ -20,7 +20,7 @@ class Aboot extends CI_Controller {
       'phone'=>$this->input->post('phone'),
       'country'=>$this->input->post('country'),
     );
-    $test=$this->Aboot->adduser($insert_data);
+    $test=$this->Aboot_model->adduser($insert_data);
 
     $data['user'] = $this->Aboot->getusers();
     redirect('pages/users', $data);
