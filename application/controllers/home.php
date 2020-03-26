@@ -6,6 +6,7 @@ class Home extends CI_Controller {
   {
     parent::__construct();
     $this->load->model('Games');
+    $this->load->model('Aboot_model');
   }
 
   function content($page = 'sales')
@@ -20,6 +21,29 @@ class Home extends CI_Controller {
     $this->load->view('templates/page', $data);
 
   }
+  public function getuser($page = 'users')
+  {
+      $data['user'] = $this->Aboot_model->getusers();
+      $data['page'] = $page;
+      $this->load->view('templates/page', $data);
+
+  }
+
+  public function adduser(){
+    //print_r($this->input->post());
+    $plainpass = $this->input->post('password');
+    $hash = password_hash($plainpass, PASSWORD_DEFAULT);
+
+    $insert_data=array(
+      'username'=>$this->input->post('username'),
+      'email'=>$this->input->post('email'),
+      'password'=>$hash,
+      'phone'=>$this->input->post('phone'),
+      'country'=>$this->input->post('country'),
+    );
+    $test=$this->Aboot_model->adduser($insert_data);
+    redirect('users')
+    }
 
 
 }
