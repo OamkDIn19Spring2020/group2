@@ -71,3 +71,9 @@ body{
     height: 10%;
     width: 100%;
 }
+
+#support_pic
+{
+    height: 200px; 
+    width: 500px;
+}
