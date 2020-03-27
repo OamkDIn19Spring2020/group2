@@ -6,6 +6,7 @@ class Home extends CI_Controller {
   {
     parent::__construct();
     $this->load->model('Games');
+    $this->load->model('Aboot_model');
   }
 
   function content($page = 'sales')
@@ -14,8 +15,10 @@ class Home extends CI_Controller {
   {
           // Whoops, we don't have a page for that!
           echo 'whoops, file doesnt exist';
-  } $this->load->helper('url');
+  }
+    $this->load->helper('url');
     $data['games'] = $this->Games->getgames();
+    $data['user'] = $this->Aboot_model->getusers();
     $data['page'] = $page;
     $this->load->view('templates/page', $data);
 
