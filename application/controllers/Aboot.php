@@ -6,6 +6,7 @@ class Aboot extends CI_Controller {
   {
     parent::__construct();
     $this->load->model('Aboot_model');
+    $this->load->helper('url');
   }
 
   public function view()
@@ -29,7 +30,7 @@ class Aboot extends CI_Controller {
       'country'=>$this->input->post('country'),
     );
     $test=$this->Aboot_model->adduser($insert_data);
-    redirect('users');
+    redirect('pages/users');
     }
 
 
