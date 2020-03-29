@@ -6,7 +6,6 @@ class Hot extends CI_Controller {
   {
     parent::__construct();
     $this->load->model('Aboot_model');
-    $load->load->hepler('url_helper');
   }
 
 
