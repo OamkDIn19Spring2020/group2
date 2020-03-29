@@ -30,7 +30,7 @@ class Aboot extends CI_Controller {
       'country'=>$this->input->post('country'),
     );
     $test=$this->Aboot_model->adduser($insert_data);
-    redirect('pages/users');
+    redirect('users');
     }
 
 
