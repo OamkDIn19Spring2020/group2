@@ -2,10 +2,10 @@
 
 class Category_model extends CI_Model {
 
- public function sortcat($cat = FALSE)
+ public function sortcat($cat = NULL)
  {
 
-     if (!$cat){
+     if ($cat === NULL){
          $this->db->select('*');
          $this->db->from('games');
          return $this->db->get()->result_array();
