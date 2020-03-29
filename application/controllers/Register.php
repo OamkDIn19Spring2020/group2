@@ -12,4 +12,32 @@ class Register extends CI_Controller {
     $data['page'] = $page;
     $this->load->view('templates/page', $data);
   }
+
+  public function __construct()
+  {
+          parent::__construct();
+          $this->load->model('Users_model');
+          $this->load->helper('url_helper');
+  }
+
+  public function createuser()
+  {
+    $this->load->helper('form');
+
+    $this->load->library('form_validation');
+
+    $this->form_validation->set_rules('uname', 'Username', 'required');
+    $this->form_validation->set_rules('password', 'Password', 'required');
+    $this->form_validation->set_rules('email', 'Email', 'required');
+
+    if ($this->form_validation->run() == FALSE)
+    {
+      $this->content($page = 'register');
+    }
+    else
+    {
+      $this->Users_model->adduser();
+      $this->load->view('pages/regsuccess');
+    }
+  }
 }
