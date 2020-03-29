@@ -6,8 +6,8 @@ class Category_model extends CI_Model {
  {
 
      if (!$cat){
-         $sql = 'Select * from games';
-         $this->db->query($sql);
+         $this->db->select('*');
+         $this->db->from('games');
          return $this->db->get()->result_array();
      }
     else{
