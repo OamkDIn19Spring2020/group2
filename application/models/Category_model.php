@@ -5,7 +5,7 @@ class Category_model extends CI_Model {
  public function sortcat()
  {
     $sql = 'Select * from games where category like = ?';
-    $this->db->query($sql, $cat);
+    $this->db->query($sql, $this->);
     return $this->db->get()->result_array();
  }
 
