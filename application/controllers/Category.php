@@ -12,8 +12,9 @@ class Category extends CI_Controller {
   {
     $search = $this->input->post('cat');
     $cat =  '%'.$search.'%';
-    $data['cat'] = $this->Category_model->sortcat($cat) ;
-    print_r($this->Category_model(sortcat($cat)));
+    $data['cats'] = $this->Category_model->sortcat($cat) ;
+    $data['page'] = 'category';
+    $this->load->view('templates/page', $data);
   }
 
 }
