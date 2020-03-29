@@ -11,7 +11,7 @@ class Category_model extends CI_Model {
          return $this->db->get()->result_array();
      }
     else{
-         $sql = 'Select * from games where category like ?';
+         $sql = 'Select * FROM games WHERE category LIKE ?';
          $this->db->query($sql, $cat);
          return $this->db->get()->result_array();
     }
