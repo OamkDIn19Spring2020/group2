@@ -23,9 +23,14 @@ class Hot extends CI_Controller {
       'country'=>$this->input->post('country'),
     );
     $test=$this->Aboot_model->adduser($insert_data);
-    $data['user'] = $this->Aboot_model->getusers();
-    $data['page'] = 'users';
-    $this->load->view('templates/page', $data);
+    redirect('hot/users');
+    }
+    public function view()
+    {
+        $data['user'] = $this->Aboot_model->getusers();
+        $data['page'] = 'users';
+        $this->load->view('templates/page', $data);
+
     }
 
 
