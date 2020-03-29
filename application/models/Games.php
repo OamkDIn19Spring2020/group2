@@ -13,7 +13,7 @@ class Games extends CI_Model {
       $this->db->from('games');
       return $this->db->get()->result_array();
   }
-  public function sortcat($id_game = '%')
+  public function searchgame($id_game = '%')
   {
      $this->db->select('*');
      $this->db->from('games');

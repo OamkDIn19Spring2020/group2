@@ -20,7 +20,7 @@ class Games extends CI_Controller {
           $id_game =  '%'.$search.'%';
       }
 
-      $data['games'] = $this->Category_model->sortcat($id_game) ;
+      $data['games'] = $this->games->searchgame($id_game) ;
       $data['page'] = 'games';
       $this->load->view('templates/page', $data);
   }
