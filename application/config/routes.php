@@ -54,7 +54,6 @@ $route['category/(:any)'] = 'category/index/$1';
 $route['category'] = 'category';
 $route['aboot/(:any)'] = 'aboot/view/$1';
 $route['aboot'] = 'aboot';
-$route['(:any)'] = 'home/content/$1';
 $route['default_controller'] = 'home/content';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
