@@ -12,7 +12,7 @@ class Category extends CI_Controller {
   {
     $search = $this->input->post('cat');
     if ($search === NULL){
-        $cat = '%'
+        $cat = '%';
     }
     else {
         $cat =  '%'.$search.'%';
