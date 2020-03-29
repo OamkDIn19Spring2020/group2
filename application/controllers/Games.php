@@ -5,7 +5,7 @@ class Games extends CI_Controller {
   public function __construct()
   {
     parent::__construct();
-    $this->load->model('Games');
+    $this->load->model('Games_model');
   }
 
   function index()
@@ -20,7 +20,7 @@ class Games extends CI_Controller {
           $id_game =  '%'.$search.'%';
       }
 
-      $data['games'] = $this->games->searchgame($id_game) ;
+      $data['games'] = $this->Games_model->searchgame($id_game) ;
       $data['page'] = 'games';
       $this->load->view('templates/page', $data);
   }
