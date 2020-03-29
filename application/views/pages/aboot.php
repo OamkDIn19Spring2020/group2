@@ -1,5 +1,5 @@
 ïnsert a picture of a boot in here => (.)
-  <form action=" <?php echo site_url('Aboot/adduser') ?> " method="post">
+  <form action=" <?php echo site_url('Hot/adduser') ?> " method="post">
     <fieldset class="fieldset">
 
       <legend>User info</legend>
@@ -8,7 +8,7 @@
       <input type="text" id="uname" name="username"><br>
 
       <label for="password">Password:</label><br>
-      <input type="yexy" id="pword" name="password"><br>
+      <input type="text" id="pword" name="password"><br>
 
       <label for="email">E-mail address:</label><br>
       <input type="email" id="email" name="email"><br>

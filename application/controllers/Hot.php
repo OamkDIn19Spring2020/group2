@@ -1,11 +1,12 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Aboot extends CI_Controller {
+class Hot extends CI_Controller {
 
   public function __construct()
   {
     parent::__construct();
     $this->load->model('Aboot_model');
+    $load->load->hepler('url_helper');
   }
 
 
