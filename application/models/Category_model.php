@@ -13,7 +13,7 @@ class Category_model extends CI_Model {
     else{
          $this->db->select('*');
          $this->db->from('games');
-         $this->db->where('category like '.$cat);
+         $this->db->where('category Like "'.$cat.'"');
          return $this->db->get()->result_array();
     }
  }
