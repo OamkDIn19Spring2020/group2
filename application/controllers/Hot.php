@@ -10,7 +10,7 @@ class Hot extends CI_Controller {
 
 
 
-  public function adduser(){
+  public function view(){
     //print_r($this->input->post());
     $plainpass = $this->input->post('password');
     $hash = password_hash($plainpass, PASSWORD_DEFAULT);
@@ -26,13 +26,6 @@ class Hot extends CI_Controller {
     $data['user'] = $this->Aboot_model->getusers();
     $data['page'] = 'users';
     $this->load->view('templates/page', $data);
-    }
-    public function view()
-    {
-        $data['user'] = $this->Aboot_model->getusers();
-        $data['page'] = 'users';
-        $this->load->view('templates/page', $data);
-
     }
 
 
