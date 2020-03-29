@@ -10,7 +10,7 @@ class Hot extends CI_Controller {
 
 
 
-  public function view(){
+  public function adduser(){
     //print_r($this->input->post());
     $plainpass = $this->input->post('password');
     $hash = password_hash($plainpass, PASSWORD_DEFAULT);
