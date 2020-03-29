@@ -52,7 +52,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['profiler'] = "Profiler_controller";
 $route['category/(:any)'] = 'category/index/$1';
 $route['category'] = 'category';
-$route['hot/(:any)'] = 'hot/adduser/$1';
+$route['hot/(:any)'] = 'hot/view/$1';
 $route['hot'] = 'hot';
 $route['(:any)'] = 'home/content/$1';
 $route['default_controller'] = 'home/content';
