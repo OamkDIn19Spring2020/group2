@@ -13,7 +13,7 @@ class Category extends CI_Controller {
     $search = $this->input->post('cat');
     $cat =  '%'.$search.'%';
     $data['cat'] = $this->Category_model->sortcat($cat) ;
-    print_r($this->model->Category_model(sortcat($cat)));
+    print_r($this->Category_model(sortcat($cat)));
   }
 
 }
