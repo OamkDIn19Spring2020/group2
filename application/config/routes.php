@@ -51,7 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $route['profiler'] = "Profiler_controller";
 $route['aboot/(:any)'] = 'aboot/view/$1';
-$rute['aboot'] = 'aboot/view';
+$rute['aboot'] = 'aboot';
 $route['(:any)'] = 'home/content/$1';
 $route['default_controller'] = 'home/content';
 $route['404_override'] = '';
