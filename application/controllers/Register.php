@@ -39,7 +39,8 @@ class Register extends CI_Controller {
     else
     {
       $this->Users_model->adduser();
-      $this->load->view('pages/regsuccess');
+      $data['page'] = 'regsuccess'
+      $this->load->view('templates/pages', $data);
     }
   }
 }
