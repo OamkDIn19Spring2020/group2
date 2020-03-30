@@ -7,12 +7,18 @@ class Games_model extends CI_Model {
       parent::__construct();
   }
 
-  function getgames()
+  function getsales()
   {
       $this->db->select('*');
       $this->db->from('games');
       $this->db->where('sale > 0');
       $this->db->order_by('NOW');
+      return $this->db->get()->result_array();
+  }
+  function getgames()
+  {
+      $this->db->select('*');
+      $this->db->from('games');
       return $this->db->get()->result_array();
   }
   public function searchgame($id_game = '%')
