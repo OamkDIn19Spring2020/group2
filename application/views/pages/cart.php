@@ -4,7 +4,7 @@
     <select class="uname" name="uname">
         <?php
             foreach ($user as $key) {
-                echo '<option value="'.$user'">'.$user'</option>';
+                echo '<option value="'.$key['username'].'">'.$key['username'].'</option>';
             }
         ?>
     </select><br>
@@ -22,7 +22,7 @@
     <select class="game" name="game">
         <?php
         foreach ($games as $row) {
-            echo '<option value="'.$games'">'.$games'</option>';
+            echo '<option value="'.$row['idGame'].'">'.$row['idGame'].'</option>';
         }
          ?>
     </select>
