@@ -7,6 +7,7 @@ class Home extends CI_Controller {
     parent::__construct();
     $this->load->model('Games_model');
     $this->load->model('Aboot_model');
+    $this->load->model('Users_model');
   }
 
   function content($page = 'sales')

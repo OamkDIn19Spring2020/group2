@@ -1,4 +1,4 @@
-<form action=" <?php echo site_url('Category/index') ?> " method="post">
+<form action=" <?php echo site_url('Category_c/index') ?> " method="post">
   <fieldset class="fieldset">
 
     <label for="cat">Search</label><br>

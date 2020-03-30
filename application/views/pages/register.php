@@ -4,7 +4,7 @@
 <div id="regForm" style="border: 1px solid black; width: 50%; margin: auto; content-align: center;">
 
   <?php echo validation_errors(); ?>
-  <?php echo form_open('Register/createuser'); ?>
+  <?php echo form_open('Register_c/createuser'); ?>
 
     <label for="uname">Username:</label>
     <input type="text" id="uname" name="uname"><br>
