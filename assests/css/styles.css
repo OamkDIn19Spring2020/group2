@@ -1,7 +1,6 @@
 html{
     height: 100%;
     width:100%;
-    color: white;
     font-family: monospace;
     font-size: 16pt;
 }
@@ -9,7 +8,8 @@ body{
     height: 100%;
     width: 100%;
     display: block;
-    background-color: rgba(   8,  8,  8,1);
+    color:antiquewhite;
+    background-color: rgba( 36, 45, 51,1);
 }
 #header{
     width: 100%;
@@ -65,22 +65,27 @@ body{
 #contents{
     min-height: 90%;
     max-height: auto;
-    background-color: rrgba( 42, 60, 46,1);
+    background-color: rgba( 23,160, 53,1);
 }
 #footer{
     height: 10%;
     width: 100%;
 }
-a:link, a:visited{
-    text-decoration:inherit;
-    color: inherit;
-    cursor: pointer;
-}
+
 #support_pic
 {
     height: 200px;
     width: 500px;
 }
+
+
+a:link, a:visited{
+    text-decoration:inherit;
+    color: inherit;
+    cursor: pointer;
+}
+
+
 table{
     border-collapse: collapse;
 }
