@@ -24,7 +24,7 @@ class Games_model extends CI_Model {
   {
      $this->db->select('*');
      $this->db->from('games');
-     $this->db->where('concat_ws(idGame, developer, publisher, category) Like "'.$id_game.'"');
+     $this->db->where('idGame, developer, publisher, categor Like "'.$id_s.'"');
      return $this->db->get()->result_array();
   }
 }
