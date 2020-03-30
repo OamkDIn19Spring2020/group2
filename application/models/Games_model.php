@@ -7,6 +7,14 @@ class Games_model extends CI_Model {
       parent::__construct();
   }
 
+  function getsales()
+  {
+      $this->db->select('*');
+      $this->db->from('games');
+      $this->db->where('sale > 0');
+      $this->db->order_by('NOW');
+      return $this->db->get()->result_array();
+  }
   function getgames()
   {
       $this->db->select('*');
@@ -18,6 +26,13 @@ class Games_model extends CI_Model {
      $this->db->select('*');
      $this->db->from('games');
      $this->db->where('idGame Like "'.$id_game.'"');
+     return $this->db->get()->result_array();
+  }
+  public function search($id_s = '%')
+  {
+     $this->db->select('*');
+     $this->db->from('games');
+     $this->db->where('concat_ws(idGame, developer, publisher, category) Like "'.$id_s.'"');
      return $this->db->get()->result_array();
   }
 }

@@ -18,6 +18,7 @@ class Home extends CI_Controller {
           // Whoops, we don't have a page for that!
           echo 'whoops, file doesnt exist';
   }
+    $data['sales'] = $this->Games_model->getsales();
     $data['games'] = $this->Games_model->getgames();
     $data['user'] = $this->Aboot_model->getusers();
     $data['cats'] = $this->Category_model->sortcat();
