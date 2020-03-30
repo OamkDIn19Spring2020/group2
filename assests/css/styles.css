@@ -82,5 +82,8 @@ a:link, a:visited{
     width: 500px;
 }
 table{
-    border: 1;
+    border-collapse: collapse;
+}
+table, th, td{
+    border: 1px solid black;
 }
