@@ -8,10 +8,6 @@ class Aboot_model extends CI_Model {
         //Codeigniter : Write Less Do More
       }
 
-    public function adduser($insert_data){
-        $this->db->insert('user',$insert_data);
-        return $this->db->affected_rows();
-    }
     function getusers()
     {
         $this->db->select('*');

@@ -1,24 +1,27 @@
 
-    <div id="regForm" style="border: 1px solid black; width: 50%; margin: auto">
-      <form action="register" method="post">
-        <fieldset class="fieldset">
+<?php $this->load->helper('form'); ?>
 
-          <legend>User info</legend>
+<div id="regForm" style="border: 1px solid black; width: 50%; margin: auto; content-align: center;">
 
-          <label for="uname">Username:</label><br>
-          <input type="text" id="uname" name="uname"><br>
+  <?php echo validation_errors(); ?>
+  <?php echo form_open('Register/createuser'); ?>
 
-          <label for="password">Password:</label><br>
-          <input type="password" id="pword" name="pword"><br>
+    <label for="uname">Username:</label>
+    <input type="text" id="uname" name="uname"><br>
 
-          <label for="password">Repeat password:</label><br>
-          <input type="password" id="pword" name="pword"><br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password"><br>
 
-          <label for="email">E-mail address:</label><br>
-          <input type="email" id="email" name="email"><br>
+    <label for="email">E-mail address:</label>
+    <input type="text" id="email" name="email"><br>
 
-          <input type="submit" value="submit">
+    <label for="phone">Phone number:</label>
+    <input type="text" id="phone" name="phone"><br>
 
-        </fieldset>
-      </form>
-    </div>
+    <label for="country">Country</label>
+    <input type="text" id="country" name="country"><br>
+
+    <input type="submit" name="submit" value="Register">
+
+  </form>
+</div>
