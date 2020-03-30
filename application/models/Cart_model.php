@@ -10,7 +10,7 @@ class Cart_model extends CI_Model {
           'idGame'=>$this->input->post('game'),
       );
 
-      return $this->db->insert('user', $insert_data);
+      return $this->db->insert('history', $insert_data);
   }
 
   function gethistoryall(){
