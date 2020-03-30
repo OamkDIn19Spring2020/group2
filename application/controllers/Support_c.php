@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Support extends CI_Controller{
+class Support_c extends CI_Controller{
 
   function content($page = 'support')
   {
