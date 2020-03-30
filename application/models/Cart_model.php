@@ -3,8 +3,15 @@
 class Cart_model extends CI_Model {
 
   function purchase(){
-     $this->db->insert('user', $insert_data);
-    return $this->db->affected_rows();
+      $insert_data=array(
+        'username'=>$this->input->post('uname'),
+        'email'=>$this->input->post('email'),
+        'password'=>$hash,
+        'phone'=>$this->input->post('phone'),
+        'country'=>$this->input->post('country'),
+      );
+
+      return $this->db->insert('user', $insert_data);
   }
 
   function gethistoryall(){
