@@ -50,16 +50,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['profiler'] = "Profiler_controller";
-$route['register/(:any)'] = 'register/content/$1';
-$route['register'] = 'register';
-$route['support/(:any)'] = 'support/content/$1';
-$route['support'] = 'support';
-$route['games/(:any)'] = 'games/index/$1';
-$route['games'] = 'games';
-$route['category/(:any)'] = 'category/index/$1';
-$route['category'] = 'category';
-$route['hot/(:any)'] = 'hot/view/$1';
-$route['hot'] = 'hot';
+$route['register_c/(:any)'] = 'register_c/content/$1';
+$route['register_c'] = 'register_c';
+$route['support_c/(:any)'] = 'support_c/content/$1';
+$route['support_c'] = 'support_c';
+$route['games_c/(:any)'] = 'games_c/index/$1';
+$route['games_c'] = 'games_c';
+$route['category_c/(:any)'] = 'category_c/index/$1';
+$route['category_c'] = 'category_c';
+$route['hot_c/(:any)'] = 'hot_c/view/$1';
+$route['hot_c'] = 'hot_c';
 $route['(:any)'] = 'home/content/$1';
 $route['default_controller'] = 'home/content';
 $route['404_override'] = '';
