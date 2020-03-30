@@ -1,8 +1,8 @@
-<form action=" <?php echo site_url('Category_c/index') ?> " method="post">
+<form action=" <?php echo site_url('Games_c/index') ?> " method="post">
   <fieldset class="fieldset">
+    <label for="s_game">Search</label><br>
+    <input type="text" id="s_game" name="s_game">
 
-    <label for="cat">Search</label><br>
-    <input type="text" id="cat" name="cat"><br>
     <input type="submit" value="submit">
 
   </fieldset>
@@ -15,7 +15,7 @@
     </thead>
     <tbody>
         <?php
-        foreach ($cats as $row){
+        foreach ($games as $row){
             echo '<tr>';
             echo '<td>'.$row['idGame'].'</td><td>'.$row['price'].'</td><td>'.$row['developer'].'</td><td>'.$row['publisher'].'</td><td>'.$row['r_date'].'</td><td>'.$row['category'].'</td><td>';
             echo '</tr>';

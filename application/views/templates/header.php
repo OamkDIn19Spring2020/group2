@@ -3,7 +3,7 @@
         <a href="<?php echo site_url('sales'); ?>" class="buttons">Sales</a>
         <a href="<?php echo site_url('category'); ?>" class="buttons">Categories</a>
         <a href="<?php echo site_url('aboot'); ?>" class="buttons">Hot</a>
-        <div class="buttons">Popular</div>
+        <a href="<?php echo site_url('games'); ?>" class="buttons">Games</a>
         <div class="buttons">New releases</div>
     </div>
     <div id='funcs'>

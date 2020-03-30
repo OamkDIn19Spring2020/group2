@@ -1,12 +1,11 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Aboot extends CI_Controller {
+class Hot_c extends CI_Controller {
 
   public function __construct()
   {
     parent::__construct();
     $this->load->model('Aboot_model');
-    $this->load->helper('url_helper');
   }
 
 
@@ -24,13 +23,12 @@ class Aboot extends CI_Controller {
       'country'=>$this->input->post('country'),
     );
     $test=$this->Aboot_model->adduser($insert_data);
-    redirect('aboot/users');
+    redirect('hot/users');
     }
     public function view()
     {
-        $page = 'users';
         $data['user'] = $this->Aboot_model->getusers();
-        $data['page'] = $page;
+        $data['page'] = 'users';
         $this->load->view('templates/page', $data);
 
     }
