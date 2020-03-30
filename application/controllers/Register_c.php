@@ -35,13 +35,13 @@ class Register_c extends CI_Controller {
     if ($this->form_validation->run() == FALSE)
     {
         $data['page'] = 'register';
-        $this->load->view('templates/pages', $data);
+        $this->load->view('templates/page', $data);
     }
     else
     {
       $this->Users_model->adduser();
       $data['page'] = 'regsuccess';
-      $this->load->view('templates/pages', $data);
+      $this->load->view('templates/page', $data);
     }
   }
 }
