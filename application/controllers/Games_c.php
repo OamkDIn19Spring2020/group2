@@ -36,7 +36,7 @@ class Games_c extends CI_Controller {
       $id_s =  '%'.$search.'%';
   }
 
-  $data['results'] = $this->Games_model->search($id_s);
+  $data['games'] = $this->Games_model->search($id_s);
   $data['page'] = 'games';
   $this->load->view('templates/page', $data);
 }
