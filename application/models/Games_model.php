@@ -9,8 +9,10 @@ class Games_model extends CI_Model {
 
   function getgames()
   {
-      $this->db->select('*');
+      $this->db->select('*, 0.01*sale*price as Sale');
       $this->db->from('games');
+      $this->db->where('sale not 0');
+      $this->db->order('NOW');
       return $this->db->get()->result_array();
   }
   public function searchgame($id_game = '%')
