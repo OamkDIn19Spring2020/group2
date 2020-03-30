@@ -1,6 +1,13 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-        
+
 class Register extends CI_Controller {
+
+    public function __construct()
+    {
+            parent::__construct();
+            $this->load->model('Users_model');
+            $this->load->helper('url_helper');
+    }
 
   function content($page = 'register')
   {
@@ -13,12 +20,7 @@ class Register extends CI_Controller {
     $this->load->view('templates/page', $data);
   }
 
-  public function __construct()
-  {
-          parent::__construct();
-          $this->load->model('Users_model');
-          $this->load->helper('url_helper');
-  }
+
 
   public function createuser()
   {
