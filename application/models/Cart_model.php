@@ -4,11 +4,10 @@ class Cart_model extends CI_Model {
 
   function purchase(){
       $insert_data=array(
-        'username'=>$this->input->post('uname'),
-        'email'=>$this->input->post('email'),
-        'password'=>$hash,
-        'phone'=>$this->input->post('phone'),
-        'country'=>$this->input->post('country'),
+          'username'=>$this->input->post('uname'),
+          'price'=>$this->input->post('price'),
+          'method'=>$this->input->post('meth'),
+          'idGame'=>$this->input->post('game'),
       );
 
       return $this->db->insert('user', $insert_data);
