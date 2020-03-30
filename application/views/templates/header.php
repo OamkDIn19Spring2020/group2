@@ -10,6 +10,6 @@
     </div>
     <div id='funcs'>
         <a href="<?php echo site_url('register'); ?>" id="Login">Login</a>
-        <div id="cart">Shopping Cart</div>
+        <a href="<?php echo site_url('cart'); ?>" id="Login">Shopping cart</a>
     </div>
 </div>

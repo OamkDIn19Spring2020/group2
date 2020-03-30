@@ -9,6 +9,7 @@ class Home extends CI_Controller {
     $this->load->model('Aboot_model');
     $this->load->model('Users_model');
     $this->load->model('Category_model');
+    $this->load->model('Cart_model');
   }
 
   function content($page = 'sales')
@@ -22,6 +23,7 @@ class Home extends CI_Controller {
     $data['games'] = $this->Games_model->getgames();
     $data['user'] = $this->Aboot_model->getusers();
     $data['cats'] = $this->Category_model->sortcat();
+    $data['logs'] = $this->Cart_model->gethistoryall();
     $data['page'] = $page;
     $this->load->view('templates/page', $data);
 
