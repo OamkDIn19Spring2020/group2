@@ -28,9 +28,12 @@ class Register_c extends CI_Controller {
 
     $this->load->library('form_validation');
 
-    $this->form_validation->set_rules('uname', 'Username', 'required');
-    $this->form_validation->set_rules('password', 'Password', 'required');
-    $this->form_validation->set_rules('email', 'Email', 'required');
+    $this->form_validation->set_rules('uname', 'Username', 'trim|required|alpha_numeric|min_length[3]|max_length[10]|is_unique[user.username]');
+    $this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[8]|max_length[150]');
+    $this->form_validation->set_rules('passconf', 'Password confirmation', 'trim|required|matches[password]');
+    $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email|is_unique[user.email]');
+    $this->form_validation->set_rules('phone', 'Phone number', 'trim|numeric|is_unique[user.phone]');
+    $this->form_validation->set_rules('country', 'Home country', 'trim|alpha');
 
     if ($this->form_validation->run() == FALSE)
     {
