@@ -1,7 +1,6 @@
 html{
     height: 100%;
     width:100%;
-    font-family: 'Share Tech Mono', monospace;
     font-size: 16pt;
 }
 body{
@@ -10,7 +9,7 @@ body{
     display: block;
     color:antiquewhite;
     background-color: #162F73;
-    font-family: 'Share Tech Mono', monospace;
+    font-family: 'VT323', monospace;
 }
 #header{
     width: 100%;
