@@ -10,7 +10,7 @@ class Support extends CI_Controller{
             // Whoops, we don't have a page for that!
             echo 'whoops, file doesnt exist';
     }
-  }
   $data['page'] = $page;
   $this->load->view('templates/page', $data);
+}
 }
