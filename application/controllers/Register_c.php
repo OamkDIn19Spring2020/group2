@@ -34,7 +34,8 @@ class Register extends CI_Controller {
 
     if ($this->form_validation->run() == FALSE)
     {
-      $data['page'] = 'register';
+        $data['page'] = 'register';
+        $this->load->view('templates/pages', $data);
     }
     else
     {
