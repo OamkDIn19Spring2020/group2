@@ -81,3 +81,6 @@ a:link, a:visited{
     height: 200px;
     width: 500px;
 }
+table{
+    border: 1;
+}
