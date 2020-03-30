@@ -15,7 +15,7 @@
     </thead>
     <tbody>
         <?php
-        foreach ($games as $row){
+        foreach (($games or $results) as $row){
             echo '<tr>';
             echo '<td>'.$row['idGame'].'</td><td>'.$row['price'].'</td><td>'.$row['developer'].'</td><td>'.$row['publisher'].'</td><td>'.$row['r_date'].'</td><td>'.$row['category'].'</td><td>';
             echo '</tr>';
