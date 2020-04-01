@@ -38,13 +38,12 @@ class Games_model extends CI_Model {
   }
 
   public function gethot($period = '7'){
-      $sql =    'select count(history.idGame) as p_count, games.*
-                from history
-                right join games on history.idGame = games.idGame
-                where history.p_date >= CURDATE() - INTERVAL ? DAY
-                group by idGame
-                order by p_count desc, price desc';
-      $this->db->query($sql, $period);
+      $this->db->select('count(history.idGame) as p_count, games.*');
+      $this->db->from('history');
+      $this->db->join('right join games on history.idGame = games.idGame');
+      $this->db->where('history.p_date >= CURDATE() - interval '.$period.' DAY');
+      $this->db->group_by('idGame');
+      $this->db->order_by('p_count desc, price desc');
       return $this->db->get()->result_array();
   }
 }
