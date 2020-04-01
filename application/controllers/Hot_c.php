@@ -6,6 +6,7 @@ class Hot_c extends CI_Controller {
   {
     parent::__construct();
     $this->load->model('Aboot_model');
+    $this->load->model('Games_model');
   }
 
 
@@ -28,6 +29,7 @@ class Hot_c extends CI_Controller {
     public function view()
     {
         $data['user'] = $this->Aboot_model->getusers();
+        $data['hot'] = $this->Games_model->gethot($period);
         $data['page'] = 'users';
         $this->load->view('templates/page', $data);
 

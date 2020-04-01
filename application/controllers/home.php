@@ -24,6 +24,7 @@ class Home extends CI_Controller {
     $data['user'] = $this->Aboot_model->getusers();
     $data['cats'] = $this->Category_model->sortcat();
     $data['logs'] = $this->Cart_model->gethistoryall();
+    $data['hot'] = $this->Games_model->gethot($period);
     $data['page'] = $page;
     $this->load->view('templates/page', $data);
 

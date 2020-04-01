@@ -36,4 +36,15 @@ class Games_model extends CI_Model {
      $this->db->where('concat_ws(idGame, developer, publisher, category) Like "'.$id_s.'"');
      return $this->db->get()->result_array();
   }
+
+  public function gethot($period = '7 DAY'){
+      $sql =    'select count(history.idGame) as p_count, games.*
+                from history
+                right join games on history.idGame = games.idGame
+                where history.p_date >= CURDATE() - INTERVAL ?
+                group by idGame
+                order by p_count desc, price desc';
+      $this->db->query($sql, $period);
+      return $this->db->get()->result_array();
+  }
 }
