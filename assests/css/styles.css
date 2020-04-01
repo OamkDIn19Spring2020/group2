@@ -31,7 +31,7 @@ body{
 .sales{
     grid-column-start:2;
 }
-.buttons:hover{
+.buttons:not(s_games):hover{
     background-color:#3192B5;
 }
 form.buttons{

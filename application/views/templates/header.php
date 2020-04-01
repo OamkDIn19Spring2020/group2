@@ -3,7 +3,7 @@
         <a href="<?php echo site_url('sales'); ?>" class="buttons sales">Sales</a>
         <a href="<?php echo site_url('hot'); ?>" class="buttons hot">Hot</a>
         <a href="<?php echo site_url('games'); ?>" class="buttons games">Games</a>
-        <form action=" <?php echo site_url('Games_c/s_index') ?> " method="post" class="buttons">
+        <form action=" <?php echo site_url('Games_c/s_index') ?> " method="post" class="buttons s_games">
             <input type="text" name="search" id="search">
             <input type="submit" value="Search">
         </form>
