@@ -3,6 +3,9 @@
 
     <label for="interval">Timeframe</label<br>
     <select class="interval" name="interval">
+        <option value="none" selected disabled hidden>
+          This Week 
+      </option>
         <option value="1">Today</option>
         <option value="7">This Week</option>
         <option value="30">This Month</option>
