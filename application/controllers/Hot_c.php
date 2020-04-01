@@ -36,6 +36,7 @@ class Hot_c extends CI_Controller {
 
     public function view()
     {
+        $period = '7'
         $data['user'] = $this->Aboot_model->getusers();
         $data['hot'] = $this->Games_model->gethot($period);
         $data['page'] = 'users';
