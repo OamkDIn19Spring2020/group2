@@ -74,11 +74,16 @@ body{
 
 #support_pic
 {
-    height: 200px; 
+    height: 400px; 
     width: 500px;
 }
 
-.support_text
+#pic_border
 {
-    display: inline-grid;
+    border: 1px solid black;
+    display: inline-block;
+    position: absolute;
+    left: 65%;
+    bottom: 25%;
+    
 }
