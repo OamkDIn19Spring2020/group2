@@ -23,7 +23,7 @@
         <?php
         foreach ($hot as $row){
             echo '<tr>';
-            echo '<td>'.$row['idGame'].'</td><td>'.$row['price'].'</td><td>'.$row['p_count'].'%</td><td>'.$row['developer'].'</td><td>'.$row['publisher'].'</td><td>'.$row['r_date'].'</td><td>'.$row['category'].'</td><td>';
+            echo '<td>'.$row['idGame'].'</td><td>'.$row['price'].'</td><td>'.$row['p_count'].'</td><td>'.$row['developer'].'</td><td>'.$row['publisher'].'</td><td>'.$row['r_date'].'</td><td>'.$row['category'].'</td><td>';
             echo '</tr>';
         }
          ?>
