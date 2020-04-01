@@ -19,11 +19,11 @@
 
     <label for="email">* E-mail address:</label><br>
     <?php echo form_error('email'); ?>
-    <input type="text" id="email" name="email" value="<?php echo set_value('email'); ?>"><br>
+    <input type="email" id="email" name="email" value="<?php echo set_value('email'); ?>"><br>
 
     <label for="phone">Phone number:</label><br>
     <?php echo form_error('phone'); ?>
-    <input type="text" id="phone" name="phone" value="<?php echo set_value('phone'); ?>"><br>
+    <input type="tel" id="phone" name="phone" placeholder="1112223333" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" value="<?php echo set_value('phone'); ?>"><br>
 
     <label for="country">Country</label><br>
     <?php echo form_error('country'); ?>
