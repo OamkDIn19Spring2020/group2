@@ -40,7 +40,7 @@ class Games_model extends CI_Model {
   public function gethot($period = '7'){
       $this->db->select('count(history.idGame) as p_count, games.*');
       $this->db->from('history');
-      $this->db->join('right join games on history.idGame = games.idGame');
+      $this->db->join('games', 'history.idGame = games.idGame', 'right');
       $this->db->where('history.p_date >= CURDATE() - interval '.$period.' DAY');
       $this->db->group_by('idGame');
       $this->db->order_by('p_count desc, price desc');
