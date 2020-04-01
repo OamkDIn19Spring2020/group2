@@ -37,11 +37,11 @@ class Games_model extends CI_Model {
      return $this->db->get()->result_array();
   }
 
-  public function gethot($period = '7 DAY'){
+  public function gethot($period = '7'){
       $sql =    'select count(history.idGame) as p_count, games.*
                 from history
                 right join games on history.idGame = games.idGame
-                where history.p_date >= CURDATE() - INTERVAL ?
+                where history.p_date >= CURDATE() - INTERVAL ? DAY
                 group by idGame
                 order by p_count desc, price desc';
       $this->db->query($sql, $period);

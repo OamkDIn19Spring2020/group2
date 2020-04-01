@@ -24,8 +24,16 @@ class Hot_c extends CI_Controller {
       'country'=>$this->input->post('country'),
     );
     $test=$this->Aboot_model->adduser($insert_data);
-    redirect('hot/users');
+    redirect('Hot_c/users');
     }
+
+    function hotgames(){
+        $period = $this->input->post('interval');
+        $data['hot'] = $this->Games_model->gethot($period);
+        $data['page'] = 'hot';
+        $this->load->view('templates/page', $data);
+    }
+
     public function view()
     {
         $data['user'] = $this->Aboot_model->getusers();

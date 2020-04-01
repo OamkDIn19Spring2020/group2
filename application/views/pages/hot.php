@@ -1,3 +1,18 @@
+<form action=" <?php echo site_url('Hot_c/hotgames') ?> " method="post">
+  <fieldset class="fieldset">
+
+    <label for="interval">Timeframe</label<br>
+    <select class="interval" name="interval">
+        <option value="1">Today</option>
+        <option value="7">This Week</option>
+        <option value="30">This Month</option>
+        <option value="365">This Year</option>
+    </select>
+
+    <input type="submit" value="submit">
+
+ </fieldset>
+</form>
 <table>
     <thead>
         <tr>
