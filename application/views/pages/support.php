@@ -15,7 +15,6 @@ Customer Support Toll-Free number: +91 45 6584 1937
 <option>Problem with installation</option>
 <option>Trojan horse detected :(</option>
 <option>Chunguscoin is not showing value.</option>
-
 </select>
 <div>
 <input type="text" placeholder="Write your message here..." style="height:170px; width:400px;">
