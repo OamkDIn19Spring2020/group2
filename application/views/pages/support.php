@@ -9,17 +9,12 @@ function playSound () {
 You can leave us a message in the field below or call our <br>
 Customer Support Toll-Free number: +91 45 6584 1937
 </div>
-<input type="text">
-<input type="text" style="height:170px; width:400px;">
-<input type="submit">
-<img id="support_pic" src="../assests/imgs/berkeley-communications-WEDDt-u3q3o-unsplash.jpg">
 <p>Please select your issue below:</p>
 <select>
 <option>Invalid Key, You are scam!</option>
 <option>Problem with installation</option>
 <option>Trojan horse detected :(</option>
 <option>Chunguscoin is not showing value.</option>
-
 </select>
 <div>
 <input type="text" placeholder="Write your message here..." style="height:170px; width:400px;">
