@@ -73,10 +73,20 @@ body{
 
 #support_pic
 {
-    height: 200px;
+
+    height: 400px; 
     width: 500px;
 }
 
+#pic_border
+{
+    border: 1px solid black;
+    display: inline-block;
+    position: absolute;
+    left: 65%;
+    bottom: 25%;
+    
+}
 
 a:link, a:visited{
     text-decoration:inherit;
@@ -84,10 +94,10 @@ a:link, a:visited{
     cursor: pointer;
 }
 
-
 table{
     border-collapse: collapse;
 }
 table, th, td{
     border: 1px solid black;
 }
+
