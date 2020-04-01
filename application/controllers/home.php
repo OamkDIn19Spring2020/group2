@@ -9,6 +9,7 @@ class Home extends CI_Controller {
     $this->load->model('Aboot_model');
     $this->load->model('Users_model');
     $this->load->model('Category_model');
+    $this->load->model('Cart_model');
   }
 
   function content($page = 'sales')
@@ -18,10 +19,13 @@ class Home extends CI_Controller {
           // Whoops, we don't have a page for that!
           echo 'whoops, file doesnt exist';
   }
+    $period = '7';
     $data['sales'] = $this->Games_model->getsales();
     $data['games'] = $this->Games_model->getgames();
     $data['user'] = $this->Aboot_model->getusers();
     $data['cats'] = $this->Category_model->sortcat();
+    $data['logs'] = $this->Cart_model->gethistoryall();
+    $data['hot'] = $this->Games_model->gethot($period);
     $data['page'] = $page;
     $this->load->view('templates/page', $data);
 
