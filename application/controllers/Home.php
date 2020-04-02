@@ -31,5 +31,9 @@ class Home extends CI_Controller {
 
   }
 
+  function logout(){
+      session_destroy();
+      redirect('sales');
+  }
 
 }
