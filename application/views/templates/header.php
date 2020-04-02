@@ -7,6 +7,8 @@
             <input type="text" name="search" id="search">
             <input type="submit" value="Search">
         </form>
+        <div id="rightcorn">
+
         <?php
         if (isset($_SESSION['logged_in']) && $_SESSION['logged_in']) {
             echo '<a href='.site_url('account').' id="Login">'.$_SESSION['username'].'</a>';
@@ -19,5 +21,6 @@
         }
         ?>
         <a href="<?php echo site_url('cart'); ?>" id="cart">Shopping cart</a>
+    </div>
     </div>
 </div>

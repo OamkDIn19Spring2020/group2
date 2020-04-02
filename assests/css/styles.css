@@ -23,6 +23,11 @@ body{
     display: grid;
     grid-template-columns: [col1] 20% [col2] 20% [col3] 20% [col4] 20% [col5] 20%;
 }
+#rightcorn{
+    grid-column: 5;
+    grid-row-start: 0;
+    grid-row-end: 2;
+}
 .buttons{
     width: 100%;
     grid-column: auto;
@@ -51,10 +56,6 @@ form.buttons{
     align-content:left;
 }
 #logreg{
-    grid-row-start:0;
-    grid-row-end:1;
-    grid-column-start:2;
-    grid-column-end:2;
     text-align:center;
     width:100%;
     display: grid;
