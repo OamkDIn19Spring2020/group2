@@ -9,7 +9,8 @@
         </form>
     </div>
     <div id='funcs'>
-        <?php if ($_SESSION('logged_in')) {
+        <?php
+        if ($_SESSION['logged_in']) {
             echo '<a href='.site_url('account').' id="Login">'.$_SESSION['username'].'</a>';
         }
         else{
