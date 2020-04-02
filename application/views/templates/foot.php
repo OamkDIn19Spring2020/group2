@@ -1,6 +1,6 @@
 <div id="footer">
     <div id="footext">
-        CHUNGUSGAINZ
+        <h3>CHUNGUSGAINZ.COM.NET.CN.RU</h3>
     </div>
     <div id="footercont">
         <div class = 'buttons'><a href="<?php echo site_url('aboot'); ?>">aboot.php</a></div>
