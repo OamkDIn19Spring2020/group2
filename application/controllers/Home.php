@@ -31,5 +31,10 @@ class Home extends CI_Controller {
 
   }
 
+  function logout(){
+      session_destroy();
+      $data['page'] = 'sales';
+      $this->load->view('templates/page', $data);
+  }
 
 }

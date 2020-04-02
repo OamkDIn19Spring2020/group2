@@ -1,3 +1,5 @@
 <?php echo $_SESSION['username'] ?>
 <br>
-<button type="button" onclick="<?php session_destroy(); redirect('sales');?>">logout</button>
+<form  action="<?php echo site_url('Home/logout');?>" method="post">
+    <input type="submit" value="Log out">
+</form>
