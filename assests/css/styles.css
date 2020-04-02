@@ -73,7 +73,7 @@ form.buttons{
     background-color:#3192B5;
 }
 #contents{
-    min-height: 90%;
+    min-height: 75%;
     max-height: auto;
     background-color: #35927E;
     display:flex;
@@ -85,7 +85,7 @@ form.buttons{
     margin-right: auto;
 }
 #footer{
-    height: 10%;
+    height: auto;
     width: 100%;
 }
 
@@ -123,4 +123,13 @@ table, th, td{
     box-sizing: border-box;
     margin: auto;
     padding: 30px 60px;
+}
+#footext{
+    width: 100%;
+    text-align: center;
+}
+#footercont{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
 }
