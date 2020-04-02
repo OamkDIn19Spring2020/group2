@@ -27,7 +27,7 @@ class Login_c extends CI_Controller {
     {
         $this->load->helper('form');
         $this->load->library('form_validation');
-
+        $this->load->database();
         $this->form_validation->set_rules('uname', 'Username', 'trim|required');
         $this->form_validation->set_rules('password', 'Password', 'trim|required');
 

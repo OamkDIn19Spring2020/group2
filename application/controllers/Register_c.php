@@ -6,6 +6,7 @@ class Register_c extends CI_Controller {
     {
             parent::__construct();
             $this->load->model('Users_model');
+            $this->load->database();
             $this->load->helper('url_helper');
     }
 
@@ -47,9 +48,8 @@ class Register_c extends CI_Controller {
     }
     else
     {
-      $this->Users_model->adduser();
-      $data['page'] = 'regsuccess';
-      $this->load->view('templates/page', $data);
+      $this->Users_model->adduser();      
+      redirect('sales');      
     }
   }
 }
