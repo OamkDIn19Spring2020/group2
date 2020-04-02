@@ -24,6 +24,11 @@ class Register_c extends CI_Controller {
 
   public function createuser()
   {
+    /* 
+    |  This function takes the things from the registration form and checks if they are valid. 
+    |  If not, it redirects back to the form saying what's wrong.
+    |  If they are, it calls the adduser() function from the user model that inserts the data into the database.
+    */
     $this->load->helper('form');
 
     $this->load->library('form_validation');

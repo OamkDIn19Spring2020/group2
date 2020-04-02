@@ -8,7 +8,7 @@
         <?php
         foreach ($user as $row){
             echo '<tr>';
-            echo '<td>'.$row['username'].'</td><td>'.$row['email'].'</td><td>'.$row['password'].'</td><td>'.$row['create_time'].'</td><td>'.$row['phone'].'</td><td>'.$row['country'].'</td><td>';
+            echo '<td>'.$row['username'].'</td><td>'.$row['email'].'</td><td>'.$row['password'].'</td><td>'.$row['create_time'].'</td><td>'.$row['phone'].'</td><td>'.$row['country'].'</td>';
             echo '</tr>';
         }
          ?>
