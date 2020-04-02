@@ -2,13 +2,12 @@
 <?php $this->load->helper('form'); ?>
 
 <div id="regForm">
+  <p>Items marked with an asterisk (*) are required fields.</p>
+    
+  <p>Already have an account? <a href="<?php echo site_url('login'); ?>" id="Login">Click here to log in!</a></p>
 
   <?php echo form_open('Register_c/createuser'); ?>
 
-    <p>Items marked with an asterisk (*) are required fields.</p>
-    <br>
-    <p>Already have an acccount? <a href="<?php echo site_url('login'); ?>" id="Login">Click here to log in!</link>
-    <br>
     <label for="uname">Username:*</label><br>
     <?php echo form_error('uname'); ?>
     <input type="text" id="uname" name="uname" value="<?php echo set_value('username'); ?>"><br>
