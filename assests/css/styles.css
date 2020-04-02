@@ -131,5 +131,10 @@ table, th, td{
 #footercont{
     display: grid;
     grid-template-rows: auto;
-    grid-template-columns: auto;
+    grid-template-columns: [col1] 20% [col2] 20% [col3] 20% [col4] 20% [col5] 20%;
+}
+#footercont .buttons{
+    grid-column:auto;
+    grid-row:auto;
+    width:100%;
 }
