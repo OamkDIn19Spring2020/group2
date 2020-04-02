@@ -118,7 +118,7 @@ table{
 table, th, td{
     border: 1px solid black;
 }
-#regForm{
+#regForm, #loginForm{
     border: 1px solid black;
     box-sizing: border-box;
     margin: auto;
