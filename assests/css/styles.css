@@ -118,3 +118,9 @@ table{
 table, th, td{
     border: 1px solid black;
 }
+#regForm{
+    border: 1px solid black;
+    box-sizing: border-box;
+    margin: auto;
+    padding: 30px 60px;
+}

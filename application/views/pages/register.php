@@ -1,7 +1,7 @@
 
 <?php $this->load->helper('form'); ?>
 
-<div id="regForm" style="border: 1px solid black; width: 50%; box-sizing: border-box; margin: auto; padding: 30px 60px;">
+<div id="regForm">
 
   <?php echo form_open('Register_c/createuser'); ?>
 
