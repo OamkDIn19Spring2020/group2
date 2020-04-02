@@ -49,6 +49,9 @@ form.buttons{
     display: grid;
     grid-template-columns: [col1] 50% [col2] 50%;
 }
+#Login{
+    text-align: center;
+}
 #Login:hover, #register:hover, #cart:hover{
     background-color:#3192B5;
 }
