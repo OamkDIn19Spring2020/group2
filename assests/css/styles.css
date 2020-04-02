@@ -14,8 +14,6 @@ body{
 #header{
     width: 100%;
     height: 100px;
-    display: grid;
-    grid-template-rows:[row1]50% [row2] 25% [row3] 25%;
 }
 #tags{
     height:100%;
