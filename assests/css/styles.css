@@ -73,12 +73,19 @@ form.buttons{
     background-color:#3192B5;
 }
 #contents{
-    min-height: 90%;
+    min-height: 75%;
     max-height: auto;
     background-color: #35927E;
+    display:flex;
+}
+#center{
+    height: auto;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 #footer{
-    height: 10%;
+    height: auto;
     width: 100%;
 }
 
@@ -110,4 +117,24 @@ table{
 }
 table, th, td{
     border: 1px solid black;
+}
+#regForm{
+    border: 1px solid black;
+    box-sizing: border-box;
+    margin: auto;
+    padding: 30px 60px;
+}
+#footext{
+    width: 100%;
+    text-align: center;
+}
+#footercont{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: [col1] 20% [col2] 20% [col3] 20% [col4] 20% [col5] 20%;
+}
+#footercont .buttons{
+    grid-column:auto;
+    grid-row:auto;
+    width:100%;
 }
