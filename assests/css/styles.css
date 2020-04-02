@@ -50,13 +50,15 @@ form.buttons{
     grid-template-columns: [col1] 3fr [col2] 20%;
     align-content:left;
 }
-#Login{
+#logreg{
     grid-row-start:0;
     grid-row-end:1;
     grid-column-start:2;
     grid-column-end:2;
     text-align:center;
     width:100%;
+    display: grid;
+    grid-template-columns: [col1] 50% [col2] 50%;
 }
 #Login:hover{
     background-color:#3192B5;

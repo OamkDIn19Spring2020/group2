@@ -33,9 +33,7 @@ class Home extends CI_Controller {
 
   function logout(){
       session_destroy();
-      $data['page'] = 'sales';
-      $data['sales'] = $this->Games_model->getsales();
-      $this->load->view('templates/page', $data);
+      redirect('sales');
   }
 
 }

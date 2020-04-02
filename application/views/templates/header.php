@@ -14,8 +14,12 @@
             echo '<a href='.site_url('account').' id="Login">'.$_SESSION['username'].'</a>';
         }
         else{
-            echo '<a href='.site_url('register').' id="Login">Login</a>';
+            echo "<div id='logreg'>";
+            echo '<a href='.site_url('login').' id="Login">Login</a>';
+            echo '<a href='.site_url('register').' id="register">register</a>';
+            echo '</div>';
         }
+
 
         ?>
         <a href="<?php echo site_url('cart'); ?>" id="cart">Shopping cart</a>
