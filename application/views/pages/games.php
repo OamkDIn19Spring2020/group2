@@ -1,12 +1,4 @@
-<form action=" <?php echo site_url('Games_c/index') ?> " method="post">
-  <fieldset class="fieldset">
-    <label for="s_game">Search</label><br>
-    <input type="text" id="s_game" name="s_game">
 
-    <input type="submit" value="submit">
-
-  </fieldset>
-</form>
 <table>
     <thead>
         <tr>

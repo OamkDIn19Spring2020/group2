@@ -8,23 +8,6 @@ class Games_c extends CI_Controller {
     $this->load->model('Games_model');
   }
 
-  function index()
-  {
-      $search = $this->input->post('s_game');
-
-      if ($search === NULL){
-          $id_game = '%';
-      }
-
-      else {
-          $id_game =  '%'.$search.'%';
-      }
-
-      $data['games'] = $this->Games_model->searchgame($id_game) ;
-      $data['page'] = 'games';
-      $this->load->view('templates/page', $data);
-  }
-
   function s_index(){
   $search = $this->input->post('search');
 
