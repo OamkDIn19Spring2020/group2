@@ -77,12 +77,12 @@ form.buttons{
     max-height: auto;
     background-color: #35927E;
     display:flex;
-    align-items: center;
 }
 #center{
     height: auto;
     width: auto;
     margin-left: auto;
+    margin-right: auto;
 }
 #footer{
     height: 10%;
