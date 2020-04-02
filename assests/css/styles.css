@@ -76,6 +76,13 @@ form.buttons{
     min-height: 90%;
     max-height: auto;
     background-color: #35927E;
+    display:flex;
+    align-items: center;
+}
+#center{
+    height: auto;
+    width: auto;
+    margin-left: auto;
 }
 #footer{
     height: 10%;
