@@ -60,7 +60,7 @@ form.buttons{
     display: grid;
     grid-template-columns: [col1] 50% [col2] 50%;
 }
-#Login:hover{
+#Login:hover, #register:hover{
     background-color:#3192B5;
 }
 #cart{
