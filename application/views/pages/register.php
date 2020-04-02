@@ -1,23 +1,26 @@
 
 <?php $this->load->helper('form'); ?>
 
-<div id="regForm" style="border: 1px solid black; width: 50%; box-sizing: border-box; margin: auto; padding: 30px 60px;">
+<div id="regForm">
+  <p>Items marked with an asterisk (*) are required fields.</p>
+    
+  <p>Already have an account? <a href="<?php echo site_url('login'); ?>" id="Login">Click here to log in!</a></p>
 
   <?php echo form_open('Register_c/createuser'); ?>
 
-    <label for="uname">* Username:</label><br>
+    <label for="uname">Username:*</label><br>
     <?php echo form_error('uname'); ?>
     <input type="text" id="uname" name="uname" value="<?php echo set_value('username'); ?>"><br>
 
-    <label for="password">* Password:</label><br>
+    <label for="password">Password:*</label><br>
     <?php echo form_error('password'); ?>
     <input type="password" id="password" name="password"><br>
 
-    <label for="password">* Confirm password:</label><br>
+    <label for="password">Confirm password:*</label><br>
     <?php echo form_error('passconf'); ?>
     <input type="password" id="passconf" name="passconf"><br>
 
-    <label for="email">* E-mail address:</label><br>
+    <label for="email">E-mail address:*</label><br>
     <?php echo form_error('email'); ?>
     <input type="email" id="email" name="email" value="<?php echo set_value('email'); ?>"><br>
 
