@@ -9,7 +9,14 @@
         </form>
     </div>
     <div id='funcs'>
-        <a href="<?php echo site_url('register'); ?>" id="Login">Login</a>
+        <?php if ($_SESSION('logged_in')) {
+            echo '<a href='.site_url('account').' id="Login">'.$_SESSION['username'].'</a>';
+        }
+        else{
+            echo '<a href='.site_url('register').' id="Login">Login</a>';
+        }
+
+        ?>
         <a href="<?php echo site_url('cart'); ?>" id="cart">Shopping cart</a>
     </div>
 </div>
