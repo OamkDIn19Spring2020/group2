@@ -29,4 +29,12 @@ class Users_model extends CI_Model {
     
     return $this->db->insert('user', $insert_data);
   }
+
+  public function getpassword($given_username)
+  {
+    $this->db->select('password');
+    $this->db->from('user');
+    $this->db->where('username', $given_username);
+    return $this->db-get()->row('password');
+  }
 }
