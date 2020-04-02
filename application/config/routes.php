@@ -52,6 +52,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['profiler'] = "Profiler_controller";
 $route['cart_c/(:any)'] = 'cart_c/index/$1';
 $route['cart_c'] = 'cart_c';
+$route['login_c/(:any)'] = 'login_c/validatelogin/$1';
+$route['login_c'] = 'login_c';
 $route['register_c/(:any)'] = 'register_c/createuser/$1';
 $route['register_c'] = 'register_c';
 $route['support_c/(:any)'] = 'support_c/content/$1';
