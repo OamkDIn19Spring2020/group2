@@ -98,7 +98,7 @@ form.buttons{
     width: 500px;
 }
 #supptext{
-    display:inline-flex;
+    display:inline-block;
 }
 
 #pic_border
@@ -106,6 +106,10 @@ form.buttons{
     border: 1px solid black;
     display: inline-block;
 
+}
+#suppfunc{
+    width:min-content;
+    margin-right:auto;
 }
 
 a:link, a:visited{
