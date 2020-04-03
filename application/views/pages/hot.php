@@ -25,9 +25,15 @@
     <tbody>
         <?php
         foreach ($hot as $row){
-            echo '<a href='.site_url($row['idGame']).'><tr>';
-            echo '<td>'.$row['idGame'].'</td><td>'.$row['price'].'</td><td>'.$row['p_count'].'</td><td>'.$row['developer'].'</td><td>'.$row['publisher'].'</td><td>'.$row['r_date'].'</td><td>'.$row['category'].'</td>';
-            echo '</tr></a>';
+            echo '<tr>';
+            echo '<td><a href='.site_url($row['idGame']).'>'.$row['idGame'].'</td>
+            <td><a href='.site_url($row['idGame']).'>'.$row['price'].'</a></td>
+            <td><a href='.site_url($row['idGame']).'>'.$row['p_count'].'</a></td>
+            <td><a href='.site_url($row['idGame']).'>'.$row['developer'].'</a></td>
+            <td><a href='.site_url($row['idGame']).'>'.$row['publisher'].'</a></td>
+            <td><a href='.site_url($row['idGame']).'>'.$row['r_date'].'</a></td>
+            <td><a href='.site_url($row['idGame']).'>'.$row['category'].'</a></td>';
+            echo '</tr>';
         }
          ?>
     </tbody>

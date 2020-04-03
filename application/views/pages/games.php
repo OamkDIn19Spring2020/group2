@@ -15,9 +15,14 @@
         }
         else{
             foreach ($games as $row){
-                echo '<tr><a href='.site_url($row['idGame']).'>';
-                echo '<td>'.$row['idGame'].'</td><td>'.$row['price'].'</td><td>'.$row['developer'].'</td><td>'.$row['publisher'].'</td><td>'.$row['r_date'].'</td><td>'.$row['category'].'</td>';
-                echo '</a></tr>';
+                echo '<tr>';
+                echo '<td><a href='.site_url($row['idGame']).'>'.$row['idGame'].'</a></td>
+                <td><a href='.site_url($row['idGame']).'>'.$row['price'].'</a></td>
+                <td><a href='.site_url($row['idGame']).'>'.$row['r_date'].'</a></td>
+                <td><a href='.site_url($row['idGame']).'>'.$row['developer'].'</a></td>
+                <td><a href='.site_url($row['idGame']).'>'.$row['publisher'].'</a></td>
+                <td><a href='.site_url($row['idGame']).'>'.$row['category'].'</a></td>';
+                echo '</tr>';
             }
         }
          ?>
