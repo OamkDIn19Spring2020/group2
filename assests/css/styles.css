@@ -102,9 +102,9 @@ form.buttons{
 {
     border: 1px solid black;
     display: inline-block;
-    position: relative;
-    left: 4%;
-    bottom: 50%;
+    position: absolute;
+    left: 65%;
+    bottom: 25%;
 
 }
 
