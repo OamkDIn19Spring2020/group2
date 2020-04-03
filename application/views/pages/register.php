@@ -3,8 +3,8 @@
 
 <div id="regForm">
   <p>Items marked with an asterisk (*) are required fields.</p>
-    
-  <p>Already have an account? <a href="<?php echo site_url('login'); ?>" id="Login">Click here to log in!</a></p>
+
+  <p>Already have an account? <a href="<?php echo site_url('login'); ?>" id="login">Click here to log in!</a></p>
 
   <?php echo form_open('Register_c/createuser'); ?>
 

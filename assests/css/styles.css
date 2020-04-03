@@ -7,8 +7,8 @@ body{
     height: 100%;
     width: 100%;
     display: block;
-    color:antiquewhite;
-    background-color: #162F73;
+    color:#0ac28e;
+    background-color: #095cb8;
     font-family: 'VT323', monospace;
 }
 #header{
@@ -31,7 +31,8 @@ body{
     grid-column-start:2;
 }
 .buttons:not(.s_games):hover{
-    background-color:#3192B5;
+    background-color:#0a91c2;
+    color:black;
 }
 form.buttons{
     grid-row-start:2;
@@ -49,11 +50,16 @@ form.buttons{
     display: grid;
     grid-template-columns: [col1] 50% [col2] 50%;
 }
+#login:hover{
+        background-color:#095cb8;
+        color:#fbf9f7;
+}
 #Login{
     text-align: center;
 }
 #Login:hover, #register:hover, #cart:hover{
-    background-color:#3192B5;
+    background-color:#0a91c2;
+    color:black;
 }
 #cart{
     grid-row:2;
@@ -67,8 +73,12 @@ form.buttons{
 #contents{
     min-height: 75%;
     max-height: auto;
-    background-color: #35927E;
+    background-color: #00aaaa;
+    color:black;
     display:flex;
+}
+#regForm a, #loginForm a{
+    color: #120eb7;
 }
 #center{
     height: auto;
@@ -105,12 +115,19 @@ a:link, a:visited{
 }
 
 table{
-    border-collapse: separate;
+    border-collapse: collapse;
     text-align: center;
 }
-table, th, td{
-    border: 1px solid black;
+tr, th, td{
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
     padding:2.5px;
+}
+tbody tr:hover{
+    background-color: #0a91c2;
+}
+thead, tr:nth-child(even){
+    background-color: #0ac28e;
 }
 #regForm, #loginForm{
     border: 1px solid black;
