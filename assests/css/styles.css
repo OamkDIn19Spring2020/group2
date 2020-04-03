@@ -102,9 +102,9 @@ form.buttons{
 {
     border: 1px solid black;
     display: inline-block;
-    position: absolute;
-    left: 65%;
-    bottom: 20%;
+    position: relative;
+    left: 4%;
+    bottom: 50%;
 
 }
 
@@ -148,4 +148,9 @@ thead, tr:nth-child(even){
     grid-column:auto;
     grid-row:auto;
     width:100%;
+}
+
+#message_box
+{
+    display: inline-block;
 }
