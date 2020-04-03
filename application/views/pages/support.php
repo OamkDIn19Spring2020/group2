@@ -4,10 +4,13 @@ function playSound () {
 }
 </script>
 <div id="supptext">
+<div>
+
 <h1>Customer Support</h1>
 <p>Having Problems with your purchase? No Problem! <br>
 You can leave us a message in the field below or call our <br>
 Customer Support Toll-Free number: +91 45 6584 1937
+</div>    
 <div id="pic_border">
     <img id="support_pic" src="../assests/imgs/2_ohMC30wCR_gMzmxiUxnDCQ.jpeg">
 </div>

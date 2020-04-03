@@ -98,7 +98,7 @@ form.buttons{
     width: 500px;
 }
 #supptext{
-    display:inline-block;
+    display:inline-flex;
 }
 
 #pic_border
