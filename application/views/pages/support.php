@@ -23,11 +23,11 @@ Customer Support Toll-Free number: +91 45 6584 1937
 
 </select>
 </div>
-</div>
 <div>
 <input type="text" placeholder="Write your message here..." style="height:170px; width:400px;">
 <audio id="play" src="../assests/sounds/Big chungus - original clip.mp3"></audio>
 <input type="submit" onclick="playSound()">
+</div>
 </div>
 <div id="pic_border">
     <img id="support_pic" src="../assests/imgs/2_ohMC30wCR_gMzmxiUxnDCQ.jpeg">
