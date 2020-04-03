@@ -149,3 +149,8 @@ thead, tr:nth-child(even){
     grid-row:auto;
     width:100%;
 }
+
+#message_box
+{
+    display: inline-block;
+}
