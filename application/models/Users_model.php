@@ -37,5 +37,4 @@ class Users_model extends CI_Model {
     $this->db->where('username', $given_username);
     return $this->db->get()->row('password');
   }
-
 }
