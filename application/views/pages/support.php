@@ -5,9 +5,9 @@ function playSound () {
 </script>
 <div id="center">
 
-<div id="supptext">
 <div>
 
+    <div id="supptext">
 <h1>Customer Support</h1>
 <p>Having Problems with your purchase? No Problem! <br>
 You can leave us a message in the field below or call our <br>
