@@ -93,16 +93,19 @@ form.buttons{
 
 #support_pic
 {
-
+    grid-row:1;
     height: 400px;
     width: 500px;
 }
 #supptext{
-    display:inline-block;
+    width:fit-content;
+    display:grid;
+    grid-template-columns:[col1] 2fr [col2] 2fr;
 }
 
 #pic_border
 {
+    width:fit-content;
     border: 1px solid black;
     display: inline-block;
 
