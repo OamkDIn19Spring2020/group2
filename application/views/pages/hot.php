@@ -25,9 +25,9 @@
     <tbody>
         <?php
         foreach ($hot as $row){
-            echo '<tr>';
+            echo '<tr><a href='site_url($row['idGame'])'>';
             echo '<td>'.$row['idGame'].'</td><td>'.$row['price'].'</td><td>'.$row['p_count'].'</td><td>'.$row['developer'].'</td><td>'.$row['publisher'].'</td><td>'.$row['r_date'].'</td><td>'.$row['category'].'</td>';
-            echo '</tr>';
+            echo '</a></tr>';
         }
          ?>
     </tbody>

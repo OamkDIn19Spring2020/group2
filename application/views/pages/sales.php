@@ -12,7 +12,7 @@ echo phpversion();
     <tbody>
         <?php
         foreach ($sales as $row){
-            echo '<tr>';
+            echo '<tr><a href='site_url($row['idGame'])'>';
             echo '<td>'.$row['idGame'].'</td>
                     <td>'.$row['price'].'</td>
                     <td>'.$row['sale'].'%</td>
@@ -21,7 +21,7 @@ echo phpversion();
                     <td>'.$row['publisher'].'</td>
                     <td>'.$row['r_date'].'</td
                     ><td>'.$row['category'].'</td>';
-            echo '</tr>';
+            echo '</a></tr>';
         }
          ?>
     </tbody>
