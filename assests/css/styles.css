@@ -7,8 +7,8 @@ body{
     height: 100%;
     width: 100%;
     display: block;
-    color:antiquewhite;
-    background-color: #162F73;
+    color:black;
+    background-color: #;
     font-family: 'VT323', monospace;
 }
 #header{
@@ -31,7 +31,7 @@ body{
     grid-column-start:2;
 }
 .buttons:not(.s_games):hover{
-    background-color:#3192B5;
+    background-color:#095cb8;
 }
 form.buttons{
     grid-row-start:2;
@@ -53,7 +53,7 @@ form.buttons{
     text-align: center;
 }
 #Login:hover, #register:hover, #cart:hover{
-    background-color:#3192B5;
+    background-color:#095cb8;
 }
 #cart{
     grid-row:2;
@@ -67,8 +67,11 @@ form.buttons{
 #contents{
     min-height: 75%;
     max-height: auto;
-    background-color: #35927E;
+    background-color: #aaaaaa;
     display:flex;
+}
+#regForm a, #loginForm a{
+    color: #120eb7;
 }
 #center{
     height: auto;
