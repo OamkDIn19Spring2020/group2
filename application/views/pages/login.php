@@ -16,5 +16,5 @@
 
   </form>
 
-  <p>Don't have an account? <a href="<?php echo site_url('register'); ?>" id="Login">Make one here!</a></p>  
+  <p>Don't have an account? <a href="<?php echo site_url('register'); ?>" id="login">Make one here!</a></p>  
 </div>

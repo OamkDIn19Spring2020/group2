@@ -49,6 +49,10 @@ form.buttons{
     display: grid;
     grid-template-columns: [col1] 50% [col2] 50%;
 }
+#login:hover{
+        background-color:#095cb8;
+        color:#fbf9f7;
+}
 #Login{
     text-align: center;
 }
