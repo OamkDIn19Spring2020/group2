@@ -97,14 +97,14 @@ form.buttons{
     height: 400px;
     width: 500px;
 }
+#supptext{
+    display:inline-block;
+}
 
 #pic_border
 {
     border: 1px solid black;
     display: inline-block;
-    position: absolute;
-    left: 65%;
-    bottom: 25%;
 
 }
 
