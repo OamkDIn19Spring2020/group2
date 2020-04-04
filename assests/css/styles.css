@@ -93,19 +93,28 @@ form.buttons{
 
 #support_pic
 {
-
+    grid-row:1;
     height: 400px;
     width: 500px;
+}
+#supptext{
+    width:fit-content;
+    display:grid;
+    grid-template-columns:[col1] 2fr [col2] 2fr;
 }
 
 #pic_border
 {
+    height:fit-content;
+    width:fit-content;
     border: 1px solid black;
     display: inline-block;
-    position: absolute;
-    left: 65%;
-    bottom: 25%;
+    margin:auto;
 
+}
+#suppfunc{
+    width:min-content;
+    margin-right:auto;
 }
 
 a:link, a:visited{
@@ -153,4 +162,27 @@ thead, tr:nth-child(even){
 #message_box
 {
     display: inline-block;
+}
+
+.gametable{
+    display: grid;
+    font-size:19pt;
+    text-align:center;
+    width:75%;
+    height:auto;
+    grid-template-columns: [col1] 30% [col2] 30% [col3] 30%;
+}
+.gameintable{
+    grid-column: auto;
+    height: 150px;
+    width: 100%;
+    border: 1px solid black;
+    display: grid;
+    grid-template-rows:[row1] 60% [row2] 40%;
+    grid-template-columns:[col1] 60% [col2] 40%;
+}
+.gameimgTable{
+    grid-row:span 2;
+    height:inherit;
+    width:inherit;
 }
