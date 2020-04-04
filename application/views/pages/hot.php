@@ -28,7 +28,7 @@
     </div>
     <?php
     foreach ($hot as $row) {
-        echo '<div class="tr"><button type="submit"><button name="gname" value='.$row['idGame'].'>
+        echo '<div class="tr">
             <div class="td">'.$row['idGame'].'</div>
             <div class="td">'.$row['price'].'</div>
             <div class="td">'.$row['p_count'].'</div>
@@ -36,7 +36,7 @@
             <div class="td">'.$row['publisher'].'</div>
             <div class="td">'.$row['r_date'].'</div>
             <div class="td">'.$row['category'].'</div>
-            </button></button></div>';
+            </div>';
     }
 
      ?>
