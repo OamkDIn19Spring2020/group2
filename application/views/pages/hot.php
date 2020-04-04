@@ -13,26 +13,29 @@
 
  </fieldset>
 </form>
-<table>
-    <thead>
-        <tr>
-            <th>Game</th><th>price</th><th>Amount purchased</th><th>developer</th><th>publisher</th><th>release date</th><th>categories</th>
-        </tr>
-    </thead>
-    <tbody>
-        <?php
-        foreach ($hot as $row){
-            echo '<tr>';
-            echo '<td><form action="show_c/index" method="post"><input type="submit" value="'.$row['idGame'].'></form></td>
-            <td><form action="show_c/index" method="post"><input type="submit" value="'.$row['idGame'].'></form></td>
-            <td><form action="show_c/index" method="post"><input type="submit" value="'.$row['idGame'].'></form></td>
-            <td><form action="show_c/index" method="post"><input type="submit" value="'.$row['idGame'].'></form></td>
-            <td><form action="show_c/index" method="post"><input type="submit" value="'.$row['idGame'].'></form></td>
-            <td><form action="show_c/index" method="post"><input type="submit" value="'.$row['idGame'].'></form></td>
-            <td><form action="show_c/index" method="post"><input type="submit" value="'.$row['idGame'].'></form></td>';
-            echo '</tr>';
-        }
-         ?>
-    </tbody>
-</table>
-</div>
+<form action="<?php echo site_url('Show_c/index'); ?>" method="post">
+    <input name="inp">
+    <table>
+        <thead>
+            <tr>
+                <th>Game</th><th>price</th><th>Amount purchased</th><th>developer</th><th>publisher</th><th>release date</th><th>categories</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+            foreach ($hot as $row){
+                echo '<tr>';
+                echo '<td contenteditable="true"><input type="hidden" value='.$row['idGame'].' name="gname">'.$row['idGame'].'</td>
+                <td contenteditable="true"><input type="hidden" value='.$row['idGame'].' name="gname">'.$row['price'].'</a></td>
+                <td contenteditable="true"><input type="hidden" value='.$row['idGame'].' name="gname">'.$row['p_count'].'</a></td>
+                <td contenteditable="true"><input type="hidden" value='.$row['idGame'].' name="gname">'.$row['developer'].'</a></td>
+                <td contenteditable="true"><input type="hidden" value='.$row['idGame'].' name="gname">'.$row['publisher'].'</a></td>
+                <td contenteditable="true"><input type="hidden" value='.$row['idGame'].' name="gname">'.$row['r_date'].'</a></td>
+                <td contenteditable="true"><input type="hidden" value='.$row['idGame'].' name="gname">'.$row['category'].'</a></td>';
+                echo '</tr>';
+            }
+            ?>
+        </tbody>
+    </table>
+    <input type="submit" name="submit" value="Submit">
+</form>
