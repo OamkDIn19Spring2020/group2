@@ -21,12 +21,13 @@
 <div class="gametable">
     <?php
     foreach ($hot as $row) {
-        echo '<button form="showgame" value='.$row['idGame'].' class="gameintable">
+        echo '<button form="showgame" value='.$row['idGame'].' class="gameintable>
                 <img class="gameimgTable" src='.base_url().'assests/imgs/2_ohMC30wCR_gMzmxiUxnDCQ.jpeg>
                 <div class="gameNameTable">'.$row['idGame'].'</div>
                 <div class="priceTable">
                     <div class="gamePrice">'.$row['price'].'$£</div>
                     <div class="addbutton"><button form="addcart" value='.$row['idGame'].'/></div>
+                </div>
               </button>';
     }
 
