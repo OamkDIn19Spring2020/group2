@@ -189,3 +189,7 @@ thead, tr:nth-child(even){
     height:inherit;
     width:inherit;
 }
+.gametable a{
+    height:100%;
+    width: 100%;
+}

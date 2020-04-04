@@ -18,11 +18,15 @@
 <div class="gametable">
     <?php
     foreach ($hot as $row) {
-        echo '<a class="gameintable" href='.site_url('Show_c/index/'.$row['idGame']).'>
+        echo '<div class="gametable">
+                <a href='.site_url('Show_c/index/'.$row['idGame']).'>
                 <img class="gameimgTable" src='.base_url().'assests/imgs/2_ohMC30wCR_gMzmxiUxnDCQ.jpeg>
                 <div class="gameNameTable">'.$row['idGame'].'</div>
+                </a>
                 <div class="priceTable">
-                    <div class="gamePrice">'.$row['price'].'$£</div>
+                    <a href='.site_url('Show_c/index/'.$row['idGame']).'>
+                        <div class="gamePrice">'.$row['price'].'$£</div>
+                    </a>
                     <div class="addbutton">
                         <form action="Cart_c/addtocart" method="post">
                             <button value='.$row['idGame'].'/>
