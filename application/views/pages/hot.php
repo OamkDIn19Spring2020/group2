@@ -23,13 +23,13 @@
         <?php
         foreach ($hot as $row){
             echo '<tr>';
-            echo '<td><a href='.site_url($row['idGame']).'>'.$row['idGame'].'</td>
-            <td><a href='.site_url($row['idGame']).'>'.$row['price'].'</a></td>
-            <td><a href='.site_url($row['idGame']).'>'.$row['p_count'].'</a></td>
-            <td><a href='.site_url($row['idGame']).'>'.$row['developer'].'</a></td>
-            <td><a href='.site_url($row['idGame']).'>'.$row['publisher'].'</a></td>
-            <td><a href='.site_url($row['idGame']).'>'.$row['r_date'].'</a></td>
-            <td><a href='.site_url($row['idGame']).'>'.$row['category'].'</a></td>';
+            echo '<td><form action="show_c/index" method="post"><input type="submit" value="'.$row['idGame'].'></form></td>
+            <td><form action="show_c/index" method="post"><input type="submit" value="'.$row['idGame'].'></form></td>
+            <td><form action="show_c/index" method="post"><input type="submit" value="'.$row['idGame'].'></form></td>
+            <td><form action="show_c/index" method="post"><input type="submit" value="'.$row['idGame'].'></form></td>
+            <td><form action="show_c/index" method="post"><input type="submit" value="'.$row['idGame'].'></form></td>
+            <td><form action="show_c/index" method="post"><input type="submit" value="'.$row['idGame'].'></form></td>
+            <td><form action="show_c/index" method="post"><input type="submit" value="'.$row['idGame'].'></form></td>';
             echo '</tr>';
         }
          ?>
