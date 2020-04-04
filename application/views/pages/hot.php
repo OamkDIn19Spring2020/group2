@@ -6,6 +6,22 @@
         <option value="none" selected disabled hidden>
           This Week
       </option>
+        <?php if(isset($inter))
+        echo '<option value='.$inter.'>';
+        if ($inter = '1'){
+            echo 'Today';
+        }
+        elseif ($inter = '7') {
+            echo 'This Week';
+        }
+        elseif ($inter = '30') {
+            echo 'This Month';
+        }
+        elseif ($inter = '365') {
+            echo 'This Year';
+        }
+        echo '</option>';
+        ?>
         <option value="1">Today</option>
         <option value="7">This Week</option>
         <option value="30">This Month</option>
