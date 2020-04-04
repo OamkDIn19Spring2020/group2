@@ -31,6 +31,7 @@ class Hot_c extends CI_Controller {
         $period = $this->input->post('interval');
         $data['hot'] = $this->Games_model->gethot($period);
         $data['page'] = 'hot';
+        $data['inter'] = $period;
         $this->load->view('templates/page', $data);
     }
 
