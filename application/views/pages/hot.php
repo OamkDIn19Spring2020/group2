@@ -13,26 +13,45 @@
 
  </fieldset>
 </form>
-<table>
-    <thead>
-        <tr>
-            <th>Game</th><th>price</th><th>Amount purchased</th><th>developer</th><th>publisher</th><th>release date</th><th>categories</th>
-        </tr>
-    </thead>
-    <tbody>
-        <?php
-        foreach ($hot as $row){
-            echo '<tr>';
-            echo '<td><a href='.site_url($row['idGame']).'>'.$row['idGame'].'</td>
-            <td><a href='.site_url($row['idGame']).'>'.$row['price'].'</a></td>
-            <td><a href='.site_url($row['idGame']).'>'.$row['p_count'].'</a></td>
-            <td><a href='.site_url($row['idGame']).'>'.$row['developer'].'</a></td>
-            <td><a href='.site_url($row['idGame']).'>'.$row['publisher'].'</a></td>
-            <td><a href='.site_url($row['idGame']).'>'.$row['r_date'].'</a></td>
-            <td><a href='.site_url($row['idGame']).'>'.$row['category'].'</a></td>';
-            echo '</tr>';
-        }
-         ?>
-    </tbody>
-</table>
+
+<form action="Show_c/index" method="post">
+
+<div class="gametable">
+    <?php
+    foreach ($hot as $row) {
+        echo '<div class="gameintable">
+            <img class="gameimgTable" src='.base_url().'assests/imgs/2_ohMC30wCR_gMzmxiUxnDCQ.jpeg>
+            <div class="gameNameTable">'.$row['idGame'].'</div>
+            <div class"gamePriceTable">'.$row['price'].'</div></div>';
+    }
+
+     ?>
 </div>
+
+</form>
+
+
+
+<!--    <table>
+        <thead>
+            <tr>
+                <th>Game</th><th>price</th><th>Amount purchased</th><th>developer</th><th>publisher</th><th>release date</th><th>categories</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            foreach ($hot as $row){
+                echo '<tr>';
+                echo '<td><form action='.site_url('Show_c/index').' method="post"><button type="submit" value='.$row['idGame'].' name="gname">'.$row['idGame'].'</button></form></td>
+                <td><form action='.site_url('Show_c/index').' method="post"><button type="submit" value='.$row['idGame'].' name="gname">'.$row['price'].'</button></form></td>
+                <td><form action='.site_url('Show_c/index').' method="post"><button type="submit" value='.$row['idGame'].' name="gname">'.$row['p_count'].'</button></form></td>
+                <td><form action='.site_url('Show_c/index').' method="post"><button type="submit" value='.$row['idGame'].' name="gname">'.$row['developer'].'</button></form></td>
+                <td><form action='.site_url('Show_c/index').' method="post"><button type="submit" value='.$row['idGame'].' name="gname">'.$row['publisher'].'</button></form></td>
+                <td><form action='.site_url('Show_c/index').' method="post"><button type="submit" value='.$row['idGame'].' name="gname">'.$row['r_date'].'</button></form></td>
+                <td><form action='.site_url('Show_c/index').' method="post"><button type="submit" value='.$row['idGame'].' name="gname">'.$row['category'].'</button></form></td>';
+                echo '</tr>';
+            }
+
+        </tbody>
+    </table>
+-->

@@ -163,3 +163,26 @@ thead, tr:nth-child(even){
 {
     display: inline-block;
 }
+
+.gametable{
+    display: grid;
+    font-size:19pt;
+    text-align:center;
+    width:75%;
+    height:auto;
+    grid-template-columns: [col1] 30% [col2] 30% [col3] 30%;
+}
+.gameintable{
+    grid-column: auto;
+    height: 150px;
+    width: 100%;
+    border: 1px solid black;
+    display: grid;
+    grid-template-rows:[row1] 60% [row2] 40%;
+    grid-template-columns:[col1] 60% [col2] 40%;
+}
+.gameimgTable{
+    grid-row:span 2;
+    height:inherit;
+    width:inherit;
+}
