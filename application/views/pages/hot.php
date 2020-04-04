@@ -23,13 +23,13 @@
             <?php
             foreach ($hot as $row){
                 echo '<tr>';
-                echo '<td><form action='.echo site_url('Show_c/index').' method="post"><button type="submit" value='.$row['idGame'].' name="gname">'.$row['idGame'].'</button></form></td>
-                <td><form action='.echo site_url('Show_c/index').' method="post"><button type="submit" value='.$row['idGame'].' name="gname">'.$row['price'].'</button></form></td>
-                <td><form action='.echo site_url('Show_c/index').' method="post"><button type="submit" value='.$row['idGame'].' name="gname">'.$row['p_count'].'</button></form></td>
-                <td><form action='.echo site_url('Show_c/index').' method="post"><button type="submit" value='.$row['idGame'].' name="gname">'.$row['developer'].'</button></form></td>
-                <td><form action='.echo site_url('Show_c/index').' method="post"><button type="submit" value='.$row['idGame'].' name="gname">'.$row['publisher'].'</button></form></td>
-                <td><form action='.echo site_url('Show_c/index').' method="post"><button type="submit" value='.$row['idGame'].' name="gname">'.$row['r_date'].'</button></form></td>
-                <td><form action='.echo site_url('Show_c/index').' method="post"><button type="submit" value='.$row['idGame'].' name="gname">'.$row['category'].'</button></form></td>';
+                echo '<td><form action='.site_url('Show_c/index').' method="post"><button type="submit" value='.$row['idGame'].' name="gname">'.$row['idGame'].'</button></form></td>
+                <td><form action='.site_url('Show_c/index').' method="post"><button type="submit" value='.$row['idGame'].' name="gname">'.$row['price'].'</button></form></td>
+                <td><form action='.site_url('Show_c/index').' method="post"><button type="submit" value='.$row['idGame'].' name="gname">'.$row['p_count'].'</button></form></td>
+                <td><form action='.site_url('Show_c/index').' method="post"><button type="submit" value='.$row['idGame'].' name="gname">'.$row['developer'].'</button></form></td>
+                <td><form action='.site_url('Show_c/index').' method="post"><button type="submit" value='.$row['idGame'].' name="gname">'.$row['publisher'].'</button></form></td>
+                <td><form action='.site_url('Show_c/index').' method="post"><button type="submit" value='.$row['idGame'].' name="gname">'.$row['r_date'].'</button></form></td>
+                <td><form action='.site_url('Show_c/index').' method="post"><button type="submit" value='.$row['idGame'].' name="gname">'.$row['category'].'</button></form></td>';
                 echo '</tr>';
             }
             ?>
