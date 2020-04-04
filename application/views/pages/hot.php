@@ -26,12 +26,12 @@
             foreach ($hot as $row){
                 echo '<tr>';
                 echo '<td contenteditable="true"><input type="hidden" value='.$row['idGame'].' name="gname">'.$row['idGame'].'</td>
-                <td contenteditable="true"><input type="hidden" value='.$row['idGame'].' name="gname">'.$row['price'].'</a></td>
-                <td contenteditable="true"><input type="hidden" value='.$row['idGame'].' name="gname">'.$row['p_count'].'</a></td>
-                <td contenteditable="true"><input type="hidden" value='.$row['idGame'].' name="gname">'.$row['developer'].'</a></td>
-                <td contenteditable="true"><input type="hidden" value='.$row['idGame'].' name="gname">'.$row['publisher'].'</a></td>
-                <td contenteditable="true"><input type="hidden" value='.$row['idGame'].' name="gname">'.$row['r_date'].'</a></td>
-                <td contenteditable="true"><input type="hidden" value='.$row['idGame'].' name="gname">'.$row['category'].'</a></td>';
+                <td contenteditable="true"><input type="hidden" value='.$row['idGame'].' name="gname">'.$row['price'].'</td>
+                <td contenteditable="true"><input type="hidden" value='.$row['idGame'].' name="gname">'.$row['p_count'].'</td>
+                <td contenteditable="true"><input type="hidden" value='.$row['idGame'].' name="gname">'.$row['developer'].'</td>
+                <td contenteditable="true"><input type="hidden" value='.$row['idGame'].' name="gname">'.$row['publisher'].'</td>
+                <td contenteditable="true"><input type="hidden" value='.$row['idGame'].' name="gname">'.$row['r_date'].'</td>
+                <td contenteditable="true"><input type="hidden" value='.$row['idGame'].' name="gname">'.$row['category'].'</td>';
                 echo '</tr>';
             }
             ?>
