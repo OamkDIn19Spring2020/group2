@@ -18,7 +18,7 @@
 <div class="gametable">
     <?php
     foreach ($hot as $row) {
-        echo '<div class="gametable">
+        echo '<div class="gameintable">
                 <a href='.site_url('Show_c/index/'.$row['idGame']).'>
                 <img class="gameimgTable" src='.base_url().'assests/imgs/2_ohMC30wCR_gMzmxiUxnDCQ.jpeg>
                 <div class="gameNameTable">'.$row['idGame'].'</div>
