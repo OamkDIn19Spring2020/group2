@@ -17,7 +17,8 @@ class Home extends CI_Controller {
       if ( ! file_exists(APPPATH.'views/pages/'.$page.'.php'))
   {
           // Whoops, we don't have a page for that!
-          echo 'whoops, file doesnt exist';
+          $data['page'] = show_404();
+          $this->load->view('templates/page', $data);
   }
     $period = '7';
     $data['sales'] = $this->Games_model->getsales();
