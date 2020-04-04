@@ -1,8 +1,10 @@
 <script>
 function playSound () {
     document.getElementById('play').play();
-    let mess = document.getElementById("mess_box");
-    let button = document.getElementById('submit_button');
+    var mess = document.getElementById("mess_box");
+    var button = document.getElementById('submit_button');
+    var list = document.getElementById('suppfunc');
+    list.remove();
     button.remove();
     mess.remove();
     document.getElementById("sent_text").innerHTML = "Your message has been sent.";
