@@ -14,7 +14,6 @@
  </fieldset>
 </form>
 
-<form action="Cart_c/addtocart" method="post" id="addcart">
 
 <div class="gametable">
     <?php
@@ -24,7 +23,11 @@
                 <div class="gameNameTable">'.$row['idGame'].'</div>
                 <div class="priceTable">
                     <div class="gamePrice">'.$row['price'].'$£</div>
-                    <div class="addbutton"><button form="addcart" value='.$row['idGame'].'/></div>
+                    <div class="addbutton">
+                        <form action="Cart_c/addtocart" method="post">
+                            <button value='.$row['idGame'].'/>
+                        </form>
+                    </div>
                 </div>
                 </a>';
     }
