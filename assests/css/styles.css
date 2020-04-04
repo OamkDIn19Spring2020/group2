@@ -192,10 +192,6 @@ thead, tr:nth-child(even){
     width:inherit;
 }
 .gameNametable{
-    display:flex;
-    justify-content:center;
-    align-content:center;
-    line-height: 118.8px;
     grid-row: 1;
     grid-column:2;
 }
@@ -209,10 +205,19 @@ thead, tr:nth-child(even){
     display: grid;
     grid-template-rows: [row1] auto [row2] auto;
 }
+.text{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    vertical-align:middle;
+    height:100%;
+    width:100%;
+}
 form, fieldset{
     width:fit-content;
 }
-.addbutton, .hotform{
+.addbutton, #hotform{
     margin-left: auto;
     margin-right: auto;
 }
