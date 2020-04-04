@@ -1,4 +1,4 @@
-<form action=" <?php echo site_url('Hot_c/hotgames') ?> " method="post">
+<form id="hotform" action=" <?php echo site_url('Hot_c/hotgames') ?> " method="post">
   <fieldset class="fieldset">
 
     <label for="interval">Timeframe</label<br>
@@ -22,7 +22,7 @@
                 <a  class="gameimgTable" href='.site_url('Show_c/index/'.$row['idGame']).'>
                 <img class="gameimgTable" src='.base_url().'assests/imgs/2_ohMC30wCR_gMzmxiUxnDCQ.jpeg>
                 </a>
-                <a class="gameNameTable" href='.site_url('Show_c/index/'.$row['idGame']).'>'.$row['idGame'].'</a>
+                <a class="gameNameTable" href='.site_url('Show_c/index/'.$row['idGame']).'><div class="text">'.$row['idGame'].'</div></a>
                 <div class="priceTable">
                     <a href='.site_url('Show_c/index/'.$row['idGame']).'>
                         <div class="gamePrice">'.$row['price'].'$£</div>

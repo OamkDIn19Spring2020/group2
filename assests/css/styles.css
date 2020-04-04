@@ -177,20 +177,25 @@ thead, tr:nth-child(even){
 }
 .gameintable{
     grid-column: auto;
-    height: 150px;
+    height: 200px;
     width: 100%;
     border: 1px solid black;
     display: grid;
+    vertical-align:middle;
     grid-template-rows:[row1] 60% [row2] 40%;
     grid-template-columns:[col1] 60% [col2] 40%;
 }
 .gameimgTable{
-    grid-row: 1 / 2;
+    grid-row: 1 / span 2;
     grid-column: 1;
     height:inherit;
     width:inherit;
 }
 .gameNametable{
+    display:flex;
+    justify-content:center;
+    align-content:center;
+    line-height: 118.8px;
     grid-row: 1;
     grid-column:2;
 }
@@ -203,4 +208,11 @@ thead, tr:nth-child(even){
     grid-column:2;
     display: grid;
     grid-template-rows: [row1] auto [row2] auto;
+}
+form, fieldset{
+    width:fit-content;
+}
+.addbutton, .hotform{
+    margin-left: auto;
+    margin-right: auto;
 }
