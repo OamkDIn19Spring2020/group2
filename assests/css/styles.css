@@ -193,3 +193,7 @@ thead, tr:nth-child(even){
     height:100%;
     width: 100%;
 }
+.priceTable{
+    display: grid;
+    grid-template-rows: [row1] auto [row2] auto;
+}

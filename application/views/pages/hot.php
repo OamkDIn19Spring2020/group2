@@ -29,7 +29,7 @@
                     </a>
                     <div class="addbutton">
                         <form action="Cart_c/addtocart" method="post">
-                            <button value='.$row['idGame'].'/>
+                            <button value='.$row['idGame'].' name="submit" type="submit">add to cart</button>
                         </form>
                     </div>
                 </div>
