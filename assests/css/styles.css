@@ -164,12 +164,23 @@ thead, tr:nth-child(even){
     display: inline-block;
 }
 
-.table{
-    display: table;
+.gametable{
+    display: grid;
+    text-align: center;
+    grid-template-columns: [col1] 1fr [col2] 1fr [col3] 1fr [col4] 1fr;
 }
-.tr{
-    display: table-row;
+.gameintable{
+    grid-column: auto;
+    height: 1fr;
+    width: 100%;
+    border: 1px solid black;
+    display: grid;
+    grid-template-rows: [row1]75% [row2]25%;
+    grid-template-columns: [col1] 50% [col2] 50%;
 }
-.td{
-    display: table-cell;
+.gameimgTable{
+    grid-row-start: 0;
+    grid-row-end:1;
+    grid-column-start: 0;
+    grid-column-end: 2;
 }

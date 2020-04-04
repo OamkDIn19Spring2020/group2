@@ -16,27 +16,13 @@
 
 <form action="Show_c/index" method="post">
 
-<div class="table">
-    <div class="tr">
-        <div class="td">Game</div>
-        <div class="td">price</div>
-        <div class="td">Amount Purchased</div>
-        <div class="td">developer</div>
-        <div class="td">publisher</div>
-        <div class="td">release date</div>
-        <div class="td">categories</div>
-    </div>
+<div class="gametable">
     <?php
     foreach ($hot as $row) {
-        echo '<div class="tr">
-            <div class="td">'.$row['idGame'].'</div>
-            <div class="td">'.$row['price'].'</div>
-            <div class="td">'.$row['p_count'].'</div>
-            <div class="td">'.$row['developer'].'</div>
-            <div class="td">'.$row['publisher'].'</div>
-            <div class="td">'.$row['r_date'].'</div>
-            <div class="td">'.$row['category'].'</div>
-            </div>';
+        echo '<div class="gameintable">
+            <div class="gameimgTable"><img src='.base_url().'assests/imgs/2_ohMC30wCR_gMzmxiUxnDCQ.jpeg></div>
+            <div class="gameNameTable">'.$row['idGame'].'</div>
+            <div class"gamePriceTable">'.$row['price'].'</div></div>';
     }
 
      ?>
