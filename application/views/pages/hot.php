@@ -3,11 +3,8 @@
 
     <label for="interval">Timeframe</label<br>
     <select class="interval" name="interval">
-        <option value="none" selected disabled hidden>
-          This Week
-      </option>
         <?php if(isset($inter))
-        echo '<option value='.$inter.'>';
+        echo '<option value='.$inter.' selected disabled hidden>';
         if ($inter = '1'){
             echo 'Today';
         }
