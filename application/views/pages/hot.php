@@ -17,7 +17,7 @@
             elseif ($inter = '365') {
                 $string  = 'This Year';
             }
-            echo '<option value="'.$inter.'">'.$string.'</option>'
+            echo '<option value="'.$inter.'">'.$string.'</option>';
         }
 
         ?>
