@@ -5,10 +5,10 @@
     <select name="greatless" onchange="this.form.submit()">
         <?php
         if(isset($befaft)){
-            if($inter === '>='){
+            if($befaft === '>='){
                 $string = 'After';
             }
-            elseif ($inter === '<=') {
+            elseif ($befaft === '<=') {
                 $string  = 'Before';
             }
             echo '<option hidden selected value="'.$inter.'">'.$string.'</option>';
