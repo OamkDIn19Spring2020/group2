@@ -7,12 +7,9 @@ class Show_c extends CI_Controller {
     parent::__construct();
   }
 
-  function index()
+  function index($gname = null)
   {
-      $parts = parse_url(site_url());
-      $pathparts = explode('/', $parts['path']);
-      print_r($pathparts);
-      $gname = parse_url('193.167.100.74/~t8hula00/group2/index.php/Show_c/index/$1');
+      $data['gname'] = $gname;
       $data['page']  = 'aboot';
       $this->load->view('templates/page', $data);
 
