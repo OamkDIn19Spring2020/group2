@@ -2,7 +2,7 @@
   <fieldset class="fieldset">
 
     <label for="interval">Timeframe</label<br>
-    <select class="interval" name="interval">
+    <select class="interval" name="interval" onchange="this.form.submit()">
         <?php
         if(isset($inter)){
             if($inter === '1'){
@@ -27,7 +27,7 @@
         <option value="365">This Year</option>
     </select>
 
-    <input type="submit" value="submit">
+    <noscript><input style="display:none;"type="submit" value="submit"></noscript>
 
  </fieldset>
 </form>
