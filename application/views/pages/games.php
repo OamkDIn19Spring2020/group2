@@ -1,4 +1,4 @@
-<form id="hotform" action=" <?php echo site_url('Games_c/index') ?> " method="post">
+<form id="hotform" action=" <?php echo site_url('Games_c/s_index') ?> " method="post">
   <fieldset class="fieldset">
 
     <label for="greatless">Released</label<br>
