@@ -15,7 +15,7 @@
                         <a class="gameNameTable" href='.site_url('Show_c/index/'.$row['idGame']).'><div class="text">'.$row['idGame'].'</div></a>
                         <div class="priceTable">
                             <a href='.site_url('Show_c/index/'.$row['idGame']).'>
-                                <div class="gamePrice">'.$row['price'].'$£</div>
+                                <div class="gamePrice">'.$row['price'].'¤</div>
                             </a>
                             <div class="addbutton">
                                 <form action="Cart_c/addtocart" method="post">
