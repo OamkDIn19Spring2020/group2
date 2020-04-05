@@ -6,7 +6,7 @@
         <?php
         if(isset($inter)){
             if($inter === '1'){
-                $string === 'Today';
+                $string = 'Today';
             }
             elseif ($inter === '7') {
                 $string  = 'This Week';
@@ -17,7 +17,7 @@
             elseif ($inter === '365') {
                 $string  = 'This Year';
             }
-            echo '<option value="'.$inter.'">'.$string.'</option>';
+            echo '<option disabled selected value="'.$inter.'">'.$string.'</option>';
         }
 
         ?>
