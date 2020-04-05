@@ -82,7 +82,7 @@ form.buttons{
 }
 #center{
     height: auto;
-    width: auto;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -171,8 +171,8 @@ thead, tr:nth-child(even){
     font-size:19pt;
     text-align:center;
     width:75%;
+    grid-template-columns:33% 33% 33%;
     height:auto;
-    grid-template-columns: [col1] 30% [col2] 30% [col3] 30%;
     grid-gap:25px;
 }
 .gameintable{
