@@ -100,6 +100,7 @@ form.buttons{
 #supptext{
     width:fit-content;
     display:grid;
+    margin:auto;
     grid-template-columns:[col1] 2fr [col2] 2fr;
 }
 
