@@ -5,16 +5,16 @@
     <select class="interval" name="interval">
         <?php
         if(isset($inter)){
-            if($inter = '1'){
-                $string = 'Today';
+            if($inter === '1'){
+                $string === 'Today';
             }
-            elseif ($inter = '7') {
+            elseif ($inter === '7') {
                 $string  = 'This Week';
             }
-            elseif ($inter = '30') {
+            elseif ($inter === '30') {
                 $string  = 'This Month';
             }
-            elseif ($inter = '365') {
+            elseif ($inter === '365') {
                 $string  = 'This Year';
             }
             echo '<option value="'.$inter.'">'.$string.'</option>';
