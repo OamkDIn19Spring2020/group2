@@ -17,7 +17,7 @@
             elseif ($inter === '365') {
                 $string  = 'This Year';
             }
-            echo '<option disabled selected value="'.$inter.'">'.$string.'</option>';
+            echo '<option hidden selected value="'.$inter.'">'.$string.'</option>';
         }
 
         ?>
