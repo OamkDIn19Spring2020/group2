@@ -5,10 +5,10 @@
     <select name="greatless" onchange="this.form.submit()">
         <?php
         if(isset($befaft)){
-            if($inter === '>='){
+            if($inter === '>'){
                 $string = 'After';
             }
-            elseif ($inter === '<=') {
+            elseif ($inter === '<') {
                 $string  = 'Before';
             }
             echo '<option hidden selected value="'.$inter.'">'.$string.'</option>';
@@ -19,7 +19,7 @@
         <option value="<=">Before</option>
     </select>
     <label for="release">Date</label>
-    <input type="date" name="search_date" onchange="this.form.submit()" value="<?php if(isset($datum)){echo $datum;} ?>">
+    <input type="date" name="search_date" onchange="this.form.submit()" value="<?php if(isset($datum)){echo $datum;} else{ echo '1970-01-01';} ?>">
 
     <label for="sortby">Sort By</label>
     <select name="sortby" onchange="this.form.submit()">

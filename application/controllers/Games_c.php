@@ -23,7 +23,7 @@ class Games_c extends CI_Controller {
   $data['befaft'] = $releaseorder;
 
   if($releaseorder === NULL){
-      $datesort = '>=';
+      $datesort = '>';
   }
   else {
       $datesort = $releaseorder;
