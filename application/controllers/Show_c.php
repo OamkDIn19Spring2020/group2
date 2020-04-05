@@ -7,9 +7,9 @@ class Show_c extends CI_Controller {
     parent::__construct();
   }
 
-  function index()
+  function index($gname = null)
   {
-      $gname = $this->input->post('gname');
+      $data['gname'] = $gname;
       $data['page']  = 'aboot';
       $this->load->view('templates/page', $data);
 
