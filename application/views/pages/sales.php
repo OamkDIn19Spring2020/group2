@@ -8,7 +8,7 @@
                 <a class="gameNameTable" href='.site_url('Show_c/index/'.$row['idGame']).'><div class="text">'.$row['idGame'].'</div></a>
                 <div class="priceTable">
                     <a href='.site_url('Show_c/index/'.$row['idGame']).'>
-                        <div class="gamePrice"><s>'.$row['price'].'</s> -'.$row['sale'].'% =>'.$row['NOW'].'¤</div>
+                        <div class="gamePrice"><s>'.$row['price'].'</s>-'.$row['sale'].'% =>'.$row['NOW'].'¤</div>
                     </a>
                     <div class="addbutton">
                         <form action="Cart_c/addtocart" method="post">
