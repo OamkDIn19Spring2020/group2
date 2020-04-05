@@ -165,24 +165,59 @@ thead, tr:nth-child(even){
 }
 
 .gametable{
+    margin-left:auto;
+    margin-right:auto;
     display: grid;
     font-size:19pt;
     text-align:center;
     width:75%;
     height:auto;
     grid-template-columns: [col1] 30% [col2] 30% [col3] 30%;
+    grid-gap:25px;
 }
 .gameintable{
     grid-column: auto;
-    height: 150px;
+    height: 200px;
     width: 100%;
     border: 1px solid black;
     display: grid;
+    vertical-align:middle;
     grid-template-rows:[row1] 60% [row2] 40%;
     grid-template-columns:[col1] 60% [col2] 40%;
 }
 .gameimgTable{
-    grid-row:span 2;
+    grid-row: 1 / span 2;
+    grid-column: 1;
     height:inherit;
     width:inherit;
+}
+.gameNametable{
+    grid-row: 1;
+    grid-column:2;
+}
+.gameintable a{
+    height:100%;
+    width: 100%;
+}
+.priceTable{
+    grid-row:2;
+    grid-column:2;
+    display: grid;
+    grid-template-rows: [row1] auto [row2] auto;
+}
+.text{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    vertical-align:middle;
+    height:100%;
+    width:100%;
+}
+form, fieldset{
+    width:fit-content;
+}
+.addbutton, #hotform{
+    margin-left: auto;
+    margin-right: auto;
 }

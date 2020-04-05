@@ -1,4 +1,4 @@
-<form action=" <?php echo site_url('Hot_c/hotgames') ?> " method="post">
+<form id="hotform" action=" <?php echo site_url('Hot_c/hotgames') ?> " method="post">
   <fieldset class="fieldset">
 
     <label for="interval">Timeframe</label<br>
@@ -14,21 +14,31 @@
  </fieldset>
 </form>
 
-<form action="Show_c/index" method="post">
 
 <div class="gametable">
     <?php
     foreach ($hot as $row) {
         echo '<div class="gameintable">
-            <img class="gameimgTable" src='.base_url().'assests/imgs/2_ohMC30wCR_gMzmxiUxnDCQ.jpeg>
-            <div class="gameNameTable">'.$row['idGame'].'</div>
-            <div class"gamePriceTable">'.$row['price'].'</div></div>';
+                <a class="gameimgTable" href='.site_url('Show_c/index/'.$row['idGame']).'>
+                <img class="gameimgTable" src='.base_url().'assests/imgs/2_ohMC30wCR_gMzmxiUxnDCQ.jpeg>
+                </a>
+                <a class="gameNameTable" href='.site_url('Show_c/index/'.$row['idGame']).'><div class="text">'.$row['idGame'].'</div></a>
+                <div class="priceTable">
+                    <a href='.site_url('Show_c/index/'.$row['idGame']).'>
+                        <div class="gamePrice">'.$row['price'].'$£</div>
+                    </a>
+                    <div class="addbutton">
+                        <form action="Cart_c/addtocart" method="post">
+                            <button value='.$row['idGame'].' name="submit" type="submit">add to cart</button>
+                        </form>
+                    </div>
+                </div>
+                </div>';
     }
 
      ?>
 </div>
 
-</form>
 
 
 
