@@ -143,6 +143,7 @@ thead, tr:nth-child(even){
     border: 1px solid black;
     box-sizing: border-box;
     margin: auto;
+    width:fit-content;
     padding: 30px 60px;
 }
 #footext{
