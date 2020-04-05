@@ -3,6 +3,24 @@
 
     <label for="interval">Timeframe</label<br>
     <select class="interval" name="interval">
+        <?php
+        if(isset($inter)){
+            if($inter = '1'){
+                $string = 'Today';
+            }
+            elseif ($inter = '7') {
+                $string  = 'This Week';
+            }
+            elseif ($inter = '30') {
+                $string  = 'This Month';
+            }
+            elseif ($inter = '365') {
+                $string  = 'This Year';
+            }
+            echo '<option value="'.$inter.'">'.$string.'</option>'
+        }
+
+        ?>
         <option value="1">Today</option>
         <option value="7">This Week</option>
         <option value="30">This Month</option>
