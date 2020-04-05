@@ -20,7 +20,7 @@
     foreach ($hot as $row) {
         echo '<div class="gameintable">
                 <a class="gameimgTable" href='.site_url('Show_c/index/'.$row['idGame']).'>
-                <img class="gameimgTable" src='.base_url().'assests/imgs/2_ohMC30wCR_gMzmxiUxnDCQ.jpeg>
+                <img class="gameimgTable" src='.base_url().'assests/imgs/'.$row['idGame'].'.jpg>
                 </a>
                 <a class="gameNameTable" href='.site_url('Show_c/index/'.$row['idGame']).'><div class="text">'.$row['idGame'].'</div></a>
                 <div class="priceTable">
