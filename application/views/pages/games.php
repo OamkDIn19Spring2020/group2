@@ -11,7 +11,7 @@
             elseif ($befaft === '<=') {
                 $string  = 'Before';
             }
-            echo '<option hidden selected value="'.$inter.'">'.$string.'</option>';
+            echo '<option hidden selected value="'.$befaft.'">'.$string.'</option>';
         }
 
         ?>
