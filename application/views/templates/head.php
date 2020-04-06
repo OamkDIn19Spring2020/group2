@@ -1,5 +1,5 @@
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-16">
     <title></title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
