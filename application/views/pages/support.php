@@ -23,26 +23,31 @@ function playSound () {
                 echo '<script>function playSound () {
                 document.getElementById("play").play();            
                 }</script>';
+            
             }
+            
             else
             {
-            echo '<form id ="form" action="'.site_url("Support_c/testing").'" method="post">
-            <div id="suppfunc">
-                <p>Please select your issue below:</p>
-                <select name="options">
-                    <option>Invalid Key, You are scam!</option>
-                    <option>Problem with installation</option>
-                    <option>Trojan horse detected :(</option>
-                    <option>Chunguscoin is not showing value.</option>
-                    <option>Other...</option>
-                </select>
-            </div>
-            <div id="text_box">
-                <input id="mess_box" type="text" name="message" placeholder="Write your message here..." style="height:170px; width:400px;">
-                <audio id="play" src="../assests/sounds/Big chungus - original clip.mp3"></audio>
-                <input id ="submit_button" type="submit"  onclick="playSound()">
-            </div>
-            </form>';
+            
+                echo '<form id ="form" action="'.site_url("Support_c/testing").'" method="post">
+                <div id="suppfunc">
+                    <p>Please select your issue below:</p>
+                    <select name="options">
+                        <option>Invalid Key, You are scam!</option>
+                        <option>Problem with installation</option>
+                        <option>Trojan horse detected :(</option>
+                        <option>Chunguscoin is not showing value.</option>
+                        <option>Other...</option>
+                    </select>
+                </div>
+                
+                <div id="text_box">
+                    <input id="mess_box" type="text" name="message" placeholder="Write your message here..." style="height:170px; width:400px;">
+                    <audio id="play" src="../assests/sounds/Big chungus - original clip.mp3"></audio>
+                    <input id ="submit_button" type="submit"  onclick="playSound()">
+                </div>
+                </form>';
+                
             }
             ?>
         </div>
