@@ -39,6 +39,25 @@ form, fieldset{
     width:fit-content;
 }
 
+button{
+    background-color: #0a91c2;
+    border:1px dashed;
+    border-radius:15px;
+}
+button:hover{
+    background-color:#09b855;
+    color:white;
+}
+input[type=submit]{
+    background-color: #0ac28e;
+    border:1px dashed;;
+    border-radius:15px;
+}
+input[type=submit]:hover{
+    background-color: #09b855;
+    color:white;
+}
+
 /*---header css---*/
 
 #header{
@@ -134,6 +153,15 @@ form.buttons{
     margin-left: auto;
     margin-right: auto;
 }
+#contents input[type=submit]{
+    background-color: #0a91c2;
+    border:1px dashed;;
+    border-radius:15px;
+}
+#contents input[type=submit]:hover{
+    background-color: #09b855;
+    color:white;
+}
 
 
 /*---games grid layout---*/
@@ -154,17 +182,23 @@ form.buttons{
     height: 200px;
     width: 100%;
     border: 1px solid black;
+    border-radius: 15px;
     display: grid;
     vertical-align:middle;
     grid-template-rows:[row1] 60% [row2] 40%;
     grid-template-columns:[col1] 60% [col2] 40%;
+}
+.gameintable:hover{
+    background-color:#0ac28e;
 }
 .gameimgTable{
     grid-row: 1 / span 2;
     grid-column: 1;
     height:inherit;
     width:inherit;
+    border-radius:15px 0px 0px 15px;
 }
+
 .gameNametable{
     grid-row: 1;
     grid-column:2;
@@ -179,6 +213,7 @@ form.buttons{
     display: grid;
     grid-template-rows: [row1] auto [row2] auto;
 }
+
 .text{
     display:flex;
     align-items:center;
@@ -198,13 +233,19 @@ form.buttons{
 /*---aboot.php---*/
 
 #gamepage{
-
+    width:fit-content;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /*---account.php---*/
 
 /*---cart.php---*/
-
+#cartcont{
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
 /*---category.php---*/
 
 /*---games.php---*/

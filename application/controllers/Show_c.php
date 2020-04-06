@@ -9,7 +9,17 @@ class Show_c extends CI_Controller {
 
   function index($gname = null)
   {
+
+      if(strpos($gname, '%C3%A4')){
+          $data['gname'] = str_replace('%C3%A4', 'ä', $gname);
+      }
+      elseif (strpos($gname, '%C3%B6')) {
+          $data['gname'] = str_replace('%C3%B6', 'ö', $gname);
+      }
+      else{
       $data['gname'] = $gname;
+      }
+
       $data['page']  = 'aboot';
       $this->load->view('templates/page', $data);
 
