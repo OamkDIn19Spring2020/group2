@@ -89,7 +89,7 @@
                         <a class="gameimgTable" href='.site_url('Show_c/index/'.$row['idGame']).'>
                         <img class="gameimgTable" src='.base_url().'assests/imgs/'.$row['idGame'].'.jpg>
                         </a>
-                        <a class="gameNameTable" href='.site_url('Show_c/index/'.$row['idGame']).'><div class="text">'.$row['idGame'].'<br>'.$row['price'].'</div>
+                        <a class="gameNameTable" href='.site_url('Show_c/index/'.$row['idGame']).'><div class="text">'.$row['idGame'].'<br>'.$row['price'].'¤</div>
                             </a>
                             <div class="priceTable">
                             <div class="addbutton">
