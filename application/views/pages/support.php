@@ -19,7 +19,7 @@ function playSound () {
             {
 
                 echo '<p id="sent_text">Your message has been sent.</p>';
-                echo '<audio id="play" src="'.base_url().'/assests/sounds/Big chungus - original clip.mp3"></audio>';
+                echo '<audio id="play" onLoad="playSound()" src="'.base_url().'/assests/sounds/Big chungus - original clip.mp3"></audio>';
                 echo '<script>function playSound () {
                 document.getElementById("play").play();
                 }</script>';
