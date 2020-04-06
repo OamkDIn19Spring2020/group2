@@ -31,13 +31,13 @@ Customer Support Toll-Free number: +91 45 6584 1937
 </div>
 <div id="text_box">
 <input id="mess_box" type="text" placeholder="Write your message here..." style="height:170px; width:400px;">
-<audio id="play" src="../assests/sounds/Big chungus - original clip.mp3"></audio>
+<audio id="play" src="<?php echo base_url();?>/assests/sounds/Big chungus - original clip.mp3"></audio>
 <input id ="submit_button" type="submit"  onclick="playSound()">
 <p id="sent_text"></p>
 </div>
 </div>
 <div id="pic_border">
-    <img id="support_pic" src="../assests/imgs/2_ohMC30wCR_gMzmxiUxnDCQ.jpeg">
+    <img id="support_pic" src="<?php echo base_url();?>/assests/imgs/2_ohMC30wCR_gMzmxiUxnDCQ.jpeg">
 </div>
 </div>
 </div>
