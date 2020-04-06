@@ -153,6 +153,15 @@ form.buttons{
     margin-left: auto;
     margin-right: auto;
 }
+#contents input[type=submit]{
+    background-color: #0ac28e;
+    border:1px dashed;;
+    border-radius:15px;
+}
+#contents input[type=submit]:hover{
+    background-color: #09b855;
+    color:white;
+}
 
 
 /*---games grid layout---*/
