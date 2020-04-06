@@ -24,11 +24,12 @@ class Games_model extends CI_Model {
   }
 
 
-  public function search($id_s = '%')
+  public function search($id_s = '%', $datesort = '>', $start_date = '1970-01-01', $order = 'idGame, price desc')
   {
      $this->db->select('*');
      $this->db->from('games');
-     $this->db->where('concat_ws(idGame, developer, publisher, category) Like "'.$id_s.'"');
+     $this->db->where('concat_ws(idGame, developer, publisher, category) Like "'.$id_s.'" and r_date '.$datesort.' "'.$start_date.'"');
+     $this->db->order_by($order);
      return $this->db->get()->result_array();
   }
 
