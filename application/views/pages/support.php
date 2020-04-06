@@ -30,12 +30,15 @@ Customer Support Toll-Free number: +91 45 6584 1937
 <option>Problem with installation</option>
 <option>Trojan horse detected :(</option>
 <option>Chunguscoin is not showing value.</option>
+<option>Other...</option>
 
 </select>
 </div>
 <div id="text_box">
+<?php $this->load->helper('form'); ?>
 <form id ="form">
-<input id="mess_box" type="text" placeholder="Write your message here..." style="height:170px; width:400px;">
+<?php echo form_error('message')?>
+<input id="mess_box" type="text" name="message" placeholder="Write your message here..." style="height:170px; width:400px;">
 <audio id="play" src="../assests/sounds/Big chungus - original clip.mp3"></audio>
 <input id ="submit_button" type="submit"  onclick="playSound()">
 </form>

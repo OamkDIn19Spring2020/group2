@@ -12,5 +12,9 @@ class Support_c extends CI_Controller{
     }
   $data['page'] = $page;
   $this->load->view('templates/page', $data);
+  
+  $this->load->helper('form');
+  $this->load->library('form_validation');
+  $this->form_validation->set_rules('message', 'Message', 'min_length[1]');
   }
 }
