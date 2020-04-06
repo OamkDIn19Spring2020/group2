@@ -41,7 +41,7 @@ function playSound () {
             </div>
             <div id="text_box">
                 <input id="mess_box" type="text" name="message" placeholder="Write your message here..." style="height:170px; width:400px;">
-                <audio id="play" src="<?php echo base_url();?>/assests/sounds/Big chungus - original clip.mp3"></audio>
+                <audio id="play" src="'.base_url().'/assests/sounds/Big chungus - original clip.mp3"></audio>
                 <input id ="submit_button" type="submit"  onclick="playSound()">
             </div>
             </form>';
