@@ -1,4 +1,4 @@
-<div id="center">
+<div id="cartcont">
 
 <form action=" <?php echo site_url('Cart_c/index') ?> " method="post">
   <fieldset class="fieldset">

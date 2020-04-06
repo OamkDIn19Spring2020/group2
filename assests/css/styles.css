@@ -199,12 +199,18 @@ form.buttons{
 
 #gamepage{
     width:fit-content;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /*---account.php---*/
 
 /*---cart.php---*/
-
+#cartcont{
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
 /*---category.php---*/
 
 /*---games.php---*/
