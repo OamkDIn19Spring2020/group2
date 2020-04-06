@@ -1,12 +1,14 @@
 <script>
 function playSound () {
     document.getElementById('play').play();
-    var mess = document.getElementById("mess_box");
+   /* var mess = document.getElementById("mess_box");
     var button = document.getElementById('submit_button');
     var list = document.getElementById('suppfunc');
     list.remove();
     button.remove();
-    mess.remove();
+    mess.remove();*/
+    var form = document.getElementById('form');
+    form.remove();
     document.getElementById("sent_text").innerHTML = "Your message has been sent.";
 }
 
@@ -32,9 +34,11 @@ Customer Support Toll-Free number: +91 45 6584 1937
 </select>
 </div>
 <div id="text_box">
+<form id ="form">
 <input id="mess_box" type="text" placeholder="Write your message here..." style="height:170px; width:400px;">
 <audio id="play" src="../assests/sounds/Big chungus - original clip.mp3"></audio>
 <input id ="submit_button" type="submit"  onclick="playSound()">
+</form>
 <p id="sent_text"></p>
 </div>
 </div>

@@ -12,5 +12,5 @@ class Support_c extends CI_Controller{
     }
   $data['page'] = $page;
   $this->load->view('templates/page', $data);
-}
+  }
 }
