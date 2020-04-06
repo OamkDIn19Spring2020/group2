@@ -207,7 +207,7 @@ form.buttons{
 
 /*---cart.php---*/
 #cartcont{
-    width: auto;
+    width: fit-content;
     margin-left: auto;
     margin-right: auto;
 }
