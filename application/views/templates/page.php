@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="fi" dir="ltr">
     <?php  $this->load->view('templates/head');?>
     <?php  $this->load->view('templates/body');?>
 </html>
