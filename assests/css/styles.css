@@ -1,3 +1,5 @@
+/* ---tag css---*/
+
 html{
     height: 100%;
     width:100%;
@@ -11,6 +13,53 @@ body{
     background-color: #095cb8;
     font-family: 'VT323', monospace;
 }
+
+table{
+    border-collapse: collapse;
+    text-align: center;
+}
+tr, th, td{
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    padding:2.5px;
+}
+tbody tr:hover{
+    background-color: #0a91c2;
+}
+thead, tr:nth-child(even){
+    background-color: #0ac28e;
+}
+a:link, a:visited{
+    text-decoration:inherit;
+    color: inherit;
+    cursor: pointer;
+}
+
+form, fieldset{
+    width:fit-content;
+}
+
+button{
+    background-color: #0a91c2;
+    border:1px dashed;
+    border-radius:15px;
+}
+button:hover{
+    background-color:#09b855;
+    color:white;
+}
+input[type=submit]{
+    background-color: #0ac28e;
+    border:1px dashed;;
+    border-radius:15px;
+}
+input[type=submit]:hover{
+    background-color: #09b855;
+    color:white;
+}
+
+/*---header css---*/
+
 #header{
     width: 100%;
     height: 100px;
@@ -21,7 +70,6 @@ body{
     grid-template-rows: [row1] 50% [row2] 50%;
     grid-template-columns: [col1] 20% [col2] 20% [col3] 20% [col4] 20% [col5] 20%;
 }
-
 .buttons{
     width: 100%;
     grid-column: auto;
@@ -50,10 +98,7 @@ form.buttons{
     display: grid;
     grid-template-columns: [col1] 50% [col2] 50%;
 }
-#login:hover{
-        background-color:#095cb8;
-        color:#fbf9f7;
-}
+
 #Login{
     text-align: center;
 }
@@ -70,82 +115,8 @@ form.buttons{
     grid-row:2;
 }
 
-#contents{
-    min-height: 75%;
-    max-height: auto;
-    background-color: #00aaaa;
-    color:black;
-    display:flex;
-}
-#regForm a, #loginForm a{
-    color: #120eb7;
-}
-#center{
-    height: auto;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-}
-#footer{
-    height: auto;
-    width: 100%;
-}
+/*--- footer css---*/
 
-#support_pic
-{
-    grid-row:1;
-    height: 400px;
-    width: 500px;
-}
-#supptext{
-    width:fit-content;
-    display:grid;
-    margin:auto;
-    grid-template-columns:[col1] 2fr [col2] 2fr;
-}
-
-#pic_border
-{
-    height:fit-content;
-    width:fit-content;
-    border: 1px solid black;
-    display: inline-block;
-    margin:auto;
-
-}
-#suppfunc{
-    width:min-content;
-    margin-right:auto;
-}
-
-a:link, a:visited{
-    text-decoration:inherit;
-    color: inherit;
-    cursor: pointer;
-}
-
-table{
-    border-collapse: collapse;
-    text-align: center;
-}
-tr, th, td{
-    border-right: 1px solid black;
-    border-bottom: 1px solid black;
-    padding:2.5px;
-}
-tbody tr:hover{
-    background-color: #0a91c2;
-}
-thead, tr:nth-child(even){
-    background-color: #0ac28e;
-}
-#regForm, #loginForm{
-    border: 1px solid black;
-    box-sizing: border-box;
-    margin: auto;
-    width:fit-content;
-    padding: 30px 60px;
-}
 #footext{
     width: 100%;
     text-align: center;
@@ -161,10 +132,39 @@ thead, tr:nth-child(even){
     width:100%;
 }
 
-#message_box
-{
-    display: inline-block;
+#footer{
+    height: auto;
+    width: 100%;
 }
+
+
+/*---content css---*/
+
+#contents{
+    min-height: 75%;
+    max-height: auto;
+    background-color: #00aaaa;
+    color:black;
+    display:flex;
+}
+#center{
+    height: auto;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#contents input[type=submit]{
+    background-color: #0a91c2;
+    border:1px dashed;;
+    border-radius:15px;
+}
+#contents input[type=submit]:hover{
+    background-color: #09b855;
+    color:white;
+}
+
+
+/*---games grid layout---*/
 
 .gametable{
     margin-left:auto;
@@ -182,17 +182,23 @@ thead, tr:nth-child(even){
     height: 200px;
     width: 100%;
     border: 1px solid black;
+    border-radius: 15px;
     display: grid;
     vertical-align:middle;
     grid-template-rows:[row1] 60% [row2] 40%;
     grid-template-columns:[col1] 60% [col2] 40%;
+}
+.gameintable:hover{
+    background-color:#0ac28e;
 }
 .gameimgTable{
     grid-row: 1 / span 2;
     grid-column: 1;
     height:inherit;
     width:inherit;
+    border-radius:15px 0px 0px 15px;
 }
+
 .gameNametable{
     grid-row: 1;
     grid-column:2;
@@ -207,6 +213,7 @@ thead, tr:nth-child(even){
     display: grid;
     grid-template-rows: [row1] auto [row2] auto;
 }
+
 .text{
     display:flex;
     align-items:center;
@@ -216,10 +223,115 @@ thead, tr:nth-child(even){
     height:100%;
     width:100%;
 }
-form, fieldset{
-    width:fit-content;
-}
 .addbutton, #hotform{
     margin-left: auto;
     margin-right: auto;
+}
+
+
+
+/*---aboot.php---*/
+
+#gamepage{
+    width:fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*---account.php---*/
+
+/*---cart.php---*/
+#cartcont{
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*---category.php---*/
+
+/*---games.php---*/
+
+/*---hot.php---*/
+
+/*---login.php---*/
+
+#loginForm{
+    border: 1px solid black;
+    box-sizing: border-box;
+    margin: auto;
+    width:fit-content;
+    padding: 30px 60px;
+}
+
+#loginForm a{
+    color: #120eb7;
+}
+
+#login:hover{
+    background-color:#095cb8;
+    color:#fbf9f7;
+}
+
+/*---register.php---*/
+
+#regForm{
+    border: 1px solid black;
+    box-sizing: border-box;
+    margin: auto;
+    width:fit-content;
+    padding: 30px 60px;
+}
+#regForm a{
+    color: #120eb7;
+}
+
+/*---sales-php---*/
+
+/*---suppost.php---*/
+
+#supptext{
+    width:fit-content;
+    display:grid;
+    margin:auto;
+    grid-template-columns:[col1] 2fr [col2] 2fr;
+}
+#suppfunc{
+    width:min-content;
+    margin-right:auto;
+}
+#text_box{
+
+}
+#mess_box{
+
+}
+#play{
+
+}
+#submit_button{
+
+}
+#sent_text{
+
+}
+#pic_border
+{
+    height:fit-content;
+    width:fit-content;
+    border: 1px solid black;
+    display: inline-block;
+    margin:auto;
+
+}
+#support_pic
+{
+    grid-row:1;
+    height: 400px;
+    width: 500px;
+}
+/*---users.php---*/
+
+/*---find home for these---*/
+#message_box
+{
+    display: inline-block;
 }
