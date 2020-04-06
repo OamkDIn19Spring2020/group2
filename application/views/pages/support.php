@@ -1,4 +1,4 @@
-<script>
+<!--<script>
 function playSound () {
     document.getElementById('play').play();
     let mess = document.getElementById("mess_box");
@@ -8,7 +8,7 @@ function playSound () {
     document.getElementById("sent_text").innerHTML = "Your message has been sent.";
 }
 
-</script>
+</script>!-->
 <div id="center">
 
 <div id="supptext">
