@@ -1,5 +1,5 @@
 <h1>Animal crossinng: new horizons</h1>
-<p>
+<p style="text-align:center">
 Animal Crossing: New Horizons is a 2020 life simulation <br>
 video game developed and published by Nintendo for the <br>
 Nintendo Switch. The fifth main series title in the <br>
@@ -20,3 +20,4 @@ gathering and crafting items, catching insects and fish,  <br>
 and developing the island into a community of  <br>
 anthropomorphic animals. <br>
 </p>
+text shamelessly stolen from wikipedia
