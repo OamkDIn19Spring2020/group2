@@ -16,8 +16,10 @@
 
     <label for="method">method</label<br>
     <select class="meth" name="meth">
-        <option value="skrill">skrill</option>
-        <option value="chunguscoin">chunguscoin</option>
+        <option value="skrill">Skrill</option>
+        <option value="chunguscoin">Chunguscoin</option>
+        <option value="paypal">Paypal</option>
+        <option value="renminbi">Renminbi</option>
     </select>
 
     <label for="game">game</label><br>
