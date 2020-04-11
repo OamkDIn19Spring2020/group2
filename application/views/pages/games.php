@@ -35,7 +35,7 @@
                     $string  = 'Release, oldest first';
                 }
                 elseif ($sortedlist === 'r_date desc') {
-                    $string  = 'Release, newest fisrt';
+                    $string  = 'Release, newest first';
                 }
                 elseif ($sortedlist === 'price') {
                     $string  = 'Price, cheapest first';
@@ -58,7 +58,7 @@
                 echo '<option hidden selected value="'.$sortedlist.'">'.$string.'</option>';
             }
          ?>
-         <option value="r_date desc">Release, newest fisrt</option>
+         <option value="r_date desc">Release, newest first</option>
          <option value="r_date">Release, oldest first</option>
          <option value="price">Price, cheapest first</option>
          <option value="price desc">Price, most expensive first</option>
