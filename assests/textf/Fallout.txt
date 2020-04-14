@@ -1,1 +1,2 @@
-<?php redirect(https://emojipedia.org/pile-of-poo/);?>
+
+<meta http-equiv = "refresh" content = " time ; 0 = https://emojipedia.org/pile-of-poo/"/>
