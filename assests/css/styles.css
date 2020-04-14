@@ -169,6 +169,7 @@ form.buttons{
 .gametable{
     margin-left:auto;
     margin-right:auto;
+    margin-top:30px;
     display: grid;
     font-size:19pt;
     text-align:center;
