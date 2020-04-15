@@ -1,5 +1,0 @@
-<h1>Turdtopia</h1>
-<p style="text-align:center">
-don't <br>
-just don't
-</p>

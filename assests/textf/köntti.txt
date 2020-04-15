@@ -1,4 +1,0 @@
-<h1>köntti</h1>
-<p style="text-align:center">
-the <?php echo rand(0, 10000000); ?> enty in the möntti series
-</p>
