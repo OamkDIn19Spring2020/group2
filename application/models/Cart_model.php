@@ -20,4 +20,10 @@ class Cart_model extends CI_Model {
     return $this->db->get()->result_array();
   }
 
+  function promocode(){
+    $insert_data=array(
+      'codes'=>$this->input->post('promo')
+    );
+  }
+
 }
