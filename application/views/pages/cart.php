@@ -20,7 +20,10 @@
         <option value="chunguscoin">Chunguscoin</option>
         <option value="paypal">Paypal</option>
         <option value="renminbi">Renminbi</option>
-    </select>
+    </select><br>
+    
+    <label for="promo">Promocode</label><br>
+    <input type="promocode" name="promo"><br>
 
     <label for="game">game</label><br>
     <select class="game" name="game">
