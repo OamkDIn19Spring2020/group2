@@ -4,7 +4,7 @@
 <?php
 echo $gname;
 $file = fopen(base_url('assests/textf/'.$gname.'.php'), 'r') or die('file not found');
-echo fread($file, filesize('assests/textf/'.$gname.'.txt'));
+echo fread($file, filesize('assests/textf/'.$gname.'.php'));
 fclose($file);
 ?>
 
