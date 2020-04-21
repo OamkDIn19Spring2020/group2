@@ -42,10 +42,13 @@
                 </a>
                 <a class="gameNameTable" href='.site_url('Show_c/index/'.$row['idGame']).'><div class="text">';
         if(strpos($row['idGame'], '_')){
-            echo str_replace('_', ' ', $row['idGame']);
-        }
-        else{
-            echo $row['idGame'];
+            $stringtoprint = str_replace('_', ' ', $row['idGame']);
+            if(strpos($stringtoprint, '  ')){
+                echo str_replace('  ', ': ', $stringtoprint);
+            }
+            else{
+                echo $stringtoprint;
+            }
         }
         echo '<br>'.$row['price'].'¤</div>
                     </a>
