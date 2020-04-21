@@ -1,1 +1,3 @@
-<?php redirect('https://emojipedia.org/pile-of-poo/'); ?>
+<?php
+    redirect('https://en.wikipedia.org/wiki/Pile_of_Poo_emoji#/media/File:Emoji_u1f4a9.svg');
+} ?>
