@@ -1,9 +1,6 @@
 <div class="gametable">
     <?php
     foreach ($sales as $row) {
-        if(strpos($row, '_')){
-            $row = str_replace('_', ' ', $row);
-        }
         echo '<div class="gameintable">
                 <a class="gameimgTable" href='.site_url('Show_c/index/'.$row['idGame']).'>
                 <img class="gameimgTable" src='.base_url().'assests/imgs/'.$row['idGame'].'.jpg>
