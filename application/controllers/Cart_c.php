@@ -27,4 +27,8 @@ class Cart_c extends CI_Controller {
       $this->load->view('templates/page', $data);
   }
 
+  function pushing(){
+      array_push($_SESSION['testarray'], $this->input->post('pushingtoarray'));
+  }
+
 }
