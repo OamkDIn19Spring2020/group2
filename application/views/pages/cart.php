@@ -39,6 +39,7 @@
 
  </fieldset>
 </form>
+<h1>Here are your items:</h1>
 <table>
     <thead>
         <tr>

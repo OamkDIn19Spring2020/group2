@@ -64,7 +64,7 @@
          <option value="price desc">Price, most expensive first</option>
          <option value="idGame">Game, alphabetical order</option>
          <option value="idGame desc">Game, revese alphabetical order</option>
-         <option value="developer">Developer, aplhabetical order</option>
+         <option value="developer">Developer, alphabetical order</option>
          <option value="developer desc">Developer, reverse alpabetical order</option>
          <option value="publisher">Publisher, alphabetical order</option>
          <option value="publisher desc">Publisher, reverse alphabetical order</option>
