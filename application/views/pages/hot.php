@@ -53,7 +53,7 @@
         else{
             echo $row['idGame'];
         }
-        echo '<br>'.$row['price'].'¤</div>
+        echo '<br>'.$row['NOW'].'¤</div>
                     </a>
                     <div class="priceTable">
                     <div class="addbutton">
