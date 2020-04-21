@@ -11,10 +11,10 @@ class Show_c extends CI_Controller {
   {
 
       if(strpos($gname, '%C3%A4')){
-          $data['gname'] = str_replace('%C3%A4', 'ä', $gname);
+          $data['loadinfo'] = str_replace('%C3%A4', 'ä', $gname);
       }
       elseif (strpos($gname, '%C3%B6')) {
-          $data['gname'] = str_replace('%C3%B6', 'ö', $gname);
+          $data['loadinfo'] = str_replace('%C3%B6', 'ö', $gname);
       }
       else{
       $data['loadinfo'] = $gname;
