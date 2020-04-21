@@ -29,6 +29,7 @@ class Cart_c extends CI_Controller {
 
   function pushing(){
       array_push($_SESSION['testarray'], $this->input->post('pushingtoarray'));
+      redirect('games');
   }
 
 }
