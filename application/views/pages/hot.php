@@ -50,6 +50,9 @@
                 echo $stringtoprint;
             }
         }
+        else{
+            echo $row['idGame'];
+        }
         echo '<br>'.$row['price'].'¤</div>
                     </a>
                     <div class="priceTable">
