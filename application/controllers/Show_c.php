@@ -17,7 +17,7 @@ class Show_c extends CI_Controller {
           $data['gname'] = str_replace('%C3%B6', 'ö', $gname);
       }
       else{
-      $data['gname'] = $gname;
+      $data['loadinfo'] = $gname;
       }
 
       $data['page']  = 'aboot';
