@@ -1,7 +1,7 @@
-<?php 
-        
+<?php
+
 defined('BASEPATH') OR exit('No direct script access allowed');
-        
+
 class Login_c extends CI_Controller {
 
     public function _construct()
@@ -36,7 +36,7 @@ class Login_c extends CI_Controller {
             $data['page'] = 'login';
             $this->load->view('templates/page', $data);
         }
-        
+
         else
         {
             $given_username=$this->input->post('uname');
@@ -47,6 +47,7 @@ class Login_c extends CI_Controller {
             if (password_verify($given_password, $db_password)) {
                 $_SESSION['logged_in']=true;
                 $_SESSION['username']=$given_username;
+                $_SESSION['testarray'] = array('pri' => 'marina', 'vol' => 'corona 19');
                 redirect('sales');
             }
             else {
@@ -56,4 +57,4 @@ class Login_c extends CI_Controller {
             }
         }
     }
-}                         
+}

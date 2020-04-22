@@ -64,7 +64,7 @@
          <option value="price desc">Price, most expensive first</option>
          <option value="idGame">Game, alphabetical order</option>
          <option value="idGame desc">Game, revese alphabetical order</option>
-         <option value="developer">Developer, aplhabetical order</option>
+         <option value="developer">Developer, alphabetical order</option>
          <option value="developer desc">Developer, reverse alpabetical order</option>
          <option value="publisher">Publisher, alphabetical order</option>
          <option value="publisher desc">Publisher, reverse alphabetical order</option>
@@ -89,7 +89,20 @@
                         <a class="gameimgTable" href='.site_url('Show_c/index/'.$row['idGame']).'>
                         <img class="gameimgTable" src='.base_url().'assests/imgs/'.$row['idGame'].'.jpg>
                         </a>
-                        <a class="gameNameTable" href='.site_url('Show_c/index/'.$row['idGame']).'><div class="text">'.$row['idGame'].'<br>'.$row['price'].'¤</div>
+                        <a class="gameNameTable" href='.site_url('Show_c/index/'.$row['idGame']).'><div class="text">';
+                if(strpos($row['idGame'], '_')){
+                    $stringtoprint = str_replace('_', ' ', $row['idGame']);
+                    if(strpos($stringtoprint, '  ')){
+                        echo str_replace('  ', ': ', $stringtoprint);
+                    }
+                    else{
+                        echo $stringtoprint;
+                    }
+                }
+                else{
+                    echo $row['idGame'];
+                }
+                echo '<br>'.$row['NOW'].'¤</div>
                             </a>
                             <div class="priceTable">
                             <div class="addbutton">
