@@ -30,8 +30,8 @@ class Cart_model extends CI_Model {
   function addtocart()
   {
     $insert_data=array(
-      'item' => $this->input->post("idGame"),
-      'price' => $this->input->post("price"),
+      'item' => $this->input->post('idGame'),
+      'price' => $this->input->post('price'),
     );
     return $this->db->insert('cart', $insert_data);
   }
