@@ -21,7 +21,7 @@
         <option value="paypal">Paypal</option>
         <option value="renminbi">Renminbi</option>
     </select><br>
-    
+
     <label for="promo">Promocode</label><br>
     <input type="promocode" name="promo"><br>
 
@@ -48,13 +48,13 @@
         </tr>
     </thead>
     <tbody>
-        <?php 
+        <?php
         foreach ($_SESSION['testarray'] as $game){
 
-        
+
             foreach ($game as $row){
                 echo '<tr>';
-                echo '<td>'.$row['idGame'].'</td><td>'.$row['price'].'</td>';
+                echo '<td>'.$row['idGame'].'</td><td>'.$row['price'].'</td><form action="Cart_c/removeFromCart"><button type="submit" name='.$game.'>remove</button></form>';
                 echo '</tr>';
             }
         }
