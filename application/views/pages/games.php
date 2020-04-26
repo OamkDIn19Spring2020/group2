@@ -106,7 +106,7 @@
                             </a>
                             <div class="priceTable">
                             <div class="addbutton">
-                                <form action="Cart_c/addtocart" method="post">
+                                <form action="Cart_c/index" method="post">
                                     <button value='.$row['idGame'].' name="submit" type="submit">add to cart</button>
                                 </form>
                             </div>

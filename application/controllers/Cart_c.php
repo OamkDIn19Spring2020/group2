@@ -18,7 +18,7 @@ class Cart_c extends CI_Controller {
         'method'=>$this->input->post('meth'),
         'idGame'=>$this->input->post('game'),
       );
-      $test=$this->Cart_model->purchase($insert_data);
+      $this->Cart_model->purchase($insert_data);
 
       $data['page'] = 'cart';
       $data['games'] = $this->Games_model->getgames();
