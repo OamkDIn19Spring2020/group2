@@ -34,8 +34,17 @@ class Cart_c extends CI_Controller {
   }
 
   function removeFromCart(){
-      $currentkey= $this->input->post('smth');
-      unset($_SESSION['testarray'][$currentkey]);
+      $gametoremove = $this->input->post('smth');
+      foreach ($_SESSION['testarray'] as $key => &$value) {
+        foreach ($value as $game){
+
+        
+         if ($game['idGame']==$gametoremove){
+             unset($_SESSION['testarray'][$key]);
+         break;
+         }
+      }
+    }
       redirect('cart');
   }
 
