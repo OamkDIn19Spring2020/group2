@@ -16,7 +16,7 @@ class Cart_c extends CI_Controller {
         'username'=>$this->input->post('uname'),
         'price'=>$this->input->post('price'),
         'method'=>$this->input->post('meth'),
-        'idGame'=>$this->input->post('submit'),
+        'idGame'=>$this->input->post('game'),
       );
       $this->Cart_model->purchase($insert_data);
 
@@ -27,8 +27,9 @@ class Cart_c extends CI_Controller {
       $this->load->view('templates/page', $data);
   }
 
-  function pushing(){
-      array_push($_SESSION['testarray'], $this->input->post('pushingtoarray'));
+  function pushing(){ 
+      $vittu=$this->input->post('game');
+      array_push($_SESSION['testarray'], $this->Games_model->gamepush($vittu) );
       redirect('games');
   }
 

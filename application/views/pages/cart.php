@@ -40,18 +40,23 @@
  </fieldset>
 </form>
 <h1>Here are your items:</h1>
+
 <table>
     <thead>
         <tr>
-            <th>game</th><th>price</th><th>method</th><th>username</th><th>date</th>
+            <th>game</th><th>price</th>
         </tr>
     </thead>
     <tbody>
-        <?php
-        foreach ($logs as $row){
-            echo '<tr>';
-            echo '<td>'.$row['idGame'].'</td><td>'.$row['price'].'</td><td>'.$row['method'].'</td><td>'.$row['username'].'</td><td>'.$row['p_date'].'</td>';
-            echo '</tr>';
+        <?php 
+        foreach ($_SESSION['testarray'] as $game){
+
+        
+            foreach ($game as $row){
+                echo '<tr>';
+                echo '<td>'.$row['idGame'].'</td><td>'.$row['price'].'</td>';
+                echo '</tr>';
+            }
         }
          ?>
     </tbody>

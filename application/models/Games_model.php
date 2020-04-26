@@ -42,4 +42,12 @@ class Games_model extends CI_Model {
       $this->db->order_by('p_count desc, price desc');
       return $this->db->get()->result_array();
   }
+
+  function gamepush($vittu)
+  {
+      $this->db->select('*');
+      $this->db->from('games');
+      $this->db->where('idGame like "'.$vittu.'"'); 
+      return $this->db->get()->result_array();
+  }
 }
