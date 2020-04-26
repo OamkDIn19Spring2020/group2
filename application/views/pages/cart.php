@@ -51,10 +51,10 @@
         <?php
         foreach ($_SESSION['testarray'] as $game){
 
-
+            $currentkey = key($_SESSION['testarray'])
             foreach ($game as $row){
                 echo '<tr>';
-                echo '<td>'.$row['idGame'].'</td><td>'.$row['price'].'</td><form action="Cart_c/removeFromCart"><button type="submit" name='.$game.'>remove</button></form>';
+                echo '<td>'.$row['idGame'].'</td><td>'.$row['price'].'</td><form action="Cart_c/removeFromCart"><button type="submit" name='.$currentkey.'>remove</button></form>';
                 echo '</tr>';
             }
         }
