@@ -16,7 +16,7 @@ class Cart_c extends CI_Controller {
         'username'=>$this->input->post('uname'),
         'price'=>$this->input->post('price'),
         'method'=>$this->input->post('meth'),
-        'idGame'=>$this->input->post('game'),
+        'idGame'=>$this->input->post('submit'),
       );
       $this->Cart_model->purchase($insert_data);
 
