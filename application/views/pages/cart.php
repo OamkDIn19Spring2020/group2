@@ -50,12 +50,9 @@
     <tbody>
         <?php
         foreach ($_SESSION['testarray'] as $game=>$value){
-
-            $currentkey = $game;
-            echo $currentkey;
             foreach ($value as $row){
                 echo '<tr>';
-                echo '<td>'.$row['idGame'].'</td><td>'.$row['price'].'</td><form action="Cart_c/removeFromCart"><button type="submit" value='.$currentkey.' name="smth">remove</button></form>';
+                echo '<td>'.$row['idGame'].'</td><td>'.$row['price'].'</td><form action="Cart_c/removeFromCart"><button type="submit" value='.$row['idGame'].' name="smth">remove</button></form>';
                 echo '</tr>';
             }
         }
