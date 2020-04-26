@@ -34,8 +34,7 @@ class Cart_c extends CI_Controller {
   }
 
   function removeFromCart(){
-      $found = array_find($this->input->post('game'),$_SESSION['testarray'] )
-      unset($_SESSION['testarray'][$found]);
+      unset($_SESSION['testarray'][$currentkey]);
       redirect('cart');
   }
 
