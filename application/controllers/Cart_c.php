@@ -34,7 +34,9 @@ class Cart_c extends CI_Controller {
   }
 
   function removeFromCart(){
-      unset($_SESSION['testarray'][$currentkey]);
+      $somevariable = $_SESSION['testarray'];
+      $currentkey= $this->input->post('smth');
+      unset($somevariable[$currentkey]);
       redirect('cart');
   }
 
