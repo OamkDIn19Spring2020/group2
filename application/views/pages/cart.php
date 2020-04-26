@@ -49,7 +49,7 @@
     </thead>
     <tbody>
         <?php
-        foreach ($_SESSION['testarray'] as $game=>$value){
+        foreach ($_SESSION['testarray'] as $game=>&$value){
 
             $currentkey = $game;
             echo $currentkey;
