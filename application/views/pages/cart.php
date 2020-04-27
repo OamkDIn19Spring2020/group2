@@ -60,7 +60,7 @@
                         echo $row['idGame'];
                     }
                     echo '</div>';
-                    echo '<div class="priceCart">'.$row['NOW'].'</div>';
+                    echo '<div class="priceCart">'.$row['NOW'].'¤</div>';
                     echo '<form action="Cart_c/removeFromCart" method="post" class="removeGame"><button type="submit" value='.$row['idGame'].' name="smth">remove</button></form>';
                 echo '</div>';
             }
