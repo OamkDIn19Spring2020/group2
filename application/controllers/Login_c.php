@@ -47,7 +47,7 @@ class Login_c extends CI_Controller {
             if (password_verify($given_password, $db_password)) {
                 $_SESSION['logged_in']=true;
                 $_SESSION['username']=$given_username;
-                $_SESSION['testarray'] = array();
+                $_SESSION['testarray'] = array( [0] => array());
                 redirect('sales');
             }
             else {

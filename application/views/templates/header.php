@@ -17,7 +17,7 @@
                 echo '0';
             }
             else{
-                echo count($_SESSION['testarray']);
+                echo count($_SESSION['testarray']) - 1;
             }
             echo '</span></a>';
         }
