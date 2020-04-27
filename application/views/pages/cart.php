@@ -50,7 +50,7 @@
             </form>';
         }
         else{
-            echo 'your cart is empty! <br> Spend some money, will ya?';
+            echo 'your cart is empty! <br><a href='.site_url('games').'> Spend some money, will ya?</a>';
         }
         ?>
 </div>
