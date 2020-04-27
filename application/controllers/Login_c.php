@@ -58,6 +58,7 @@ class Login_c extends CI_Controller {
         }
     }
     function changePassword(){
+        $this->load->model('Users_model');
         $this->load->helper('form');
         $this->load->library('form_validation');
         $this->form_validation->set_rules('password', 'Password', 'trim|required');
