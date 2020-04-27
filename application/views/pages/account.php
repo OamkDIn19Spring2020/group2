@@ -1,16 +1,16 @@
-<?php echo $_SESSION['username'] ?>
-<br>
 <?php
 foreach ($userinfo as $key) {
-    echo $key['username'].'<br>';
-    echo $key['email'].'<br>';
-    echo $key['phone'].'<br>';
-    echo $key['country'].'<br>';
-    echo $key['password'].'<br>';
+    echo 'Username: '.$key['username'].'<br>';
+    echo 'Email: '.$key['email'].'<br>';
+    echo 'Phone:'.$key['phone'].'<br>';
+    echo 'country: '.$key['country'].'<br>';
+    echo 'password: '.$key['password'].'<br>';
     // code...
 }
 
 ?>
+<button type="button" name="button" ><a href="<?php echo site_url('Cart_c/history')?>">Purchase History</a></button>
+<button type="button" name="button" ><a href="<?php echo site_url('Home/changePassword')?>">change password</a></button>
 <form  action="<?php echo site_url('Home/logout');?>" method="post">
     <input type="submit" value="Log out">
 </form>

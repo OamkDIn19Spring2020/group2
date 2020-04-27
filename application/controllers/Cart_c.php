@@ -46,5 +46,10 @@ class Cart_c extends CI_Controller {
       }
     redirect('cart');
   }
+  function history(){
+    $data['purchased'] = $this->Cart_model->gethistoryall($_SESSION['username']);
+    $data['page'] = 'history'
+    $this->load->view('templates/page', $data);
+  }
 
 }
