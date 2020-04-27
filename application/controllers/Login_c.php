@@ -57,4 +57,16 @@ class Login_c extends CI_Controller {
             }
         }
     }
+    function changePassword(){
+        $this->load->helper('form');
+        $this->load->library('form_validation');
+        $this->form_validation->set_rules('password', 'Password', 'trim|required');
+        $this->form_validation->set_rules('newpassword', 'newPassword', 'trim|required|min_length[8]|max_length[150]');
+        $this->form_validation->set_rules('newpassconf', 'newPassword confirmation', 'trim|required|matches[password]');
+
+        if (password_verify($given_password, $db_password) && $newpassword === $newpasswordconf){
+            $this->Users_model->changepass();
+            redirect('account');
+        }
+    }
 }
