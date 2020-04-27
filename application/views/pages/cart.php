@@ -26,8 +26,9 @@
                     echo '<form action="Cart_c/removeFromCart" method="post" class="removeGame"><button type="submit" value='.$row['idGame'].' name="smth">remove</button></form>';
                 echo '</div>';
             }
-            echo $total;
+
         }
+        echo $total;
          ?>
          <form action=" <?php echo site_url('Cart_c/index') ?> " method="post">
            <fieldset class="fieldset">
