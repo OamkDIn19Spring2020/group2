@@ -41,25 +41,32 @@
 </form>
 <h1>Here are your items:</h1>
 
-<table>
-    <thead>
-        <tr>
-            <th>game</th><th>price</th>
-        </tr>
-    </thead>
-    <tbody>
         <?php
         foreach ($_SESSION['testarray'] as $game=>&$value){
 
             $currentkey = $game;
             echo $currentkey;
             foreach ($value as $row){
-                echo '<tr>';
-                echo '<td>'.$row['idGame'].'</td><td>'.$row['price'].'</td><form action="Cart_c/removeFromCart"><button type="submit" value='.$currentkey.' name="smth">remove</button></form>';
-                echo '</tr>';
+                echo '<div class="gameInCart">';
+                    echo '<div class="gameImgCart"><img class="gameImgCart" src='.base_url().'assests/imgs/'.$row['idGame'].'.jpg></div>';
+                    echo '<div class="gameNameCart">';
+                    if(strpos($row['idGame'], '_')){
+                        $stringtoprint = str_replace('_', ' ', $row['idGame']);
+                        if(strpos($stringtoprint, '  ')){
+                            echo str_replace('  ', ': ', $stringtoprint);
+                        }
+                        else{
+                            echo $stringtoprint;
+                        }
+                    }
+                    else{
+                        echo $row['idGame'];
+                    }
+                    echo '</div>';
+                    echo '<div class="priceCart">'.$row['NOW'].'¤</div>';
+                    echo '<form action="Cart_c/removeFromCart" method="post" class="removeGame"><button type="submit" value='.$row['idGame'].' name="smth">remove</button></form>';
+                echo '</div>';
             }
         }
          ?>
-    </tbody>
-</table>
 </div>
