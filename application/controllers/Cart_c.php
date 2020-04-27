@@ -13,7 +13,7 @@ class Cart_c extends CI_Controller {
   function index()
   {
       $insert_data=array(
-        'username'=>$this->input->post('uname'),
+        'username'=>$_SESSION['username'],
         'price'=>$this->input->post('price'),
         'method'=>$this->input->post('meth'),
         'idGame'=>$this->input->post('game'),
@@ -45,6 +45,11 @@ class Cart_c extends CI_Controller {
           }
       }
     redirect('cart');
+  }
+  function history(){
+    $data['purchased'] = $this->Cart_model->gethistoryall($_SESSION['username']);
+    $data['page'] = 'history';
+    $this->load->view('templates/page', $data);
   }
 
 }

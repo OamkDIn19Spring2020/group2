@@ -13,9 +13,10 @@ class Cart_model extends CI_Model {
       return $this->db->insert('history', $insert_data);
   }
 
-  function gethistoryall(){
+  function gethistoryall($nametofind){
       $this->db->select('*');
       $this->db->from('history');
+      $this->db->where('username like "'.$nametofind.'"');
       $this->db->order_by('p_date DESC');
     return $this->db->get()->result_array();
   }
