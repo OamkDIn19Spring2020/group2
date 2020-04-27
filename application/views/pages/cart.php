@@ -47,7 +47,7 @@
                 echo '<div class="gameInCart">';
                     echo '<div class="gameImgCart"><img class="gameImgCart" src='.base_url().'assests/imgs/'.$row['idGame'].'.jpg></div>';
                     echo '<div class="gameNameCart">'.$row['idGame'].'</div>';
-                    echo '<div class="priceCart">'.$row['NOW'].'</div';
+                    echo '<div class="priceCart">'.$row['NOW'].'</div>';
                     echo '<form action="Cart_c/removeFromCart" method="post" class="removeGame"><button type="submit" value='.$row['idGame'].' name="smth">remove '.$row['idGame'].'</button></form>';
                 echo '</div>';
             }
