@@ -64,6 +64,10 @@ class Login_c extends CI_Controller {
         $this->form_validation->set_rules('newpassword', 'newPassword', 'trim|required|min_length[8]|max_length[150]');
         $this->form_validation->set_rules('newpassconf', 'newPassword confirmation', 'trim|required|matches[password]');
 
+        $given_password = $this->input->post('password');
+        $db_password=$this->Users_model->getpassword($given_username)
+        $newpassword = $this->input->post('newpassword');
+        $newpassconf = $this->input->post('newpassconf');
         if (password_verify($given_password, $db_password) && $newpassword === $newpasswordconf){
             $this->Users_model->changepass();
             redirect('account');
