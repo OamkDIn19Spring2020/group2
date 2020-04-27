@@ -11,7 +11,7 @@
         <?php
         if (isset($_SESSION['logged_in']) && $_SESSION['logged_in']) {
             echo '<a href='.site_url('account').' id="Login">'.$_SESSION['username'].'</a>';
-            echo '<a href='.site_url('cart').' id="cart">Shopping cart     <span color="red;">'.count($_SESSION['testarray']).'</span></a>';
+            echo '<a href='.site_url('cart').' id="cart">Shopping cart     <span style="color:red;">'.count($_SESSION['testarray']).'</span></a>';
         }
         else{
             echo "<div id='logreg'>";
