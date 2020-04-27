@@ -30,21 +30,27 @@
 
         }
         echo 'Total: '.$total.'¤';
-         ?>
-         <form action=" <?php echo site_url('Cart_c/index') ?> " method="post">
-           <fieldset class="fieldset">
-             <label for="method">method</label<br>
-             <select class="meth" name="meth">
-                 <option value="skrill">Skrill</option>
-                 <option value="chunguscoin">Chunguscoin</option>
-                 <option value="paypal">Paypal</option>
-                 <option value="renminbi">Renminbi</option>
-             </select><br>
+        if (count($_SESSION['testarray']) >  1){
 
-             <label for="promo">Promocode</label><br>
-             <input type="promocode" name="promo"><br>
-             <input type="submit" value="submit">
+        echo    '<form action='.site_url('Cart_c/index').' method="post">
+            <fieldset class="fieldset">
+            <label for="method">method</label<br>
+            <select class="meth" name="meth">
+            <option value="skrill">Skrill</option>
+            <option value="chunguscoin">Chunguscoin</option>
+            <option value="paypal">Paypal</option>
+            <option value="renminbi">Renminbi</option>
+            </select><br>
 
-          </fieldset>
-         </form>
+            <label for="promo">Promocode</label><br>
+            <input type="promocode" name="promo"><br>
+            <button type="submit" name="button">Purchase</button>
+
+            </fieldset>
+            </form>';
+        }
+        else{
+            echo 'your cart is empty! <br> Spend some money, will ya?';
+        }
+        ?>
 </div>
