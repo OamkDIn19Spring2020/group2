@@ -11,15 +11,7 @@
         <?php
         if (isset($_SESSION['logged_in']) && $_SESSION['logged_in']) {
             echo '<a href='.site_url('account').' id="Login">'.$_SESSION['username'].'</a>';
-            echo '<a href='.site_url('cart').' id="cart">Shopping cart     <span style="color:red;">';
-            if (count($_SESSION['testarray']) === NULL)
-            {
-                echo '0';
-            }
-            else{
-                echo count($_SESSION['testarray']) - 1;
-            }
-            echo '</span></a>';
+            echo '<a href='.site_url('cart').' id="cart">Shopping cart     <span style="color:red;">'.count($_SESSION['testarray']) -1.'</span></a>';
         }
         else{
             echo "<div id='logreg'>";
