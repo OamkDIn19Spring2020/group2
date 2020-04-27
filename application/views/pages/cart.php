@@ -46,9 +46,22 @@
             foreach ($value as $row){
                 echo '<div class="gameInCart">';
                     echo '<div class="gameImgCart"><img class="gameImgCart" src='.base_url().'assests/imgs/'.$row['idGame'].'.jpg></div>';
-                    echo '<div class="gameNameCart">'.$row['idGame'].'</div>';
+                    echo '<div class="gameNameCart">';
+                    if(strpos($row['idGame'], '_')){
+                        $stringtoprint = str_replace('_', ' ', $row['idGame']);
+                        if(strpos($stringtoprint, '  ')){
+                            echo str_replace('  ', ': ', $stringtoprint);
+                        }
+                        else{
+                            echo $stringtoprint;
+                        }
+                    }
+                    else{
+                        echo $row['idGame'];
+                    }
+                    echo '</div>';
                     echo '<div class="priceCart">'.$row['NOW'].'</div>';
-                    echo '<form action="Cart_c/removeFromCart" method="post" class="removeGame"><button type="submit" value='.$row['idGame'].' name="smth">remove '.$row['idGame'].'</button></form>';
+                    echo '<form action="Cart_c/removeFromCart" method="post" class="removeGame"><button type="submit" value='.$row['idGame'].' name="smth">remove</button></form>';
                 echo '</div>';
             }
         }
