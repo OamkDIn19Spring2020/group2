@@ -48,7 +48,7 @@ class Cart_c extends CI_Controller {
   }
   function history(){
     $data['purchased'] = $this->Cart_model->gethistoryall($_SESSION['username']);
-    $data['page'] = 'history'
+    $data['page'] = 'history';
     $this->load->view('templates/page', $data);
   }
 
