@@ -12,15 +12,10 @@ class Cart_c extends CI_Controller {
 
   function index()
   {
+    $uname=$_SESSION['username'];
       foreach($_SESSION['testarray'] as $smth) {
         foreach($smth as $row) {
-          $insert_data=array(
-            'username'=>$_SESSION['username'],
-            'price'=>$row['NOW'],
-            'method'=>$this->input->post('meth'),
-            'idGame'=>$row['idGame'],
-          );
-          $this->Cart_model->purchase($insert_data);
+          $this->Cart_model->purchase($_SESSION['username'], $row['NOW'], $row['idGame'], $this->input->post('meth'));
         }
       }
 

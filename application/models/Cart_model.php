@@ -2,12 +2,12 @@
 
 class Cart_model extends CI_Model {
 
-  function purchase(){
+  function purchase($uname, $price, $game, $method){
       $insert_data=array(
-          'username'=>$this->input->post('uname'),
-          'price'=>$this->input->post('price'),
-          'method'=>$this->input->post('meth'),
-          'idGame'=>$this->input->post('game'),
+          'username'=>$uname,
+          'price'=>$price,
+          'method'=>$method,
+          'idGame'=>$game,
       );
 
       return $this->db->insert('history', $insert_data);
