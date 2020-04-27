@@ -2,14 +2,9 @@
 <h1>Here are your items:</h1>
 
         <?php
-<<<<<<< HEAD
-        foreach ($_SESSION['testarray'] as $game=>&$value){
-            
-=======
             $total = 0;
         foreach ($_SESSION['testarray'] as $game=>$value){
 
->>>>>>> t8stage
             foreach ($value as $row){
                 $total = $total + $row['NOW'];
                 echo '<div class="gameInCart">';

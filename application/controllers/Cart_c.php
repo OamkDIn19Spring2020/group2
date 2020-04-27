@@ -12,19 +12,26 @@ class Cart_c extends CI_Controller {
 
   function index()
   {
-      $insert_data=array(
-        'username'=>$_SESSION['username'],
-        'price'=>$this->input->post('price'),
-        'method'=>$this->input->post('meth'),
-        'idGame'=>$this->input->post('game'),
-      );
-      $this->Cart_model->purchase($insert_data);
+      foreach($_SESSION['testarray'] as $smth) {
+        foreach($smth as $row) {
+          $insert_data=array(
+            'username'=>$_SESSION['username'],
+            'price'=>$row['NOW'],
+            'method'=>$this->input->post('meth'),
+            'idGame'=>$row['idGame'],
+          );
+          $this->Cart_model->purchase($insert_data);
+        }
+      }
 
-      $data['page'] = 'cart';
+      $_SESSION['testarray'] = array();
+      redirect('games');
+
+     /* $data['page'] = 'cart';
       $data['games'] = $this->Games_model->getgames();
       $data['user'] = $this->Aboot_model->getusers();
       $data['logs'] = $this->Cart_model->gethistoryall();
-      $this->load->view('templates/page', $data);
+      $this->load->view('templates/page', $data);*/
   }
 
   function pushing(){
@@ -45,11 +52,6 @@ class Cart_c extends CI_Controller {
           }
       }
     redirect('cart');
-  }
-  function history(){
-    $data['purchased'] = $this->Cart_model->gethistoryall($_SESSION['username']);
-    $data['page'] = 'history';
-    $this->load->view('templates/page', $data);
   }
 
 }
