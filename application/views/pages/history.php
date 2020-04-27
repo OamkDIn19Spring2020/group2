@@ -8,7 +8,7 @@
         <?php
         foreach ($purchased as $row){
             echo '<tr>';
-            echo '<td>'.$row['idGame'].'</td><td>'.$row['Price'].'</td><td>'.$row['method'].'</td><td>'.$row['p_date'].'</td>';
+            echo '<td>'.$row['idGame'].'</td><td>'.$row['price'].'</td><td>'.$row['method'].'</td><td>'.$row['p_date'].'</td>';
             echo '</tr>';
         }
          ?>
