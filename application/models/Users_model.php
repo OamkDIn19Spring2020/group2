@@ -44,4 +44,11 @@ class Users_model extends CI_Model {
        $this->db->where('username like "'.$uname.'"');
       return $this->db->get()->result_array();
   }
+  function changepass(){
+      $plainpass = $this->input->post('newpassword');
+      $hash = password_hash($plainpass, PASSWORD_DEFAULT);
+      $this->db->where('username', $_SESSION['username']);
+      $this->db->update('user', array('password' => $hash));
+
+  }
 }
