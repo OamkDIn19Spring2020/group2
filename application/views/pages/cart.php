@@ -3,7 +3,9 @@
 
         <?php
         foreach ($_SESSION['testarray'] as $game=>$value){
+            $total = 0;
             foreach ($value as $row){
+                $total = $total + $row['NOW'];
                 echo '<div class="gameInCart">';
                     echo '<div class="gameImgCart"><img class="gameImgCart" src='.base_url().'assests/imgs/'.$row['idGame'].'.jpg></div>';
                     echo '<div class="gameNameCart">';
@@ -24,6 +26,7 @@
                     echo '<form action="Cart_c/removeFromCart" method="post" class="removeGame"><button type="submit" value='.$row['idGame'].' name="smth">remove</button></form>';
                 echo '</div>';
             }
+            echo $total;
         }
          ?>
          <form action=" <?php echo site_url('Cart_c/index') ?> " method="post">
