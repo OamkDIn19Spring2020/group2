@@ -20,6 +20,7 @@ class Cart_c extends CI_Controller {
       }
 
       $_SESSION['testarray'] = array();
+      $_SESSION['codecheck'] = false;
       redirect('games');
 
      /* $data['page'] = 'cart';
@@ -53,6 +54,19 @@ class Cart_c extends CI_Controller {
       $data['purchased'] = $this->Cart_model->gethistoryall($_SESSION['username']);
       $data['page'] = 'history';
       $this->load->view('templates/page', $data);
+  }
+
+  function promocode(){
+    
+    if(count ($this->Cart_model->promocode($this->input->post('promo')))> 0){
+                        
+      $data['codetext'] = '<p>Code Accepted!</p>';
+  }
+    else{
+    $data['codetext'] = '<p>Code Invalid!</p>';
+  }
+  $data['page'] = 'cart';
+  $this->load->view('templates/page', $data);
   }
 
 }

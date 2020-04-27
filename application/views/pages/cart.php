@@ -1,6 +1,16 @@
 <div id="cartcont">
 <h1>Here are your items:</h1>
+        <form action="Cart_c/promocode" method="post">
+            <label name="codetext" for="promo">Promocode</label>
+            <?php 
+                if(isset($codetext)){
+            
+                    echo ($codetext);
+                }
+            ?>
 
+            <input placeholder="XXXXXX" type="promocode" name="promo"><button type="submit" name ="apply">Apply!</button><br>
+            </form>
         <?php
             $total = 0;
         foreach ($_SESSION['testarray'] as $game=>$value){
@@ -42,8 +52,6 @@
             <option value="renminbi">Renminbi</option>
             </select><br>
 
-            <label for="promo">Promocode</label><br>
-            <input type="promocode" name="promo"><br>
             <button type="submit" name="button">Purchase</button>
 
             </fieldset>

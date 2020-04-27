@@ -21,19 +21,12 @@ class Cart_model extends CI_Model {
     return $this->db->get()->result_array();
   }
 
-  function promocode(){
-    $insert_data=array(
-      'codes'=>$this->input->post('promo')
-    );
-    return $this->db->insert('promocode', $insert_data);
-  }
+  function promocode($codetofind){
+      $this->db->select('percentoff');
+      $this->db->from('promocode');
+      $this->db->where('codes like "'.$codetofind.'"');
 
-  function addtocart()
-  {
-    $insert_data=array(
-      'item' => $this->input->post('idGame'),
-      'price' => $this->input->post('price'),
-    );
-    return $this->db->insert('cart', $insert_data);
+      return $this->db->get()->result_array();
+
   }
 }
