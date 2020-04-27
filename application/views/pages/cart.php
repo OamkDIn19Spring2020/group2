@@ -30,7 +30,7 @@
 
         }
 
-        if (count($_SESSION['testarray']) >  1){
+        if (count($_SESSION['testarray']) >  0){
         echo 'Total: '.$total.'¤';
         echo    '<form action='.site_url('Cart_c/index').' method="post">
             <fieldset class="fieldset">
