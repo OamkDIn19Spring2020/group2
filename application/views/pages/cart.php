@@ -43,9 +43,7 @@
 
         <?php
         foreach ($_SESSION['testarray'] as $game=>&$value){
-
-            $currentkey = $game;
-            echo $currentkey;
+            
             foreach ($value as $row){
                 echo '<div class="gameInCart">';
                     echo '<div class="gameImgCart"><img class="gameImgCart" src='.base_url().'assests/imgs/'.$row['idGame'].'.jpg></div>';
