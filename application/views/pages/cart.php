@@ -53,7 +53,7 @@
         foreach ($_SESSION['testarray'] as $game=>$value){
             foreach ($value as $row){
                 echo '<tr>';
-                echo '<td>'.$row['idGame'].'</td><td>'.$row['price'].'</td><form action="Cart_c/removeFromCart"><button type="submit" value='.$row['idGame'].' name="smth">remove</button></form>';
+                echo '<td>'.$row['idGame'].'</td><td>'.$row['price'].'</td><form action="Cart_c/removeFromCart"><button type="submit" value='.$row['idGame'].' name="smth">remove '.$row['idGame'].'</button></form>';
                 echo '</tr>';
             }
         }
