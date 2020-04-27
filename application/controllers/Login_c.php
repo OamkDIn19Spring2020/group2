@@ -48,6 +48,7 @@ class Login_c extends CI_Controller {
                 $_SESSION['logged_in']=true;
                 $_SESSION['username']=$given_username;
                 $_SESSION['testarray'] = array();
+                $_SESSION['itemsInCart'] = 0;
                 redirect('sales');
             }
             else {
