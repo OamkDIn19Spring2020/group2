@@ -30,7 +30,6 @@ class Cart_c extends CI_Controller {
   function pushing(){
       $vittu=$this->input->post('game');
       array_push($_SESSION['testarray'], $this->Games_model->gamepush($vittu) );
-      $_SESSION['itemsInCart'] =+;
       redirect('games');
   }
 
@@ -45,7 +44,6 @@ class Cart_c extends CI_Controller {
 
           }
       }
-    $_SESSION['itemsInCart'] =-;
     redirect('cart');
   }
 
