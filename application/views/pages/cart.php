@@ -49,6 +49,7 @@
     </thead>
     <tbody>
         <?php
+        print_r($_SESSION['testarray']);
         foreach ($_SESSION['testarray'] as $game=>$value){
             foreach ($value as $row){
                 echo '<tr>';

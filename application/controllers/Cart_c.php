@@ -37,8 +37,7 @@ class Cart_c extends CI_Controller {
       $gametoremove = $this->input->post('smth');
       foreach ($_SESSION['testarray'] as $key => $value) {
          if ($value['idGame']===$gametoremove){
-             unset($_SESSION['testarray'][$key]);
-             break;
+             array_splice($_SESSION['testarray'], $key, 1);
          }
       }
       redirect('cart');
