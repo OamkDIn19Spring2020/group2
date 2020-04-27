@@ -47,7 +47,8 @@ class Login_c extends CI_Controller {
             if (password_verify($given_password, $db_password)) {
                 $_SESSION['logged_in']=true;
                 $_SESSION['username']=$given_username;
-                $_SESSION['testarray'] = array('pri' => 'marina', 'vol' => 'corona 19');
+                $_SESSION['testarray'] = array();
+                $_SESSION['codecheck'] = false;
                 redirect('sales');
             }
             else {
@@ -55,6 +56,23 @@ class Login_c extends CI_Controller {
                 $data['page'] = 'login';
                 $this->load->view('templates/page', $data);
             }
+        }
+    }
+    function changePassword(){
+        $this->load->model('Users_model');
+        $this->load->helper('form');
+        $this->load->library('form_validation');
+        $this->form_validation->set_rules('password', 'Password', 'trim|required');
+        $this->form_validation->set_rules('newpassword', 'newPassword', 'trim|required|min_length[8]|max_length[150]');
+        $this->form_validation->set_rules('newpassconf', 'newPassword confirmation', 'trim|required|matches[password]');
+
+        $given_password = $this->input->post('password');
+        $db_password=$this->Users_model->getpassword($_SESSION['username']);
+        $newpassword = $this->input->post('newpassword');
+        $newpassconf = $this->input->post('newpassconf');
+        if (password_verify($given_password, $db_password) && $newpassword === $newpassconf){
+            $this->Users_model->changepass();
+            redirect('account');
         }
     }
 }

@@ -2,37 +2,31 @@
 
 class Cart_model extends CI_Model {
 
-  function purchase(){
+  function purchase($uname, $price, $game, $method){
       $insert_data=array(
-          'username'=>$this->input->post('uname'),
-          'price'=>$this->input->post('price'),
-          'method'=>$this->input->post('meth'),
-          'idGame'=>$this->input->post('game'),
+          'username'=>$uname,
+          'price'=>$price,
+          'method'=>$method,
+          'idGame'=>$game,
       );
 
       return $this->db->insert('history', $insert_data);
   }
 
-  function gethistoryall(){
+  function gethistoryall($nametofind){
       $this->db->select('*');
       $this->db->from('history');
+      $this->db->where('username like "'.$nametofind.'"');
       $this->db->order_by('p_date DESC');
     return $this->db->get()->result_array();
   }
 
-  function promocode(){
-    $insert_data=array(
-      'codes'=>$this->input->post('promo')
-    );
-    return $this->db->insert('promocode', $insert_data);
-  }
+  function promocode($codetofind){
+      $this->db->select('percentoff');
+      $this->db->from('promocode');
+      $this->db->where('codes like "'.$codetofind.'"');
 
-  function addtocart()
-  {
-    $insert_data=array(
-      'item' => $this->input->post('idGame'),
-      'price' => $this->input->post('price'),
-    );
-    return $this->db->insert('cart', $insert_data);
+      return $this->db->get()->result_array();
+
   }
 }
