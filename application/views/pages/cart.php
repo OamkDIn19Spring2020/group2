@@ -40,7 +40,7 @@
                     echo '</div>';
                     echo '<div class="priceCart">'.$row['NOW'].'¤</div>';
                     echo '<form action="';
-                    echo site_url('Cart_c/removeGame');
+                    echo site_url('Cart_c/removeFromCart');
                     echo '" method="post" class="removeGame"><button type="submit" value='.$currentkey.' name="smth">remove</button></form>';
                 echo '</div>';
             }
