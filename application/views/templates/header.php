@@ -1,6 +1,6 @@
 <div id="header">
     <div id="footext">
-        <h3>CHUNGUSGAINZ.COM.NET.CN.RU</h3>
+        <h3> <a href="<?php echo site_url('sales'); ?>">CHUNGUSGAINZ.COM.NET.CN.RU</a></h3>
         <div id="tags">
             <a href="<?php echo site_url('sales'); ?>" class="buttons sales">Sales</a>
             <a href="<?php echo site_url('hot'); ?>" class="buttons hot">Hot</a>
