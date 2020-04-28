@@ -1,10 +1,10 @@
 <div id="cartcont">
 <h1>Here are your items:</h1>
-        <form action="Cart_c/promocode" method="post">
+        <form action=" <?php echo site_url('Cart_c/promocode') ?> " method="post">
             <label name="codetext" for="promo">Promocode</label>
-            <?php 
+            <?php
                 if(isset($codetext)){
-            
+
                     echo ($codetext);
                 }
             ?>
@@ -12,9 +12,14 @@
             <input placeholder="XXXXXX" type="promocode" name="promo"><button type="submit" name ="apply">Apply!</button><br>
             </form>
         <?php
+        if(isset($_SESSION['username'])===FALSE){
+            redirect('games');
+        }
+        else{
+
             $total = 0;
         foreach ($_SESSION['testarray'] as $game=>$value){
-
+            $currentkey = $game;
             foreach ($value as $row){
                 $total = $total + $row['NOW'];
                 echo '<div class="gameInCart">';
@@ -34,7 +39,7 @@
                     }
                     echo '</div>';
                     echo '<div class="priceCart">'.$row['NOW'].'¤</div>';
-                    echo '<form action="Cart_c/removeFromCart" method="post" class="removeGame"><button type="submit" value='.$row['idGame'].' name="smth">remove</button></form>';
+                    echo '<form action="Cart_c/removeFromCart" method="post" class="removeGame"><button type="submit" value='.$currentkey.' name="smth">remove</button></form>';
                 echo '</div>';
             }
 
@@ -42,7 +47,7 @@
 
         if (count($_SESSION['testarray']) >  0){
         echo 'Total: '.$total.'¤';
-        echo    '<form action='.site_url('Cart_c/index').' method="post">
+        echo    '<form action="Cart_c/index" method="post">
             <fieldset class="fieldset">
             <label for="method">method</label<br>
             <select class="meth" name="meth">
@@ -58,7 +63,8 @@
             </form>';
         }
         else{
-            echo 'your cart is empty! <br><a href='.site_url('games').' stye="color:#120eb7;"> Spend some money, will ya?</a>';
+            echo 'your cart is empty! <br><a href='.site_url('games').' style="color:#120eb7;"> Spend some money, will ya?</a>';
         }
+    }
         ?>
 </div>

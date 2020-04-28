@@ -1,3 +1,5 @@
+<div id="passBox">
+
 <form action="Login_c/changePassword" method="post">
     <label for="password">Old Password</label><br>
     <input type="password" name="password" value=""><br>
@@ -10,3 +12,4 @@
     <br>
     <button type="submit" name="button">Change Password</button>
 </form>
+</div>
