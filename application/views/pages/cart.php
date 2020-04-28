@@ -1,9 +1,5 @@
 <div id="cartcont">
 <h1>Here are your items:</h1>
-<?php if($_SESSION === NULL){
-        echo '<form action="Games_c/s_index" method="post" name="falseLoad"></form>';
-        echo '<button type="submit" onload="document.forms("falseLoad").submit()"/>';
-}
 ?>
         <form action="Cart_c/promocode" method="post">
             <label name="codetext" for="promo">Promocode</label>
@@ -18,9 +14,8 @@
             </form>
         <?php
         if(isset($_SESSION['username'])===FALSE){
-            echo '<form action="Games_c/s_index" method="post">
-                    <input type="submit"  onload="this.form.submit()"/>
-                    </form>';
+            echo '<form action="Games_c/s_index" method="post" name="falseLoad"></form>';
+            echo '<button type="submit" onload="document.forms("falseLoad").submit()"/>';
         }
         else{
 
