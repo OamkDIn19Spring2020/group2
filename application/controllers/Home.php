@@ -43,6 +43,7 @@ class Home extends CI_Controller {
 
   public function deleteuser()
   {
+    $this->db->delete('history', array('username' => $_SESSION['username']));
     $this->db->delete('user', array('username' => $_SESSION['username']));
     session_destroy();
     $_SESSION['logged_in']=false;
