@@ -39,12 +39,8 @@ class Cart_c extends CI_Controller {
   function removeFromCart(){
       $gametoremove = $this->input->post('smth');
       foreach ($_SESSION['testarray'] as $key => &$value) {
-          foreach ($value as $row) {
-              if ($row['idGame']===$gametoremove){
-                  array_splice($_SESSION['testarray'], $key, 1);
-                  break;
-              }
-
+          if ($key===$gametoremove){
+             array_splice($_SESSION['testarray'], $key, 1);
           }
       }
     redirect('cart');
@@ -57,9 +53,9 @@ class Cart_c extends CI_Controller {
   }
 
   function promocode(){
-    
+
     if(count ($this->Cart_model->promocode($this->input->post('promo')))> 0){
-                        
+
       $data['codetext'] = '<p>Code Accepted!</p>';
   }
     else{
