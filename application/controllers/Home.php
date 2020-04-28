@@ -10,6 +10,7 @@ class Home extends CI_Controller {
     $this->load->model('Users_model');
     $this->load->model('Category_model');
     $this->load->model('Cart_model');
+    $this->load->database();
   }
 
   function content($page = 'sales')
@@ -34,7 +35,16 @@ class Home extends CI_Controller {
 
   function logout(){
       session_destroy();
+      $_SESSION['logged_in']=false;
       redirect('sales');
+  }
+
+  public function deleteuser()
+  {
+    $this->db->delete('user', array('username' => $_SESSION['username']));
+    session_destroy();
+    $_SESSION['logged_in']=false;
+    redirect('sales');
   }
 
 }

@@ -1,10 +1,9 @@
-<?php echo $_SESSION['username'] ?>
+
+<h1><?php echo $_SESSION['username'] ?>'s account</h1>
 <br>
 <form  action="<?php echo site_url('Home/logout');?>" method="post">
     <input type="submit" value="Log out">
-</form>
-<?php print_r($_SESSION['testarray']); ?>
-<form class="" action="Cart_c/pushing" method="post">
-    <input type="text" name="pushingtoarray">
-    <button type="submit">click me numbskull!</button>
+</form><br>
+<form  action="<?php echo site_url('Home/deleteuser');?>" method="post">
+    <input type="submit" value="Delete account">
 </form>
