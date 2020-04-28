@@ -1,6 +1,6 @@
 <div id="cartcont">
 <h1>Here are your items:</h1>
-<?php if($_SESSION['username'] === NULL){
+<?php if($_SESSION === NULL){
         echo '<form action="Games_c/s_index" method="post">
                 <input type="hidden" onload="this.form.submit()"/>
                 </form>';
