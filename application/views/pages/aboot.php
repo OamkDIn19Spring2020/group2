@@ -2,9 +2,8 @@
 
 
 <?php
-echo $loadinfo;
 if(file_exists(base_url('assests/textf/'.$loadinfo.'.php'))) {
-    redirect(base_url('assests/textf/'.$loadinfo.'.php'));
+    echo $loadinfo;
 }
 /*else{
 
