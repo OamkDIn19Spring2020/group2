@@ -39,7 +39,9 @@
                     }
                     echo '</div>';
                     echo '<div class="priceCart">'.$row['NOW'].'¤</div>';
-                    echo '<form action= "'.site_url('Cart_c/promocode') .'" method="post" class="removeGame"><button type="submit" value='.$currentkey.' name="smth">remove</button></form>';
+                    echo '<form action="';
+                    echo site_url('Cart_c/promocode');
+                    echo '" method="post" class="removeGame"><button type="submit" value='.$currentkey.' name="smth">remove</button></form>';
                 echo '</div>';
             }
 
