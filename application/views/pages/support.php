@@ -15,6 +15,11 @@ function playSound () {
             You can leave us a message in the field below or call our <br>
             Customer Support Toll-Free number: +91 45 6584 1937
             <?php $this->load->helper('form');
+            if(isset($_SESSION['username'])===FALSE){
+                redirect('games');
+            }
+            else{
+
             if (isset($test01))
             {
 
@@ -23,9 +28,9 @@ function playSound () {
                 echo '<script>function playSound () {
                 document.getElementById("play").play();
                 }</script>';
-            
+
             }
-            
+
             else
             {
             echo '<form id ="form" action="'.site_url("Support_c/testing").'" method="post">
@@ -46,6 +51,7 @@ function playSound () {
             </div>
             </form>';
             }
+        }
             ?>
         </div>
         <div id="pic_border">
