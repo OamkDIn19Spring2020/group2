@@ -1,7 +1,5 @@
 <div id="footer">
-    <div id="footext">
-        <h3>CHUNGUSGAINZ.COM.NET.CN.RU</h3>
-    </div>
+    
     <div id="footercont">
         <div class = 'buttons'><a href="<?php echo site_url('category'); ?>">Category</a></div>
         <div class = 'buttons'><a href="<?php echo site_url('games'); ?>">Games</a></div>

@@ -90,6 +90,11 @@ form.buttons{
 }
 #search{
     width:50%;
+    height: 100%;
+}
+
+#search_button{
+    height: 100%;
 }
 
 #logreg{
@@ -122,6 +127,7 @@ form.buttons{
     text-align: center;
 }
 #footercont{
+    height: min-content;
     display: grid;
     grid-template-rows: auto;
     grid-template-columns: [col1] 20% [col2] 20% [col3] 20% [col4] 20% [col5] 20%;
@@ -133,7 +139,7 @@ form.buttons{
 }
 
 #footer{
-    height: auto;
+    height: fit-content;
     width: 100%;
 }
 
@@ -141,7 +147,8 @@ form.buttons{
 /*---content css---*/
 
 #contents{
-    min-height: 75%;
+    padding-top: 5px;
+    min-height: 500px;
     max-height: auto;
     background-color: #00aaaa;
     color:black;
