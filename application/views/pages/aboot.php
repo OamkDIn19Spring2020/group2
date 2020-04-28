@@ -2,13 +2,12 @@
 
 
 <?php
-echo $loadinfo;
 if(file_exists(base_url('assests/textf/'.$loadinfo))) {
-    $file = fopen(base_url('assests/textf/'.$loadinfo), 'r');
+    $file = fopen(base_url('assests/textf/'.$loadinfo.'.php'), 'r');
     echo fread($file, filesize('assests/textf/'.$loadinfo));
     fclose($file);
 }
-else{
+/*else{
     if(strpos($loadinfo, '_')){
         $loadinfo = str_replace('_', ' ', $loadinfo);
         if(strpos($loadinfo, '  ')){
@@ -18,7 +17,7 @@ else{
 
     $pageifnonefound = $loadinfo." is a game about things where you do stuff. <br>It was released at some point, near the release of another game. <br>Core features include nothing and everything.";
     echo $pageifnonefound;
-}
+}*/
 ?>
 
 </div>
