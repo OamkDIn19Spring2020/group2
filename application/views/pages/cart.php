@@ -16,7 +16,6 @@
             redirect('games');
         }
         else{
-
             $total = 0;
         foreach ($_SESSION['testarray'] as $game=>$value){
             $currentkey = $game;
@@ -50,9 +49,16 @@
         if (count($_SESSION['testarray']) >  0){
             if(isset($sale_p)){
 
-                echo $sale_p[0]['percentoff'];
+                $sale_p = $sale_p[0]['percentoff'];
+                $newtotal = $total * (1 - 0.01*$sale_p);
+                echo 'Total: <s>'.$total.'¤</s> -'.$sale_p.'% <br>';
+                echo 'New Total: '.$newtotal.'¤';
+
             }
-        echo 'Total: '.$total.'¤';
+            else{
+
+                echo 'Total: '.$total.'¤';
+            }
         echo    '<form action="Cart_c/index" method="post">
             <fieldset class="fieldset">
             <label for="method">method</label<br>
