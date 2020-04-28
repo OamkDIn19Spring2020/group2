@@ -2,7 +2,8 @@
 
 
 <?php
-if(file_exists(base_url('assests/textf/'.$loadinfo.'.php'))) { 
+if(file_exists(base_url('assests/textf/'.$loadinfo))) {
+    echo 'things';
     $file = fopen(base_url('assests/textf/'.$loadinfo.'.php'), 'r');
     echo fread($file, filesize('assests/textf/'.$loadinfo));
     fclose($file);
