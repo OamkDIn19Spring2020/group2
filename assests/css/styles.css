@@ -25,6 +25,7 @@ tr, th, td{
 }
 tbody tr:hover{
     background-color: #0a91c2;
+    transition: all 0.3s ease 0s;
 }
 thead, tr:nth-child(even){
     background-color: #0ac28e;
@@ -47,6 +48,7 @@ button{
 button:hover{
     background-color:#09b855;
     color:white;
+    transition: all 0.3s ease 0s;
 }
 input[type=submit]{
     background-color: #0ac28e;
@@ -56,6 +58,7 @@ input[type=submit]{
 input[type=submit]:hover{
     background-color: #09b855;
     color:white;
+    transition: all 0.3s ease 0s;
 }
 
 /*---header css---*/
@@ -81,6 +84,7 @@ input[type=submit]:hover{
 .buttons:not(.s_games):hover{
     background-color:#0a91c2;
     color:black;
+    transition: all 0.3s ease 0s;
 }
 form.buttons{
     grid-row-start:2;
@@ -110,6 +114,7 @@ form.buttons{
 #Login:hover, #register:hover, #cart:hover{
     background-color:#0a91c2;
     color:black;
+    transition: all 0.3s ease 0s;
 }
 #cart{
     grid-row:2;
@@ -168,6 +173,7 @@ form.buttons{
 #contents input[type=submit]:hover{
     background-color: #09b855;
     color:white;
+    transition: all 0.3s ease 0s;
 }
 
 
@@ -198,6 +204,7 @@ form.buttons{
 }
 .gameintable:hover{
     background-color:#0ac28e;
+    transition: all 0.3s ease 0s;
 }
 .gameimgTable{
     grid-row: 1 / span 2;
@@ -323,6 +330,7 @@ form.buttons{
 #login:hover{
     background-color:#095cb8;
     color:#fbf9f7;
+    transition: all 0.3s ease 0s;
 }
 
 /*---register.php---*/
