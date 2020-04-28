@@ -49,17 +49,17 @@ class Cart_c extends CI_Controller {
       $this->load->view('templates/page', $data);
   }
 
-  function promocode(){
-
-    if(count ($this->Cart_model->promocode($this->input->post('promo')))> 0){
+  function promocode($codeToMatch){
+    $codeToMatch = $this->input->post('promo');
+    if(count ($this->Cart_model->promocode($codeToMatch))> 0){
 
       $data['codetext'] = '<p>Code Accepted!</p>';
-  }
+    }
     else{
-    $data['codetext'] = '<p>Code Invalid!</p>';
-  }
-  $data['page'] = 'cart';
-  $this->load->view('templates/page', $data);
+        $data['codetext'] = '<p>Code Invalid!</p>';
+    }
+    $data['page'] = 'cart';
+    $this->load->view('templates/page', $data);
   }
 
 }
