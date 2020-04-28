@@ -2,6 +2,7 @@
 
 
 <?php
+error_reporting(0);
 $filestatus = fopen(base_url('assests/textf/'.$loadinfo.'.php'), 'r') or die ('FALSE');
 if($filestatus === 'FALSE'){
     if(strpos($loadinfo, '_')){
