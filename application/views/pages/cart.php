@@ -20,7 +20,7 @@
         <?php
         if(isset($_SESSION['username'])===FALSE){
             echo '<form action="Games_c/s_index" method="post">
-                    <input type="button"  onload="this.form.submit()">perkele</input>
+                    <input type="submit"  onload="this.form.submit()"/>
                     </form>';
         }
         else{
