@@ -3,7 +3,7 @@
 <?php if($_SESSION['logged_in'] === FALSE){
         echo '<form action="Games_c/s_index" method="post">
                 <input type="hidden" onload="this.form.submit()"/>
-                </form>'; 
+                </form>';
 }
 ?>
         <form action="Cart_c/promocode" method="post">
@@ -48,7 +48,7 @@
 
         if (count($_SESSION['testarray']) >  0){
         echo 'Total: '.$total.'¤';
-        echo    '<form action='.site_url('Cart_c/index').' method="post">
+        echo    '<form action="Cart_c/index" method="post">
             <fieldset class="fieldset">
             <label for="method">method</label<br>
             <select class="meth" name="meth">
