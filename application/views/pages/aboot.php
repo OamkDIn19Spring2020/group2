@@ -8,7 +8,7 @@ if(strpos($loadinfo, '_')){
         $loadinfo = str_replace('  ', ': ', $loadinfo);
     }
 }
-
+echo $loadinfo;
 if(file_exists(base_url('assests/textf/'.$loadinfo.'.php'))){
     $file = fopen(base_url('assests/textf/'.$loadinfo.'.php'), 'r');
     echo fread($file, filesize('assests/textf/'.$loadinfo.'.php'));
