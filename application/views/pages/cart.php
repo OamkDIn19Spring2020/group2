@@ -50,7 +50,7 @@
         if (count($_SESSION['testarray']) >  0){
             if(isset($sale_p)){
 
-                print_r($sale_p);
+                echo $sale_p[0]['percentoff'];
             }
         echo 'Total: '.$total.'¤';
         echo    '<form action="Cart_c/index" method="post">
