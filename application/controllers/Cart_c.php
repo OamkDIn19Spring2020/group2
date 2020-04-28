@@ -58,7 +58,8 @@ class Cart_c extends CI_Controller {
     else{
     $data['codetext'] = '<p>Code Invalid!</p>';
   }
-  redirect('cart', $data);
+  $data['page'] = 'cart';
+  $this->load->view('templates/page', $data);
   }
 
 }
