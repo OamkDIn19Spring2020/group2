@@ -1,7 +1,7 @@
 <div class="gametable">
     <?php
     foreach ($sales as $key => $row) {
-        $currentkey = $key
+        $currentkey = $key;
         echo '<div class="gameintable">
                 <a class="gameimgTable" href='.site_url('Show_c/index/'.$row['idGame']).'>
                 <img class="gameimgTable" src='.base_url().'assests/imgs/'.$row['idGame'].'.jpg>
