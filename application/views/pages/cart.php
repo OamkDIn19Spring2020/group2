@@ -39,13 +39,17 @@
                     }
                     echo '</div>';
                     echo '<div class="priceCart">'.$row['NOW'].'¤</div>';
-                    echo '<form action="Cart_c/removeFromCart" method="post" class="removeGame"><button type="submit" value='.$currentkey.' name="smth">remove</button></form>';
+                    echo '<form action= "'.site_url('Cart_c/promocode') .'" method="post" class="removeGame"><button type="submit" value='.$currentkey.' name="smth">remove</button></form>';
                 echo '</div>';
             }
 
         }
 
         if (count($_SESSION['testarray']) >  0){
+            if(isset($codetext)){
+
+                echo $sale_p;
+            }
         echo 'Total: '.$total.'¤';
         echo    '<form action="Cart_c/index" method="post">
             <fieldset class="fieldset">
