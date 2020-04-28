@@ -58,7 +58,7 @@ class Cart_c extends CI_Controller {
     else{
     $data['codetext'] = '<p>Code Invalid!</p>';
   }
-  redirec('cart', $data);
+  redirect('cart', $data);
   }
 
 }
