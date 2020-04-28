@@ -22,9 +22,9 @@
                     </a>
                     <div class="priceTable">
                     <div class="addbutton">
-                        <form action="Cart_c/pushing" method="post">
-                            <button value='.$row['idGame'].' name="submit" type="submit">add to cart</button>
-                        </form>
+                    <form action="Cart_c/pushing" method="post">
+                        <button value='.$row['idGame'].' name="game" type="submit">add to cart</button>
+                    </form>
                     </div>
                 </div>
                 </div>';
