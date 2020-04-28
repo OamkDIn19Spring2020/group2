@@ -1,59 +1,64 @@
 <div id="cartcont">
-
-<form action=" <?php echo site_url('Cart_c/index') ?> " method="post">
-  <fieldset class="fieldset">
-    <label for="uname">user</label><br>
-    <select class="uname" name="uname">
-        <?php
-            foreach ($user as $key) {
-                echo '<option value="'.$key['username'].'">'.$key['username'].'</option>';
-            }
-        ?>
-    </select><br>
-
-    <label for="price">Price</label><br>
-    <input type="number" id="price" name="price"><br>
-
-    <label for="method">method</label<br>
-    <select class="meth" name="meth">
-        <option value="skrill">Skrill</option>
-        <option value="chunguscoin">Chunguscoin</option>
-        <option value="paypal">Paypal</option>
-        <option value="renminbi">Renminbi</option>
-    </select><br>
-    
-    <label for="promo">Promocode</label><br>
-    <input type="promocode" name="promo"><br>
-
-    <label for="game">game</label><br>
-    <select class="game" name="game">
-        <?php
-        foreach ($games as $row) {
-            echo '<option value="'.$row['idGame'].'">'.$row['idGame'].'</option>';
-        }
-         ?>
-    </select>
-
-
-    <input type="submit" value="submit">
-
- </fieldset>
-</form>
 <h1>Here are your items:</h1>
-<table>
-    <thead>
-        <tr>
-            <th>game</th><th>price</th><th>method</th><th>username</th><th>date</th>
-        </tr>
-    </thead>
-    <tbody>
+        <form action="Cart_c/promocode" method="post">
+            <label name="codetext" for="promo">Promocode</label>
+            <?php 
+                if(isset($codetext)){
+            
+                    echo ($codetext);
+                }
+            ?>
+
+            <input placeholder="XXXXXX" type="promocode" name="promo"><button type="submit" name ="apply">Apply!</button><br>
+            </form>
         <?php
-        foreach ($logs as $row){
-            echo '<tr>';
-            echo '<td>'.$row['idGame'].'</td><td>'.$row['price'].'</td><td>'.$row['method'].'</td><td>'.$row['username'].'</td><td>'.$row['p_date'].'</td>';
-            echo '</tr>';
+            $total = 0;
+        foreach ($_SESSION['testarray'] as $game=>$value){
+
+            foreach ($value as $row){
+                $total = $total + $row['NOW'];
+                echo '<div class="gameInCart">';
+                    echo '<div class="gameImgCart"><img class="gameImgCart" src='.base_url().'assests/imgs/'.$row['idGame'].'.jpg></div>';
+                    echo '<div class="gameNameCart">';
+                    if(strpos($row['idGame'], '_')){
+                        $stringtoprint = str_replace('_', ' ', $row['idGame']);
+                        if(strpos($stringtoprint, '  ')){
+                            echo str_replace('  ', ': ', $stringtoprint);
+                        }
+                        else{
+                            echo $stringtoprint;
+                        }
+                    }
+                    else{
+                        echo $row['idGame'];
+                    }
+                    echo '</div>';
+                    echo '<div class="priceCart">'.$row['NOW'].'¤</div>';
+                    echo '<form action="Cart_c/removeFromCart" method="post" class="removeGame"><button type="submit" value='.$row['idGame'].' name="smth">remove</button></form>';
+                echo '</div>';
+            }
+
         }
-         ?>
-    </tbody>
-</table>
+
+        if (count($_SESSION['testarray']) >  0){
+        echo 'Total: '.$total.'¤';
+        echo    '<form action='.site_url('Cart_c/index').' method="post">
+            <fieldset class="fieldset">
+            <label for="method">method</label<br>
+            <select class="meth" name="meth">
+            <option value="skrill">Skrill</option>
+            <option value="chunguscoin">Chunguscoin</option>
+            <option value="paypal">Paypal</option>
+            <option value="renminbi">Renminbi</option>
+            </select><br>
+
+            <button type="submit" name="button">Purchase</button>
+
+            </fieldset>
+            </form>';
+        }
+        else{
+            echo 'your cart is empty! <br><a href='.site_url('games').' stye="color:#120eb7;"> Spend some money, will ya?</a>';
+        }
+        ?>
 </div>

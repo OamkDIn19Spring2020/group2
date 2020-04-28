@@ -1,9 +1,16 @@
+<?php
+foreach ($userinfo as $key) {
+    echo 'Username: '.$key['username'].'<br>';
+    echo 'Email: '.$key['email'].'<br>';
+    echo 'Phone:'.$key['phone'].'<br>';
+    echo 'country: '.$key['country'].'<br>';
+    echo 'password: '.$key['password'].'<br>';
+    // code...
+}
 
-<h1><?php echo $_SESSION['username'] ?>'s account</h1>
-<br>
+?>
+<button type="button" name="button" ><a href="<?php echo site_url('Cart_c/history')?>">Purchase History</a></button>
+<button type="button" name="button" ><a href="<?php echo site_url('changepass')?>">change password</a></button>
 <form  action="<?php echo site_url('Home/logout');?>" method="post">
     <input type="submit" value="Log out">
-</form><br>
-<form  action="<?php echo site_url('Home/deleteuser');?>" method="post">
-    <input type="submit" value="Delete account">
 </form>
