@@ -382,3 +382,16 @@ form.buttons{
 {
     display: inline-block;
 }
+/*---Account.php---*/
+#accountBox{
+    width: fit-content;
+    height: fit-content;
+    margin:auto;
+}
+/*---changepass.php---*/
+#passBox{
+    width: fit-content;
+    height: fit-content;
+    margin:auto;
+    border: 3px solid black;
+}
