@@ -52,7 +52,7 @@ class Cart_c extends CI_Controller {
   function promocode(){
     $codeToMatch = $this->input->post('promo');
     if(count ($this->Cart_model->promocode($codeToMatch))> 0){
-
+      $data['sale_p'] = $this->Cart_model->promocode($codeToMatch);
       $data['codetext'] = '<p>Code Accepted!</p>';
     }
     else{
