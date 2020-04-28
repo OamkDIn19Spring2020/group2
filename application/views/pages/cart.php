@@ -1,9 +1,8 @@
 <div id="cartcont">
 <h1>Here are your items:</h1>
 <?php if($_SESSION === NULL){
-        echo '<form action="Games_c/s_index" method="post">
-                <input type="submit" >perkele</input>
-                </form>';
+        echo '<form action="Games_c/s_index" method="post" name="falseLoad"></form>';
+        echo '<button type="submit" onload="document.forms("falseLoad").submit()"/>';
 }
 ?>
         <form action="Cart_c/promocode" method="post">
