@@ -46,9 +46,9 @@
         }
 
         if (count($_SESSION['testarray']) >  0){
-            if(isset($codetext)){
+            if(isset($sale_p)){
 
-                echo $sale_p;
+                print_r($sale_p);
             }
         echo 'Total: '.$total.'¤';
         echo    '<form action="Cart_c/index" method="post">
