@@ -72,7 +72,7 @@ input[type=submit]:hover{
     margin-right:auto;
     height:100%;
     display: grid;
-    grid-template-rows: [row1] 50% [row2] 50%;
+    grid-template-rows: [row1] 49% [row2] 49%;
     grid-template-columns: [col1] 19% [col2] 19% [col3] 19% [col4] 19% [col5] 19%;
     grid-gap:1%;
 }
