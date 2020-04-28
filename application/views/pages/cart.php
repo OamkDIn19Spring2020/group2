@@ -1,6 +1,5 @@
 <div id="cartcont">
 <h1>Here are your items:</h1>
-?>
         <form action="Cart_c/promocode" method="post">
             <label name="codetext" for="promo">Promocode</label>
             <?php
@@ -14,8 +13,7 @@
             </form>
         <?php
         if(isset($_SESSION['username'])===FALSE){
-            echo '<form action="Games_c/s_index" method="post" name="falseLoad"></form>';
-            echo '<button type="submit" onload="document.forms("falseLoad").submit()"/>';
+            redirect('games');
         }
         else{
 
