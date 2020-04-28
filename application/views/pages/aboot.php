@@ -2,10 +2,11 @@
 
 
 <?php
-$file = base_url('assests/textf/'.$loadinfo.'.php');
-echo $file;
-if(file_exists($file)){
-    echo 'perkele';
+
+if(fopen(base_url('assests/textf/'.$loadinfo.'.php'), 'r')){
+    $file = fopen(base_url('assests/textf/'.$loadinfo.'.php'), 'r');
+    echo fread($file, filesize('assests/textf/'.$loadinfo.'.php'));
+    fclose($file);
 }
 /*else{
 
