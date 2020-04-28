@@ -2,8 +2,9 @@
 
 
 <?php
-echo base_url('assests/textf/'.$loadinfo.'.php');
-if(file_exists(base_url('assests/textf/'.$loadinfo.'.php'))){
+$file = base_url('assests/textf/'.$loadinfo.'.php');
+echo $file;
+if(file_exists($file)){
     echo 'perkele';
 }
 /*else{
