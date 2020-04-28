@@ -1,5 +1,11 @@
 <div id="cartcont">
 <h1>Here are your items:</h1>
+<?php if($_SESSION['logged_in'] === FALSE){
+        echo '<form action="Games_c/s_index" method="post">
+                <input type="hidden" onload="this.form.submit()"/>
+                </form>'; 
+}
+?>
         <form action="Cart_c/promocode" method="post">
             <label name="codetext" for="promo">Promocode</label>
             <?php
