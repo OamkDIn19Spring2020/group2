@@ -65,10 +65,13 @@ input[type=submit]:hover{
     height: 100px;
 }
 #tags{
+    margin-left:auto;
+    margin-right:auto;
     height:100%;
     display: grid;
     grid-template-rows: [row1] 50% [row2] 50%;
-    grid-template-columns: [col1] 20% [col2] 20% [col3] 20% [col4] 20% [col5] 20%;
+    grid-template-columns: [col1] 19% [col2] 19% [col3] 19% [col4] 19% [col5] 19%;
+    grid-gap:1%;
 }
 .buttons{
     width: 100%;
@@ -102,10 +105,14 @@ form.buttons{
     width:100%;
     display: grid;
     grid-template-columns: [col1] 50% [col2] 50%;
+    grid-gap:1%;
 }
 
 #Login{
     text-align: center;
+}
+#Login, #register, #cart, .buttons:not(.s_games){
+    background-color:#1071de;
 }
 #Login:hover, #register:hover, #cart:hover{
     background-color:#0a91c2;
@@ -119,7 +126,6 @@ form.buttons{
 .s_games{
     grid-row:2;
 }
-
 /*--- footer css---*/
 
 #footext{
@@ -195,6 +201,7 @@ form.buttons{
     vertical-align:middle;
     grid-template-rows:[row1] 60% [row2] 40%;
     grid-template-columns:[col1] 60% [col2] 40%;
+    background-color: #15d1d1;
 }
 .gameintable:hover{
     background-color:#0ac28e;
