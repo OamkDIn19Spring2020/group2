@@ -2,9 +2,9 @@
 <h1>Here are your items:</h1>
         <form action="Cart_c/promocode" method="post">
             <label name="codetext" for="promo">Promocode</label>
-            <?php 
+            <?php
                 if(isset($codetext)){
-            
+
                     echo ($codetext);
                 }
             ?>
@@ -14,7 +14,7 @@
         <?php
             $total = 0;
         foreach ($_SESSION['testarray'] as $game=>$value){
-
+            $currentkey = $game;
             foreach ($value as $row){
                 $total = $total + $row['NOW'];
                 echo '<div class="gameInCart">';
@@ -34,7 +34,7 @@
                     }
                     echo '</div>';
                     echo '<div class="priceCart">'.$row['NOW'].'¤</div>';
-                    echo '<form action="Cart_c/removeFromCart" method="post" class="removeGame"><button type="submit" value='.$row['idGame'].' name="smth">remove</button></form>';
+                    echo '<form action="Cart_c/removeFromCart" method="post" class="removeGame"><button type="submit" value='.$currentkey.' name="smth">remove</button></form>';
                 echo '</div>';
             }
 

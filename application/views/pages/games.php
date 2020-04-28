@@ -84,8 +84,7 @@
             echo '<h3> No games found </h3>';
         }
         else{
-            foreach ($games as $key => $row){
-                $currentkey = $key;
+            foreach ($games as $row){
                 echo '<div class="gameintable">
                         <a class="gameimgTable" href='.site_url('Show_c/index/'.$row['idGame']).'>
                         <img class="gameimgTable" src='.base_url().'assests/imgs/'.$row['idGame'].'.jpg>
@@ -108,7 +107,7 @@
                             <div class="priceTable">
                             <div class="addbutton">
                                 <form action="Cart_c/pushing" method="post">
-                                    <button value='.$key.' name="game" type="submit">add to cart</button>
+                                    <button value='.$row['idGame'].' name="game" type="submit">add to cart</button>
                                 </form>
                             </div>
                         </div>

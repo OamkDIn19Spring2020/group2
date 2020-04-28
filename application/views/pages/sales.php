@@ -1,7 +1,6 @@
 <div class="gametable">
     <?php
-    foreach ($sales as $key => $row) {
-        $currentkey = $key;
+    foreach ($sales as $row) {
         echo '<div class="gameintable">
                 <a class="gameimgTable" href='.site_url('Show_c/index/'.$row['idGame']).'>
                 <img class="gameimgTable" src='.base_url().'assests/imgs/'.$row['idGame'].'.jpg>
@@ -24,7 +23,7 @@
                     <div class="priceTable">
                     <div class="addbutton">
                         <form action="Cart_c/pushing" method="post">
-                            <button value='.$currentkey.' name="submit" type="submit">add to cart</button>
+                            <button value='.$row['idGame'].' name="submit" type="submit">add to cart</button>
                         </form>
                     </div>
                 </div>
