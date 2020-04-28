@@ -32,7 +32,7 @@ class Cart_c extends CI_Controller {
 
   function pushing(){
       $gameBuy=$this->input->post('game');
-      $page = $this->input->post('page')
+      $page = $this->input->post('page');
       array_push($_SESSION['testarray'], $this->Games_model->gamepush($gameBuy) );
       redirect($page);
   }
