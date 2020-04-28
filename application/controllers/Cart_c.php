@@ -49,7 +49,7 @@ class Cart_c extends CI_Controller {
       $this->load->view('templates/page', $data);
   }
 
-  function promocode($codeToMatch){
+  function promocode(){
     $codeToMatch = $this->input->post('promo');
     if(count ($this->Cart_model->promocode($codeToMatch))> 0){
 
