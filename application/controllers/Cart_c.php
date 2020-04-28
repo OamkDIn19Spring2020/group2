@@ -38,10 +38,8 @@ class Cart_c extends CI_Controller {
 
   function removeFromCart(){
       $gametoremove = $this->input->post('smth');
-      echo $gametoremove.'br';
       array_splice($_SESSION['testarray'], $gametoremove, 1);
-      print_r($_SESSION['testarray']);
-    //redirect('cart');
+      redirect('cart');
   }
 
   function history(){
