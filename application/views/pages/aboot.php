@@ -2,8 +2,9 @@
 
 
 <?php
-if(file_exists(base_url('assests/textf/'.$loadinfo.'.php'))) {
-    echo $loadinfo;
+echo $loadinfo;
+if(file_exists(base_url('assests/textf/'.$loadinfo))) {
+    echo $loadinfo
 }
 /*else{
 
