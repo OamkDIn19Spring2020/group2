@@ -42,6 +42,7 @@ class Cart_c extends CI_Controller {
       foreach ($_SESSION['testarray'] as $key => &$value) {
           echo 'key: '.$key.'<br>';
           if ($key===$gametoremove){
+              echo 'match found';
              array_splice($_SESSION['testarray'], $key, 1);
           }
       }
