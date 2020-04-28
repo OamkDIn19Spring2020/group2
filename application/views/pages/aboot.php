@@ -9,10 +9,8 @@ if(strpos($loadinfo, '_')){
     }
 }
 echo $loadinfo;
-if(file_exists(base_url('assests/textf/'.$loadinfo.'.php'))){
-    $file = fopen(base_url('assests/textf/'.$loadinfo.'.php'), 'r');
-    echo fread($file, filesize('assests/textf/'.$loadinfo.'.php'));
-    fclose($file);
+if(file_exists(base_url('assests/textf/'.$loadinfo.'.php'))) {
+    redirect(base_url('assests/textf/'.$loadinfo.'.php'));
 }
 /*else{
 
