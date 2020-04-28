@@ -39,7 +39,7 @@ class Cart_c extends CI_Controller {
   function removeFromCart(){
       $gametoremove = $this->input->post('smth');
       foreach ($_SESSION['testarray'] as $key => &$value) {
-          if ($key===$gametoremove){
+          if ($key==$gametoremove){
              array_splice($_SESSION['testarray'], $key, 1);
           }
       }
