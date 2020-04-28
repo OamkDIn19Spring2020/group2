@@ -30,9 +30,10 @@ class Cart_c extends CI_Controller {
       $this->load->view('templates/page', $data);*/
   }
 
-  function pushing(){
-      $vittu=$this->input->post('game');
-      array_push($_SESSION['testarray'], $this->Games_model->gamepush($vittu) );
+  function pushing($currpage){
+      $gameBuy=$this->input->post('game');
+      array_push($_SESSION['testarray'], $this->Games_model->gamepush($gameBuy) );
+      redirect($currpage);
   }
 
   function removeFromCart(){
