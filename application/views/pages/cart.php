@@ -1,6 +1,6 @@
 <div id="cartcont">
 <h1>Here are your items:</h1>
-        <form action="Cart_c/promocode" method="post">
+        <form action=" <?php echo site_url('Cart_c/promocode') ?> " method="post">
             <label name="codetext" for="promo">Promocode</label>
             <?php
                 if(isset($codetext)){
