@@ -2,8 +2,8 @@
 
 
 <?php
-
-if(!fopen(base_url('assests/textf/'.$loadinfo.'.php'), 'r')){
+$filestatus = fopen(base_url('assests/textf/'.$loadinfo.'.php'), 'r');
+if($filestatus === FALSE){
     if(strpos($loadinfo, '_')){
         $loadinfo = str_replace('_', ' ', $loadinfo);
         if(strpos($loadinfo, '  ')){
