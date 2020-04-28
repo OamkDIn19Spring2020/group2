@@ -1,3 +1,4 @@
+<div id="purchasebox">
 <table>
     <thead>
         <tr>
@@ -14,3 +15,5 @@
          ?>
     </tbody>
 </table>
+
+</div>
