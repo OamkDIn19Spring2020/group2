@@ -31,23 +31,16 @@ class Cart_c extends CI_Controller {
   }
 
   function pushing(){
-      $vittu=$this->input->post('game');
-      array_push($_SESSION['testarray'], $this->Games_model->gamepush($vittu) );
-      redirect('games');
+      $gameBuy=$this->input->post('game');
+      $page = $this->input->post('page');
+      array_push($_SESSION['testarray'], $this->Games_model->gamepush($gameBuy) );
+      redirect($page);
   }
 
   function removeFromCart(){
       $gametoremove = $this->input->post('smth');
-      foreach ($_SESSION['testarray'] as $key => &$value) {
-          foreach ($value as $row) {
-              if ($row['idGame']===$gametoremove){
-                  array_splice($_SESSION['testarray'], $key, 1);
-                  break;
-              }
-
-          }
-      }
-    redirect('cart');
+      array_splice($_SESSION['testarray'], $gametoremove, 1);
+      redirect('cart');
   }
 
   function history(){
@@ -57,16 +50,16 @@ class Cart_c extends CI_Controller {
   }
 
   function promocode(){
-    
-    if(count ($this->Cart_model->promocode($this->input->post('promo')))> 0){
-                        
+    $codeToMatch = $this->input->post('promo');
+    if(count ($this->Cart_model->promocode($codeToMatch))> 0){
+      $data['sale_p'] = $this->Cart_model->promocode($codeToMatch);
       $data['codetext'] = '<p>Code Accepted!</p>';
-  }
+    }
     else{
-    $data['codetext'] = '<p>Code Invalid!</p>';
-  }
-  $data['page'] = 'cart';
-  $this->load->view('templates/page', $data);
+        $data['codetext'] = '<p>Code Invalid!</p>';
+    }
+    $data['page'] = 'cart';
+    $this->load->view('templates/page', $data);
   }
 
 }
