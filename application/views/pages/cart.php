@@ -2,7 +2,7 @@
 <h1>Here are your items:</h1>
 <?php if($_SESSION === NULL){
         echo '<form action="Games_c/s_index" method="post">
-                <input type="text" onload="this.form.submit()"/>
+                <input type="submit" >perkele</input>
                 </form>';
 }
 ?>
@@ -18,6 +18,13 @@
             <input placeholder="XXXXXX" type="promocode" name="promo"><button type="submit" name ="apply">Apply!</button><br>
             </form>
         <?php
+        if(isset($_SESSION['username'])===FALSE){
+            echo '<form action="Games_c/s_index" method="post">
+                    <input type="submit" >perkele</input>
+                    </form>';
+        }
+        else{
+
             $total = 0;
         foreach ($_SESSION['testarray'] as $game=>$value){
             $currentkey = $game;
@@ -66,5 +73,6 @@
         else{
             echo 'your cart is empty! <br><a href='.site_url('games').' style="color:#120eb7;"> Spend some money, will ya?</a>';
         }
+    }
         ?>
 </div>
