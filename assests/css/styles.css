@@ -421,4 +421,5 @@ form.buttons{
 /*---history.php---*/
 #purchasebox{
     margin:auto;
+    width:fit-content;
 }
